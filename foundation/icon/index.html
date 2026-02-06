@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Icon</span>
+          </nav>
+          <h1>Icon</h1>
+          <p class="hero-description"
+             data-en="The icon system provides a consistent set of visual symbols for the LINE GIFTSHOP platform. Icons help users quickly understand actions, navigation, and content types."
+             data-ko="아이콘 시스템은 LINE GIFTSHOP 플랫폼을 위한 일관된 시각적 심볼 세트를 제공합니다. 아이콘은 사용자가 액션, 네비게이션, 콘텐츠 유형을 빠르게 이해하도록 도와줍니다."
+             data-zh="图标系统为LINE GIFTSHOP平台提供一套一致的视觉符号。图标帮助用户快速理解操作、导航和内容类型。"
+             data-th="ระบบไอคอนให้ชุดสัญลักษณ์ภาพที่สอดคล้องกันสำหรับแพลตฟอร์ม LINE GIFTSHOP ไอคอนช่วยให้ผู้ใช้เข้าใจการกระทำ การนำทาง และประเภทเนื้อหาได้อย่างรวดเร็ว">
+            The icon system provides a consistent set of visual symbols for the LINE GIFTSHOP platform. Icons help users quickly understand actions, navigation, and content types.
+          </p>
+          <div class="hero-image">
+            <img src="../../assets/images/hero-new.jpeg" alt="Icon System Hero">
+          </div>
+          <div class="category-links">
+            <a href="#principles" class="category-link">
+              <span>Principles</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#sizes" class="category-link">
+              <span>Sizes</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#usage" class="category-link">
+              <span>Usage</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Icon System</h2>
+        </section>
+
+        <div class="content-section-group">
+          <section class="content-section" id="principles">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Design Principles</h3>
+                <p data-en="Icons are designed with consistent stroke weights, corner radius, and optical balance. They maintain clarity at all sizes and work seamlessly across light and dark themes."
+                   data-ko="아이콘은 일관된 선 두께, 모서리 반경, 광학적 균형을 가지도록 디자인됩니다. 모든 크기에서 명확성을 유지하며 라이트 및 다크 테마에서 원활하게 작동합니다."
+                   data-zh="图标采用一致的笔画粗细、圆角和视觉平衡设计。它们在所有尺寸下保持清晰度，并在浅色和深色主题中无缝工作。"
+                   data-th="ไอคอนได้รับการออกแบบด้วยน้ำหนักเส้น รัศมีมุม และความสมดุลทางสายตาที่สอดคล้องกัน พวกมันรักษาความชัดเจนในทุกขนาดและทำงานได้อย่างราบรื่นในธีมสว่างและมืด">Icons are designed with consistent stroke weights, corner radius, and optical balance. They maintain clarity at all sizes and work seamlessly across light and dark themes.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Icon Principles">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="sizes">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Icon Sizes</h3>
+                <p data-en="Icons are available in multiple sizes to accommodate different use cases. Standard sizes include 16px, 20px, 24px, and 32px, based on the 4px grid system."
+                   data-ko="아이콘은 다양한 사용 사례를 수용하기 위해 여러 크기로 제공됩니다. 표준 크기는 4px 그리드 시스템을 기반으로 16px, 20px, 24px, 32px를 포함합니다."
+                   data-zh="图标提供多种尺寸以适应不同的使用场景。标准尺寸包括16px、20px、24px和32px，基于4px网格系统。"
+                   data-th="ไอคอนมีหลายขนาดเพื่อรองรับกรณีการใช้งานที่แตกต่างกัน ขนาดมาตรฐานรวมถึง 16px, 20px, 24px และ 32px ตามระบบกริด 4px">Icons are available in multiple sizes to accommodate different use cases. Standard sizes include 16px, 20px, 24px, and 32px, based on the 4px grid system.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Icon Sizes">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="usage">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Usage Guidelines</h3>
+                <p data-en="Use icons consistently throughout the interface. Pair icons with labels when possible to improve accessibility. Ensure sufficient contrast between icons and backgrounds."
+                   data-ko="인터페이스 전체에서 아이콘을 일관되게 사용하세요. 접근성을 높이기 위해 가능한 경우 아이콘과 레이블을 함께 사용하세요. 아이콘과 배경 사이에 충분한 대비를 확보하세요."
+                   data-zh="在整个界面中一致使用图标。在可能的情况下将图标与标签配对以提高可访问性。确保图标和背景之间有足够的对比度。"
+                   data-th="ใช้ไอคอนอย่างสอดคล้องกันตลอดทั้งอินเทอร์เฟซ จับคู่ไอคอนกับป้ายกำกับเมื่อเป็นไปได้เพื่อปรับปรุงการเข้าถึง ตรวจสอบให้แน่ใจว่ามีคอนทราสต์เพียงพอระหว่างไอคอนและพื้นหลัง">Use icons consistently throughout the interface. Pair icons with labels when possible to improve accessibility. Ensure sufficient contrast between icons and backgrounds.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Icon Usage">
+              </div>
+            </div>
+          </section>
+        </div>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../border/index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Border</span>
+            </span>
+          </a>
+          <a href="library.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Icon Library</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

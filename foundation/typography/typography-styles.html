@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Tokens - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../tokens.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="index.html">Typography</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Tokens</span>
+          </nav>
+          <h1>Typography Tokens</h1>
+          <p class="hero-description"
+             data-en="Typography tokens including styles and core values."
+             data-ko="스타일과 코어 값을 포함한 타이포그래피 토큰입니다."
+             data-zh="包含样式和核心值的排版令牌。"
+             data-th="โทเค็นตัวอักษรรวมถึงรูปแบบและค่าหลัก">
+            Typography tokens including styles and core values.
+          </p>
+          <div class="hero-image">
+            <img src="../../assets/images/hero-new.jpeg" alt="Typography Tokens Hero">
+          </div>
+          <div class="category-links">
+            <a href="#title" class="category-link">
+              <span>Title</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#body" class="category-link">
+              <span>Body</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#font-family" class="category-link">
+              <span>Font Family</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#font-weight" class="category-link">
+              <span>Font Weight</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#font-size" class="category-link">
+              <span>Font Size</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#line-height" class="category-link">
+              <span>Line Height</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Style</h2>
+        </section>
+
+        <section class="semantic-section" id="title">
+          <h3>Title</h3>
+          <p class="description"
+             data-en="Styles for headings and emphasized text. Supports T2-T10 sizes."
+             data-ko="제목 및 강조 텍스트에 사용되는 스타일입니다. T2-T10 사이즈를 지원합니다."
+             data-zh="用于标题和强调文本的样式。支持 T2-T10 尺寸。"
+             data-th="รูปแบบสำหรับหัวข้อและข้อความเน้น รองรับขนาด T2-T10">Styles for headings and emphasized text. Supports T2-T10 sizes.</p>
+          <table class="token-table" style="table-layout: fixed">
+            <colgroup>
+              <col style="width: 25%">
+              <col style="width: 25%">
+              <col style="width: 50%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Style</th>
+                <th>Property</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Title 2XL Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 2XL Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t10</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t10</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title 2XL Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 2XL Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t10</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t10</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title XL Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title XL Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t9</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t9</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title XL Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title XL Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t9</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t9</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title LG Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title LG Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t8</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t8</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title LG Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title LG Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t8</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t8</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title MD Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title MD Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t7</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t7</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title MD Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title MD Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t7</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t7</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title SM Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title SM Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t6</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t6</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title SM Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title SM Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t6</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t6</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title 2XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 2XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title 2XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 2XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title 3XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 3XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title 3XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 3XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Title 4XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 4XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Title 4XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Title 4XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.title.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 id="body">Body</h3>
+          <p class="description"
+             data-en="Styles for body text. Supports T1-T5 sizes."
+             data-ko="본문 텍스트에 사용되는 스타일입니다. T1-T5 사이즈를 지원합니다."
+             data-zh="用于正文的样式。支持 T1-T5 尺寸。"
+             data-th="รูปแบบสำหรับข้อความเนื้อหา รองรับขนาด T1-T5">Styles for body text. Supports T1-T5 sizes.</p>
+          <table class="token-table" style="table-layout: fixed">
+            <colgroup>
+              <col style="width: 25%">
+              <col style="width: 25%">
+              <col style="width: 50%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Style</th>
+                <th>Property</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Body LG Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body LG Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Body LG Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body LG Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t5</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Body MD Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body MD Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Body MD Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body MD Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Body SM Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body SM Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Body SM Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body SM Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t3</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Body XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Body XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t2</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+              <!-- Body 2XS Regular -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body 2XS Regular</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t1</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t1</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+              </tr>
+              <!-- Body 2XS Bold -->
+              <tr>
+                <td rowspan="3" style="vertical-align: top">Body 2XS Bold</td>
+                <td>fontSize</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-size.t1</span></a></span></td>
+              </tr>
+              <tr>
+                <td>lineHeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.line-height.body.t1</span></a></span></td>
+              </tr>
+              <tr>
+                <td>fontWeight</td>
+                <td><span class="token-name"><a href="index.html" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Core</h2>
+        </section>
+
+        <section class="semantic-section" id="font-family">
+          <h3>Font Family</h3>
+          <p class="description"
+             data-en="Defines optimized fonts for each language."
+             data-ko="언어별 최적화된 폰트를 정의합니다."
+             data-zh="定义每种语言的优化字体。"
+             data-th="กำหนดฟอนต์ที่เหมาะสมสำหรับแต่ละภาษา">Defines optimized fonts for each language.</p>
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>TW</th>
+                <th>TH</th>
+                <th>EN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-family.tw</span></a></span></td>
+                <td>SF Pro</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-family.th</span></a></span></td>
+                <td>-</td>
+                <td>Thonburi</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-family.en</span></a></span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>SF Pro</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="semantic-section" id="font-weight">
+          <h3>Font Weight</h3>
+          <p class="description"
+             data-en="Defines text weight."
+             data-ko="텍스트 굵기를 정의합니다."
+             data-zh="定义文本粗细。"
+             data-th="กำหนดน้ำหนักของข้อความ">Defines text weight.</p>
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>TW</th>
+                <th>TH</th>
+                <th>EN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-weight.regular</span></a></span></td>
+                <td>400</td>
+                <td>400</td>
+                <td>400</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-weight.bold</span></a></span></td>
+                <td>700</td>
+                <td>700</td>
+                <td>700</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="semantic-section" id="font-size">
+          <h3>Font Size</h3>
+          <p class="description"
+             data-en="Defines text size. Same values are used across all languages."
+             data-ko="텍스트 크기를 정의합니다. 모든 언어에서 동일한 값을 사용합니다."
+             data-zh="定义文本大小。所有语言使用相同的值。"
+             data-th="กำหนดขนาดข้อความ ใช้ค่าเดียวกันในทุกภาษา">Defines text size. Same values are used across all languages.</p>
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>TW</th>
+                <th>TH</th>
+                <th>EN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t1</span></a></span></td>
+                <td>10px</td>
+                <td>10px</td>
+                <td>10px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t2</span></a></span></td>
+                <td>12px</td>
+                <td>12px</td>
+                <td>12px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t3</span></a></span></td>
+                <td>13px</td>
+                <td>13px</td>
+                <td>13px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t4</span></a></span></td>
+                <td>14px</td>
+                <td>14px</td>
+                <td>14px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t5</span></a></span></td>
+                <td>16px</td>
+                <td>16px</td>
+                <td>16px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t6</span></a></span></td>
+                <td>18px</td>
+                <td>18px</td>
+                <td>18px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t7</span></a></span></td>
+                <td>20px</td>
+                <td>20px</td>
+                <td>20px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t8</span></a></span></td>
+                <td>24px</td>
+                <td>24px</td>
+                <td>24px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t9</span></a></span></td>
+                <td>28px</td>
+                <td>28px</td>
+                <td>28px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.font-size.t10</span></a></span></td>
+                <td>35px</td>
+                <td>35px</td>
+                <td>35px</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="semantic-section" id="line-height">
+          <h3>Line Height</h3>
+          <p class="description"
+             data-en="Defines line height. Divided into Title and Body types."
+             data-ko="텍스트 행간을 정의합니다. Title과 Body 두 가지 타입으로 구분됩니다."
+             data-zh="定义行高。分为 Title 和 Body 两种类型。"
+             data-th="กำหนดความสูงของบรรทัด แบ่งเป็นประเภท Title และ Body">Defines line height. Divided into Title and Body types.</p>
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>TW</th>
+                <th>TH</th>
+                <th>EN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t2</span></a></span></td>
+                <td>16px</td>
+                <td>18px</td>
+                <td>18px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t3</span></a></span></td>
+                <td>16px</td>
+                <td>18px</td>
+                <td>18px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t4</span></a></span></td>
+                <td>18px</td>
+                <td>22px</td>
+                <td>22px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t5</span></a></span></td>
+                <td>22px</td>
+                <td>26px</td>
+                <td>26px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t6</span></a></span></td>
+                <td>24px</td>
+                <td>28px</td>
+                <td>28px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t7</span></a></span></td>
+                <td>30px</td>
+                <td>30px</td>
+                <td>30px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t8</span></a></span></td>
+                <td>31px</td>
+                <td>38px</td>
+                <td>38px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t9</span></a></span></td>
+                <td>36px</td>
+                <td>44px</td>
+                <td>44px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.title.t10</span></a></span></td>
+                <td>45px</td>
+                <td>56px</td>
+                <td>56px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.body.t1</span></a></span></td>
+                <td>16px</td>
+                <td>18px</td>
+                <td>18px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.body.t2</span></a></span></td>
+                <td>18px</td>
+                <td>20px</td>
+                <td>20px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.body.t3</span></a></span></td>
+                <td>18px</td>
+                <td>22px</td>
+                <td>22px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.body.t4</span></a></span></td>
+                <td>22px</td>
+                <td>22px</td>
+                <td>22px</td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$typography.line-height.body.t5</span></a></span></td>
+                <td>26px</td>
+                <td>26px</td>
+                <td>26px</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Typography Overview</span>
+            </span>
+          </a>
+          <a href="../spacing/index.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Spacing</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

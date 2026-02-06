@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../tokens.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="color-system.html">Color</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Color Palette</span>
+          </nav>
+          <h1>Color Palette</h1>
+          <p class="hero-description"
+             data-en="This is the complete color palette of the LINE GIFTSHOP design system."
+             data-ko="LINE GIFTSHOP 디자인 시스템의 전체 컬러 팔레트입니다."
+             data-zh="这是LINE GIFTSHOP设计系统的完整颜色调色板。"
+             data-th="นี่คือจานสีที่สมบูรณ์ของระบบการออกแบบ LINE GIFTSHOP">
+            This is the complete color palette of the LINE GIFTSHOP design system.
+          </p>
+        </section>
+
+        <section class="semantic-section">
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Core Colors -->
+              <tr><td><a href="tokens/palette-black.html" class="token-link"><span>color.palette.black</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#111111"></span><span class="hex-value">#111111</span></span></td></tr>
+              <tr><td><a href="tokens/palette-white.html" class="token-link"><span>color.palette.white</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFFFFF"></span><span class="hex-value">#FFFFFF</span></span></td></tr>
+              <!-- Lightgreen -->
+              <tr><td><a href="tokens/palette-lightgreen-100.html" class="token-link"><span>color.palette.lightgreen.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FBFFFA"></span><span class="hex-value">#FBFFFA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-150.html" class="token-link"><span>color.palette.lightgreen.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E9FAE3"></span><span class="hex-value">#E9FAE3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-200.html" class="token-link"><span>color.palette.lightgreen.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DEFAD4"></span><span class="hex-value">#DEFAD4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-300.html" class="token-link"><span>color.palette.lightgreen.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CBFCBB"></span><span class="hex-value">#CBFCBB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-400.html" class="token-link"><span>color.palette.lightgreen.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#AFF299"></span><span class="hex-value">#AFF299</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-500.html" class="token-link"><span>color.palette.lightgreen.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#91ED72"></span><span class="hex-value">#91ED72</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-600.html" class="token-link"><span>color.palette.lightgreen.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#72DE54"></span><span class="hex-value">#72DE54</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-700.html" class="token-link"><span>color.palette.lightgreen.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3CC926"></span><span class="hex-value">#3CC926</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-800.html" class="token-link"><span>color.palette.lightgreen.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#37AB27"></span><span class="hex-value">#37AB27</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-900.html" class="token-link"><span>color.palette.lightgreen.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#237A1F"></span><span class="hex-value">#237A1F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-950.html" class="token-link"><span>color.palette.lightgreen.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#205416"></span><span class="hex-value">#205416</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-p300.html" class="token-link"><span>color.palette.lightgreen.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BBD9B6"></span><span class="hex-value">#BBD9B6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-p400.html" class="token-link"><span>color.palette.lightgreen.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#92CF8A"></span><span class="hex-value">#92CF8A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-p500.html" class="token-link"><span>color.palette.lightgreen.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#59BA4A"></span><span class="hex-value">#59BA4A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-p600.html" class="token-link"><span>color.palette.lightgreen.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3AA12D"></span><span class="hex-value">#3AA12D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightgreen-h600.html" class="token-link"><span>color.palette.lightgreen.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#43FF1F"></span><span class="hex-value">#43FF1F</span></span></td></tr>
+              <!-- Green -->
+              <tr><td><a href="tokens/palette-green-100.html" class="token-link"><span>color.palette.green.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F8FCF9"></span><span class="hex-value">#F8FCF9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-150.html" class="token-link"><span>color.palette.green.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E6F9EE"></span><span class="hex-value">#E6F9EE</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-200.html" class="token-link"><span>color.palette.green.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E1F8EB"></span><span class="hex-value">#E1F8EB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-300.html" class="token-link"><span>color.palette.green.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C7F7DB"></span><span class="hex-value">#C7F7DB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-400.html" class="token-link"><span>color.palette.green.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#99F2BD"></span><span class="hex-value">#99F2BD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-500.html" class="token-link"><span>color.palette.green.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#72EDA4"></span><span class="hex-value">#72EDA4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-600.html" class="token-link"><span>color.palette.green.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#54DE8D"></span><span class="hex-value">#54DE8D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-700.html" class="token-link"><span>color.palette.green.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#06C755"></span><span class="hex-value">#06C755</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-800.html" class="token-link"><span>color.palette.green.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#27AB5D"></span><span class="hex-value">#27AB5D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-900.html" class="token-link"><span>color.palette.green.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F7A44"></span><span class="hex-value">#1F7A44</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-950.html" class="token-link"><span>color.palette.green.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#16542F"></span><span class="hex-value">#16542F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-p300.html" class="token-link"><span>color.palette.green.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BAD9C7"></span><span class="hex-value">#BAD9C7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-p400.html" class="token-link"><span>color.palette.green.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#85C7A1"></span><span class="hex-value">#85C7A1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-p500.html" class="token-link"><span>color.palette.green.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#4BB878"></span><span class="hex-value">#4BB878</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-p600.html" class="token-link"><span>color.palette.green.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#2A9C5A"></span><span class="hex-value">#2A9C5A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-green-h600.html" class="token-link"><span>color.palette.green.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1FFF7A"></span><span class="hex-value">#1FFF7A</span></span></td></tr>
+              <!-- Teal -->
+              <tr><td><a href="tokens/palette-teal-100.html" class="token-link"><span>color.palette.teal.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F5FAF9"></span><span class="hex-value">#F5FAF9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-150.html" class="token-link"><span>color.palette.teal.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E6FAF6"></span><span class="hex-value">#E6FAF6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-200.html" class="token-link"><span>color.palette.teal.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D4FAF2"></span><span class="hex-value">#D4FAF2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-300.html" class="token-link"><span>color.palette.teal.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B9FAEC"></span><span class="hex-value">#B9FAEC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-400.html" class="token-link"><span>color.palette.teal.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#8EEDD9"></span><span class="hex-value">#8EEDD9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-500.html" class="token-link"><span>color.palette.teal.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5CE5C8"></span><span class="hex-value">#5CE5C8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-600.html" class="token-link"><span>color.palette.teal.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#20D6BE"></span><span class="hex-value">#20D6BE</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-700.html" class="token-link"><span>color.palette.teal.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#19BFA1"></span><span class="hex-value">#19BFA1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-800.html" class="token-link"><span>color.palette.teal.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#14A37B"></span><span class="hex-value">#14A37B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-900.html" class="token-link"><span>color.palette.teal.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#137856"></span><span class="hex-value">#137856</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-950.html" class="token-link"><span>color.palette.teal.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#125446"></span><span class="hex-value">#125446</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-p300.html" class="token-link"><span>color.palette.teal.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BAD9CF"></span><span class="hex-value">#BAD9CF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-p400.html" class="token-link"><span>color.palette.teal.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7CC9B0"></span><span class="hex-value">#7CC9B0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-p500.html" class="token-link"><span>color.palette.teal.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#46B897"></span><span class="hex-value">#46B897</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-p600.html" class="token-link"><span>color.palette.teal.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#24967C"></span><span class="hex-value">#24967C</span></span></td></tr>
+              <tr><td><a href="tokens/palette-teal-h600.html" class="token-link"><span>color.palette.teal.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1FFFCE"></span><span class="hex-value">#1FFFCE</span></span></td></tr>
+              <!-- Cyan -->
+              <tr><td><a href="tokens/palette-cyan-100.html" class="token-link"><span>color.palette.cyan.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F7FCFC"></span><span class="hex-value">#F7FCFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-150.html" class="token-link"><span>color.palette.cyan.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E3FCFC"></span><span class="hex-value">#E3FCFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-200.html" class="token-link"><span>color.palette.cyan.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D2FCFC"></span><span class="hex-value">#D2FCFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-300.html" class="token-link"><span>color.palette.cyan.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#AFFAFA"></span><span class="hex-value">#AFFAFA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-400.html" class="token-link"><span>color.palette.cyan.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#8CEDED"></span><span class="hex-value">#8CEDED</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-500.html" class="token-link"><span>color.palette.cyan.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5BE3DE"></span><span class="hex-value">#5BE3DE</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-600.html" class="token-link"><span>color.palette.cyan.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#26D1D1"></span><span class="hex-value">#26D1D1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-700.html" class="token-link"><span>color.palette.cyan.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1CB8B8"></span><span class="hex-value">#1CB8B8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-800.html" class="token-link"><span>color.palette.cyan.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#10A1A1"></span><span class="hex-value">#10A1A1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-900.html" class="token-link"><span>color.palette.cyan.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#107575"></span><span class="hex-value">#107575</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-950.html" class="token-link"><span>color.palette.cyan.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#135454"></span><span class="hex-value">#135454</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-p300.html" class="token-link"><span>color.palette.cyan.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BDD9D9"></span><span class="hex-value">#BDD9D9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-p400.html" class="token-link"><span>color.palette.cyan.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7DCDCF"></span><span class="hex-value">#7DCDCF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-p500.html" class="token-link"><span>color.palette.cyan.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#41B6B9"></span><span class="hex-value">#41B6B9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-p600.html" class="token-link"><span>color.palette.cyan.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F9399"></span><span class="hex-value">#1F9399</span></span></td></tr>
+              <tr><td><a href="tokens/palette-cyan-h600.html" class="token-link"><span>color.palette.cyan.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1FFFFF"></span><span class="hex-value">#1FFFFF</span></span></td></tr>
+              <!-- Light Blue -->
+              <tr><td><a href="tokens/palette-lightblue-100.html" class="token-link"><span>color.palette.lightblue.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F7FCFC"></span><span class="hex-value">#F7FCFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-150.html" class="token-link"><span>color.palette.lightblue.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E8F9FC"></span><span class="hex-value">#E8F9FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-200.html" class="token-link"><span>color.palette.lightblue.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D9F7FC"></span><span class="hex-value">#D9F7FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-300.html" class="token-link"><span>color.palette.lightblue.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BDF4FF"></span><span class="hex-value">#BDF4FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-400.html" class="token-link"><span>color.palette.lightblue.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#90EAFC"></span><span class="hex-value">#90EAFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-500.html" class="token-link"><span>color.palette.lightblue.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#60DEF7"></span><span class="hex-value">#60DEF7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-600.html" class="token-link"><span>color.palette.lightblue.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#11CDF2"></span><span class="hex-value">#11CDF2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-700.html" class="token-link"><span>color.palette.lightblue.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#00B8E5"></span><span class="hex-value">#00B8E5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-800.html" class="token-link"><span>color.palette.lightblue.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#0093C4"></span><span class="hex-value">#0093C4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-900.html" class="token-link"><span>color.palette.lightblue.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#066A91"></span><span class="hex-value">#066A91</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-950.html" class="token-link"><span>color.palette.lightblue.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#084F6B"></span><span class="hex-value">#084F6B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-p300.html" class="token-link"><span>color.palette.lightblue.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C1D8DE"></span><span class="hex-value">#C1D8DE</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-p400.html" class="token-link"><span>color.palette.lightblue.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7FC6D6"></span><span class="hex-value">#7FC6D6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-p500.html" class="token-link"><span>color.palette.lightblue.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3FAFC9"></span><span class="hex-value">#3FAFC9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-p600.html" class="token-link"><span>color.palette.lightblue.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#268CAD"></span><span class="hex-value">#268CAD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-lightblue-h600.html" class="token-link"><span>color.palette.lightblue.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1FC0FF"></span><span class="hex-value">#1FC0FF</span></span></td></tr>
+              <!-- Sky Blue -->
+              <tr><td><a href="tokens/palette-skyblue-100.html" class="token-link"><span>color.palette.skyblue.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F7FAFC"></span><span class="hex-value">#F7FAFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-150.html" class="token-link"><span>color.palette.skyblue.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E8F5FF"></span><span class="hex-value">#E8F5FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-200.html" class="token-link"><span>color.palette.skyblue.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DBF0FF"></span><span class="hex-value">#DBF0FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-300.html" class="token-link"><span>color.palette.skyblue.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C4E7FF"></span><span class="hex-value">#C4E7FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-400.html" class="token-link"><span>color.palette.skyblue.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#A1D8FF"></span><span class="hex-value">#A1D8FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-500.html" class="token-link"><span>color.palette.skyblue.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#78CBFF"></span><span class="hex-value">#78CBFF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-600.html" class="token-link"><span>color.palette.skyblue.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#40B6FF"></span><span class="hex-value">#40B6FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-700.html" class="token-link"><span>color.palette.skyblue.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1A9CFF"></span><span class="hex-value">#1A9CFF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-800.html" class="token-link"><span>color.palette.skyblue.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1982D2"></span><span class="hex-value">#1982D2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-900.html" class="token-link"><span>color.palette.skyblue.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#13609E"></span><span class="hex-value">#13609E</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-950.html" class="token-link"><span>color.palette.skyblue.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1D4A70"></span><span class="hex-value">#1D4A70</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-p300.html" class="token-link"><span>color.palette.skyblue.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C5D6E3"></span><span class="hex-value">#C5D6E3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-p400.html" class="token-link"><span>color.palette.skyblue.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#8FBEE3"></span><span class="hex-value">#8FBEE3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-p500.html" class="token-link"><span>color.palette.skyblue.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5BA2DB"></span><span class="hex-value">#5BA2DB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-p600.html" class="token-link"><span>color.palette.skyblue.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3F84C4"></span><span class="hex-value">#3F84C4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-skyblue-h600.html" class="token-link"><span>color.palette.skyblue.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F99FF"></span><span class="hex-value">#1F99FF</span></span></td></tr>
+              <!-- Blue -->
+              <tr><td><a href="tokens/palette-blue-100.html" class="token-link"><span>color.palette.blue.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F8F9FD"></span><span class="hex-value">#F8F9FD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-150.html" class="token-link"><span>color.palette.blue.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#ECF0FD"></span><span class="hex-value">#ECF0FD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-200.html" class="token-link"><span>color.palette.blue.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E1E8FD"></span><span class="hex-value">#E1E8FD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-300.html" class="token-link"><span>color.palette.blue.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CCD9FF"></span><span class="hex-value">#CCD9FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-400.html" class="token-link"><span>color.palette.blue.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B2C7FF"></span><span class="hex-value">#B2C7FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-500.html" class="token-link"><span>color.palette.blue.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#96B2FF"></span><span class="hex-value">#96B2FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-600.html" class="token-link"><span>color.palette.blue.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#6388FF"></span><span class="hex-value">#6388FF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-700.html" class="token-link"><span>color.palette.blue.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#4270ED"></span><span class="hex-value">#4270ED</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-800.html" class="token-link"><span>color.palette.blue.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#335FD7"></span><span class="hex-value">#335FD7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-900.html" class="token-link"><span>color.palette.blue.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3753AB"></span><span class="hex-value">#3753AB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-950.html" class="token-link"><span>color.palette.blue.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#32457A"></span><span class="hex-value">#32457A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-p300.html" class="token-link"><span>color.palette.blue.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CCD3E5"></span><span class="hex-value">#CCD3E5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-p400.html" class="token-link"><span>color.palette.blue.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#9FB6EC"></span><span class="hex-value">#9FB6EC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-p500.html" class="token-link"><span>color.palette.blue.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#658EE1"></span><span class="hex-value">#658EE1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-p600.html" class="token-link"><span>color.palette.blue.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#4E73CC"></span><span class="hex-value">#4E73CC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-blue-h600.html" class="token-link"><span>color.palette.blue.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F5AFF"></span><span class="hex-value">#1F5AFF</span></span></td></tr>
+              <!-- Indigo -->
+              <tr><td><a href="tokens/palette-indigo-100.html" class="token-link"><span>color.palette.indigo.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F7F7FC"></span><span class="hex-value">#F7F7FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-150.html" class="token-link"><span>color.palette.indigo.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E8E8FC"></span><span class="hex-value">#E8E8FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-200.html" class="token-link"><span>color.palette.indigo.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E0E0FC"></span><span class="hex-value">#E0E0FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-300.html" class="token-link"><span>color.palette.indigo.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D1D1FC"></span><span class="hex-value">#D1D1FC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-400.html" class="token-link"><span>color.palette.indigo.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#BDBDFC"></span><span class="hex-value">#BDBDFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-500.html" class="token-link"><span>color.palette.indigo.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#9C9CFC"></span><span class="hex-value">#9C9CFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-600.html" class="token-link"><span>color.palette.indigo.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7979F7"></span><span class="hex-value">#7979F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-700.html" class="token-link"><span>color.palette.indigo.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5F5FED"></span><span class="hex-value">#5F5FED</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-800.html" class="token-link"><span>color.palette.indigo.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5151E5"></span><span class="hex-value">#5151E5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-900.html" class="token-link"><span>color.palette.indigo.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#4C46C5"></span><span class="hex-value">#4C46C5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-950.html" class="token-link"><span>color.palette.indigo.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#383878"></span><span class="hex-value">#383878</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-p300.html" class="token-link"><span>color.palette.indigo.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CFCFE5"></span><span class="hex-value">#CFCFE5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-p400.html" class="token-link"><span>color.palette.indigo.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#A6A6ED"></span><span class="hex-value">#A6A6ED</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-p500.html" class="token-link"><span>color.palette.indigo.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7979D9"></span><span class="hex-value">#7979D9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-p600.html" class="token-link"><span>color.palette.indigo.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5F5FBA"></span><span class="hex-value">#5F5FBA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-indigo-h600.html" class="token-link"><span>color.palette.indigo.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F1FFF"></span><span class="hex-value">#1F1FFF</span></span></td></tr>
+              <!-- Deep Purple -->
+              <tr><td><a href="tokens/palette-deep-purple-100.html" class="token-link"><span>color.palette.deep-purple.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F4F2F7"></span><span class="hex-value">#F4F2F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-150.html" class="token-link"><span>color.palette.deep-purple.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#ECE6F7"></span><span class="hex-value">#ECE6F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-200.html" class="token-link"><span>color.palette.deep-purple.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E4DCF5"></span><span class="hex-value">#E4DCF5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-300.html" class="token-link"><span>color.palette.deep-purple.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DED3F5"></span><span class="hex-value">#DED3F5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-400.html" class="token-link"><span>color.palette.deep-purple.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CAB5F5"></span><span class="hex-value">#CAB5F5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-500.html" class="token-link"><span>color.palette.deep-purple.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B898F5"></span><span class="hex-value">#B898F5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-600.html" class="token-link"><span>color.palette.deep-purple.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#A17DF5"></span><span class="hex-value">#A17DF5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-700.html" class="token-link"><span>color.palette.deep-purple.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#8556E3"></span><span class="hex-value">#8556E3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-800.html" class="token-link"><span>color.palette.deep-purple.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#6B3CC9"></span><span class="hex-value">#6B3CC9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-900.html" class="token-link"><span>color.palette.deep-purple.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#643CB2"></span><span class="hex-value">#643CB2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-950.html" class="token-link"><span>color.palette.deep-purple.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#47346B"></span><span class="hex-value">#47346B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-p300.html" class="token-link"><span>color.palette.deep-purple.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D3CCE5"></span><span class="hex-value">#D3CCE5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-p400.html" class="token-link"><span>color.palette.deep-purple.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B59FE8"></span><span class="hex-value">#B59FE8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-p500.html" class="token-link"><span>color.palette.deep-purple.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#9473D6"></span><span class="hex-value">#9473D6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-p600.html" class="token-link"><span>color.palette.deep-purple.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#7956B0"></span><span class="hex-value">#7956B0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-deep-purple-h600.html" class="token-link"><span>color.palette.deep-purple.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#5F1EFF"></span><span class="hex-value">#5F1EFF</span></span></td></tr>
+              <!-- Purple -->
+              <tr><td><a href="tokens/palette-purple-100.html" class="token-link"><span>color.palette.purple.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F6F2F7"></span><span class="hex-value">#F6F2F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-150.html" class="token-link"><span>color.palette.purple.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F4E8F7"></span><span class="hex-value">#F4E8F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-200.html" class="token-link"><span>color.palette.purple.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F2DEF7"></span><span class="hex-value">#F2DEF7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-300.html" class="token-link"><span>color.palette.purple.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F0D4F7"></span><span class="hex-value">#F0D4F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-400.html" class="token-link"><span>color.palette.purple.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E9B7F7"></span><span class="hex-value">#E9B7F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-500.html" class="token-link"><span>color.palette.purple.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DB97F7"></span><span class="hex-value">#DB97F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-600.html" class="token-link"><span>color.palette.purple.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CE7AF0"></span><span class="hex-value">#CE7AF0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-700.html" class="token-link"><span>color.palette.purple.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C355D9"></span><span class="hex-value">#C355D9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-800.html" class="token-link"><span>color.palette.purple.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#AF36C7"></span><span class="hex-value">#AF36C7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-900.html" class="token-link"><span>color.palette.purple.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#873797"></span><span class="hex-value">#873797</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-950.html" class="token-link"><span>color.palette.purple.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#562E5E"></span><span class="hex-value">#562E5E</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-p300.html" class="token-link"><span>color.palette.purple.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DBCCE3"></span><span class="hex-value">#DBCCE3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-p400.html" class="token-link"><span>color.palette.purple.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C89BE0"></span><span class="hex-value">#C89BE0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-p500.html" class="token-link"><span>color.palette.purple.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#A771C9"></span><span class="hex-value">#A771C9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-p600.html" class="token-link"><span>color.palette.purple.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#81529E"></span><span class="hex-value">#81529E</span></span></td></tr>
+              <tr><td><a href="tokens/palette-purple-h600.html" class="token-link"><span>color.palette.purple.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DA1FFF"></span><span class="hex-value">#DA1FFF</span></span></td></tr>
+              <!-- Magenta -->
+              <tr><td><a href="tokens/palette-magenta-100.html" class="token-link"><span>color.palette.magenta.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCF7FA"></span><span class="hex-value">#FCF7FA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-150.html" class="token-link"><span>color.palette.magenta.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCEDF6"></span><span class="hex-value">#FCEDF6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-200.html" class="token-link"><span>color.palette.magenta.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCE3F1"></span><span class="hex-value">#FCE3F1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-300.html" class="token-link"><span>color.palette.magenta.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCD4EB"></span><span class="hex-value">#FCD4EB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-400.html" class="token-link"><span>color.palette.magenta.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCB8DF"></span><span class="hex-value">#FCB8DF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-500.html" class="token-link"><span>color.palette.magenta.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF9CCD"></span><span class="hex-value">#FF9CCD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-600.html" class="token-link"><span>color.palette.magenta.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF70B0"></span><span class="hex-value">#FF70B0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-700.html" class="token-link"><span>color.palette.magenta.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F74397"></span><span class="hex-value">#F74397</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-800.html" class="token-link"><span>color.palette.magenta.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DE2C7F"></span><span class="hex-value">#DE2C7F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-900.html" class="token-link"><span>color.palette.magenta.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C6216B"></span><span class="hex-value">#C6216B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-950.html" class="token-link"><span>color.palette.magenta.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#731D44"></span><span class="hex-value">#731D44</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-p300.html" class="token-link"><span>color.palette.magenta.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#EBCCDD"></span><span class="hex-value">#EBCCDD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-p400.html" class="token-link"><span>color.palette.magenta.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#ED91BC"></span><span class="hex-value">#ED91BC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-p500.html" class="token-link"><span>color.palette.magenta.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E569A0"></span><span class="hex-value">#E569A0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-p600.html" class="token-link"><span>color.palette.magenta.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C74A82"></span><span class="hex-value">#C74A82</span></span></td></tr>
+              <tr><td><a href="tokens/palette-magenta-h600.html" class="token-link"><span>color.palette.magenta.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FE48CE"></span><span class="hex-value">#FE48CE</span></span></td></tr>
+              <!-- Red -->
+              <tr><td><a href="tokens/palette-red-100.html" class="token-link"><span>color.palette.red.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCF7F8"></span><span class="hex-value">#FCF7F8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-150.html" class="token-link"><span>color.palette.red.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFE6E9"></span><span class="hex-value">#FFE6E9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-200.html" class="token-link"><span>color.palette.red.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFDEE1"></span><span class="hex-value">#FFDEE1</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-300.html" class="token-link"><span>color.palette.red.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCCFD4"></span><span class="hex-value">#FCCFD4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-400.html" class="token-link"><span>color.palette.red.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCB5BD"></span><span class="hex-value">#FCB5BD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-500.html" class="token-link"><span>color.palette.red.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF919F"></span><span class="hex-value">#FF919F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-600.html" class="token-link"><span>color.palette.red.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF697A"></span><span class="hex-value">#FF697A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-700.html" class="token-link"><span>color.palette.red.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF334B"></span><span class="hex-value">#FF334B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-800.html" class="token-link"><span>color.palette.red.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#EB2A41"></span><span class="hex-value">#EB2A41</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-900.html" class="token-link"><span>color.palette.red.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CD263A"></span><span class="hex-value">#CD263A</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-950.html" class="token-link"><span>color.palette.red.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#85101E"></span><span class="hex-value">#85101E</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-p300.html" class="token-link"><span>color.palette.red.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F2CED2"></span><span class="hex-value">#F2CED2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-p400.html" class="token-link"><span>color.palette.red.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F68A94"></span><span class="hex-value">#F68A94</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-p500.html" class="token-link"><span>color.palette.red.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#EB6570"></span><span class="hex-value">#EB6570</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-p600.html" class="token-link"><span>color.palette.red.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#D44652"></span><span class="hex-value">#D44652</span></span></td></tr>
+              <tr><td><a href="tokens/palette-red-h600.html" class="token-link"><span>color.palette.red.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF1F3A"></span><span class="hex-value">#FF1F3A</span></span></td></tr>
+              <!-- Orange -->
+              <tr><td><a href="tokens/palette-orange-100.html" class="token-link"><span>color.palette.orange.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFFBFA"></span><span class="hex-value">#FFFBFA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-150.html" class="token-link"><span>color.palette.orange.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFF4F0"></span><span class="hex-value">#FFF4F0</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-200.html" class="token-link"><span>color.palette.orange.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFE4DB"></span><span class="hex-value">#FFE4DB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-300.html" class="token-link"><span>color.palette.orange.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFD9CC"></span><span class="hex-value">#FFD9CC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-400.html" class="token-link"><span>color.palette.orange.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFC2AD"></span><span class="hex-value">#FFC2AD</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-500.html" class="token-link"><span>color.palette.orange.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFA182"></span><span class="hex-value">#FFA182</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-600.html" class="token-link"><span>color.palette.orange.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF875C"></span><span class="hex-value">#FF875C</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-700.html" class="token-link"><span>color.palette.orange.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF6F36"></span><span class="hex-value">#FF6F36</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-800.html" class="token-link"><span>color.palette.orange.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F0581D"></span><span class="hex-value">#F0581D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-900.html" class="token-link"><span>color.palette.orange.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DB3F00"></span><span class="hex-value">#DB3F00</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-950.html" class="token-link"><span>color.palette.orange.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B22D00"></span><span class="hex-value">#B22D00</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-p300.html" class="token-link"><span>color.palette.orange.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FAD3C5"></span><span class="hex-value">#FAD3C5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-p400.html" class="token-link"><span>color.palette.orange.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FA9E7F"></span><span class="hex-value">#FA9E7F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-p500.html" class="token-link"><span>color.palette.orange.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F5765D"></span><span class="hex-value">#F5765D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-p600.html" class="token-link"><span>color.palette.orange.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E35F42"></span><span class="hex-value">#E35F42</span></span></td></tr>
+              <tr><td><a href="tokens/palette-orange-h600.html" class="token-link"><span>color.palette.orange.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF571F"></span><span class="hex-value">#FF571F</span></span></td></tr>
+              <!-- Amber -->
+              <tr><td><a href="tokens/palette-amber-100.html" class="token-link"><span>color.palette.amber.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFFEFA"></span><span class="hex-value">#FFFEFA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-150.html" class="token-link"><span>color.palette.amber.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFFCE8"></span><span class="hex-value">#FFFCE8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-200.html" class="token-link"><span>color.palette.amber.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFF7B8"></span><span class="hex-value">#FFF7B8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-300.html" class="token-link"><span>color.palette.amber.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFEB94"></span><span class="hex-value">#FFEB94</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-400.html" class="token-link"><span>color.palette.amber.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFD86B"></span><span class="hex-value">#FFD86B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-500.html" class="token-link"><span>color.palette.amber.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFC53D"></span><span class="hex-value">#FFC53D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-600.html" class="token-link"><span>color.palette.amber.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCB321"></span><span class="hex-value">#FCB321</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-700.html" class="token-link"><span>color.palette.amber.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FA9E1E"></span><span class="hex-value">#FA9E1E</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-800.html" class="token-link"><span>color.palette.amber.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E38E17"></span><span class="hex-value">#E38E17</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-900.html" class="token-link"><span>color.palette.amber.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#CC7A08"></span><span class="hex-value">#CC7A08</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-950.html" class="token-link"><span>color.palette.amber.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B86B00"></span><span class="hex-value">#B86B00</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-p300.html" class="token-link"><span>color.palette.amber.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFE8C2"></span><span class="hex-value">#FFE8C2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-p400.html" class="token-link"><span>color.palette.amber.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFDD80"></span><span class="hex-value">#FFDD80</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-p500.html" class="token-link"><span>color.palette.amber.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFB55D"></span><span class="hex-value">#FFB55D</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-p600.html" class="token-link"><span>color.palette.amber.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F7821B"></span><span class="hex-value">#F7821B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-amber-h600.html" class="token-link"><span>color.palette.amber.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FF8F1F"></span><span class="hex-value">#FF8F1F</span></span></td></tr>
+              <!-- Yellow -->
+              <tr><td><a href="tokens/palette-yellow-100.html" class="token-link"><span>color.palette.yellow.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FEFFFA"></span><span class="hex-value">#FEFFFA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-150.html" class="token-link"><span>color.palette.yellow.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FDFFEB"></span><span class="hex-value">#FDFFEB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-200.html" class="token-link"><span>color.palette.yellow.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FBFFBF"></span><span class="hex-value">#FBFFBF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-300.html" class="token-link"><span>color.palette.yellow.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FDFF78"></span><span class="hex-value">#FDFF78</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-400.html" class="token-link"><span>color.palette.yellow.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFFC33"></span><span class="hex-value">#FFFC33</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-500.html" class="token-link"><span>color.palette.yellow.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFF200"></span><span class="hex-value">#FFF200</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-600.html" class="token-link"><span>color.palette.yellow.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFE500"></span><span class="hex-value">#FFE500</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-700.html" class="token-link"><span>color.palette.yellow.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFD900"></span><span class="hex-value">#FFD900</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-800.html" class="token-link"><span>color.palette.yellow.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E0BF00"></span><span class="hex-value">#E0BF00</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-900.html" class="token-link"><span>color.palette.yellow.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C2A500"></span><span class="hex-value">#C2A500</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-950.html" class="token-link"><span>color.palette.yellow.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#A88F00"></span><span class="hex-value">#A88F00</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-p300.html" class="token-link"><span>color.palette.yellow.p300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCFAD2"></span><span class="hex-value">#FCFAD2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-p400.html" class="token-link"><span>color.palette.yellow.p400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFF0A4"></span><span class="hex-value">#FFF0A4</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-p500.html" class="token-link"><span>color.palette.yellow.p500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFEA80"></span><span class="hex-value">#FFEA80</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-p600.html" class="token-link"><span>color.palette.yellow.p600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFDF6B"></span><span class="hex-value">#FFDF6B</span></span></td></tr>
+              <tr><td><a href="tokens/palette-yellow-h600.html" class="token-link"><span>color.palette.yellow.h600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FFDE1F"></span><span class="hex-value">#FFDE1F</span></span></td></tr>
+              <!-- Slate -->
+              <tr><td><a href="tokens/palette-slate-100.html" class="token-link"><span>color.palette.slate.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F2F4F7"></span><span class="hex-value">#F2F4F7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-150.html" class="token-link"><span>color.palette.slate.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E1E4EB"></span><span class="hex-value">#E1E4EB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-200.html" class="token-link"><span>color.palette.slate.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C6CBD6"></span><span class="hex-value">#C6CBD6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-300.html" class="token-link"><span>color.palette.slate.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#AAB1C2"></span><span class="hex-value">#AAB1C2</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-400.html" class="token-link"><span>color.palette.slate.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#8F97AB"></span><span class="hex-value">#8F97AB</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-500.html" class="token-link"><span>color.palette.slate.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#707991"></span><span class="hex-value">#707991</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-600.html" class="token-link"><span>color.palette.slate.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#596174"></span><span class="hex-value">#596174</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-700.html" class="token-link"><span>color.palette.slate.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#434958"></span><span class="hex-value">#434958</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-800.html" class="token-link"><span>color.palette.slate.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#2D313C"></span><span class="hex-value">#2D313C</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-900.html" class="token-link"><span>color.palette.slate.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#181A21"></span><span class="hex-value">#181A21</span></span></td></tr>
+              <tr><td><a href="tokens/palette-slate-950.html" class="token-link"><span>color.palette.slate.950</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#0D0E12"></span><span class="hex-value">#0D0E12</span></span></td></tr>
+              <!-- Gray -->
+              <tr><td><a href="tokens/palette-gray-100.html" class="token-link"><span>color.palette.gray.100</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#FCFCFC"></span><span class="hex-value">#FCFCFC</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-150.html" class="token-link"><span>color.palette.gray.150</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#F5F5F5"></span><span class="hex-value">#F5F5F5</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-200.html" class="token-link"><span>color.palette.gray.200</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#EFEFEF"></span><span class="hex-value">#EFEFEF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-250.html" class="token-link"><span>color.palette.gray.250</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#E8E8E8"></span><span class="hex-value">#E8E8E8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-300.html" class="token-link"><span>color.palette.gray.300</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#DFDFDF"></span><span class="hex-value">#DFDFDF</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-350.html" class="token-link"><span>color.palette.gray.350</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#C8C8C8"></span><span class="hex-value">#C8C8C8</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-400.html" class="token-link"><span>color.palette.gray.400</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#B7B7B7"></span><span class="hex-value">#B7B7B7</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-450.html" class="token-link"><span>color.palette.gray.450</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#AAAAAA"></span><span class="hex-value">#AAAAAA</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-500.html" class="token-link"><span>color.palette.gray.500</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#949494"></span><span class="hex-value">#949494</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-600.html" class="token-link"><span>color.palette.gray.600</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#777777"></span><span class="hex-value">#777777</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-650.html" class="token-link"><span>color.palette.gray.650</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#616161"></span><span class="hex-value">#616161</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-700.html" class="token-link"><span>color.palette.gray.700</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#555555"></span><span class="hex-value">#555555</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-750.html" class="token-link"><span>color.palette.gray.750</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#3F3F3F"></span><span class="hex-value">#3F3F3F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-800.html" class="token-link"><span>color.palette.gray.800</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#303030"></span><span class="hex-value">#303030</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-850.html" class="token-link"><span>color.palette.gray.850</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#1F1F1F"></span><span class="hex-value">#1F1F1F</span></span></td></tr>
+              <tr><td><a href="tokens/palette-gray-900.html" class="token-link"><span>color.palette.gray.900</span></a></td><td><span class="token-value"><span class="color-chip" style="background:#111111"></span><span class="hex-value">#111111</span></span></td></tr>
+              <!-- Alpha White -->
+              <tr><td><a href="tokens/palette-alpha-white-4.html" class="token-link"><span>color.palette.alpha.white.4</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff0a"></span><span class="hex-value">#ffffff0a</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-6.html" class="token-link"><span>color.palette.alpha.white.6</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff0f"></span><span class="hex-value">#ffffff0f</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-8.html" class="token-link"><span>color.palette.alpha.white.8</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff14"></span><span class="hex-value">#ffffff14</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-10.html" class="token-link"><span>color.palette.alpha.white.10</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff1a"></span><span class="hex-value">#ffffff1a</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-15.html" class="token-link"><span>color.palette.alpha.white.15</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff26"></span><span class="hex-value">#ffffff26</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-20.html" class="token-link"><span>color.palette.alpha.white.20</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff33"></span><span class="hex-value">#ffffff33</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-25.html" class="token-link"><span>color.palette.alpha.white.25</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff40"></span><span class="hex-value">#ffffff40</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-30.html" class="token-link"><span>color.palette.alpha.white.30</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff4d"></span><span class="hex-value">#ffffff4d</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-35.html" class="token-link"><span>color.palette.alpha.white.35</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff59"></span><span class="hex-value">#ffffff59</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-40.html" class="token-link"><span>color.palette.alpha.white.40</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff66"></span><span class="hex-value">#ffffff66</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-45.html" class="token-link"><span>color.palette.alpha.white.45</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff73"></span><span class="hex-value">#ffffff73</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-50.html" class="token-link"><span>color.palette.alpha.white.50</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff80"></span><span class="hex-value">#ffffff80</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-55.html" class="token-link"><span>color.palette.alpha.white.55</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff8c"></span><span class="hex-value">#ffffff8c</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-60.html" class="token-link"><span>color.palette.alpha.white.60</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffff99"></span><span class="hex-value">#ffffff99</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-65.html" class="token-link"><span>color.palette.alpha.white.65</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffa6"></span><span class="hex-value">#ffffffa6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-70.html" class="token-link"><span>color.palette.alpha.white.70</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffb3"></span><span class="hex-value">#ffffffb3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-75.html" class="token-link"><span>color.palette.alpha.white.75</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffbf"></span><span class="hex-value">#ffffffbf</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-80.html" class="token-link"><span>color.palette.alpha.white.80</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffcc"></span><span class="hex-value">#ffffffcc</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-85.html" class="token-link"><span>color.palette.alpha.white.85</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffd9"></span><span class="hex-value">#ffffffd9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-white-90.html" class="token-link"><span>color.palette.alpha.white.90</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #ffffffe6"></span><span class="hex-value">#ffffffe6</span></span></td></tr>
+              <!-- Alpha Black -->
+              <tr><td><a href="tokens/palette-alpha-black-4.html" class="token-link"><span>color.palette.alpha.black.4</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #0000000a"></span><span class="hex-value">#0000000a</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-6.html" class="token-link"><span>color.palette.alpha.black.6</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #0000000f"></span><span class="hex-value">#0000000f</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-8.html" class="token-link"><span>color.palette.alpha.black.8</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000014"></span><span class="hex-value">#00000014</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-10.html" class="token-link"><span>color.palette.alpha.black.10</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #0000001a"></span><span class="hex-value">#0000001a</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-15.html" class="token-link"><span>color.palette.alpha.black.15</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000026"></span><span class="hex-value">#00000026</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-20.html" class="token-link"><span>color.palette.alpha.black.20</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000033"></span><span class="hex-value">#00000033</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-25.html" class="token-link"><span>color.palette.alpha.black.25</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000040"></span><span class="hex-value">#00000040</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-30.html" class="token-link"><span>color.palette.alpha.black.30</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #0000004d"></span><span class="hex-value">#0000004d</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-35.html" class="token-link"><span>color.palette.alpha.black.35</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000059"></span><span class="hex-value">#00000059</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-40.html" class="token-link"><span>color.palette.alpha.black.40</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000066"></span><span class="hex-value">#00000066</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-45.html" class="token-link"><span>color.palette.alpha.black.45</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000073"></span><span class="hex-value">#00000073</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-50.html" class="token-link"><span>color.palette.alpha.black.50</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000080"></span><span class="hex-value">#00000080</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-55.html" class="token-link"><span>color.palette.alpha.black.55</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #0000008c"></span><span class="hex-value">#0000008c</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-60.html" class="token-link"><span>color.palette.alpha.black.60</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #00000099"></span><span class="hex-value">#00000099</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-65.html" class="token-link"><span>color.palette.alpha.black.65</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000a6"></span><span class="hex-value">#000000a6</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-70.html" class="token-link"><span>color.palette.alpha.black.70</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000b3"></span><span class="hex-value">#000000b3</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-75.html" class="token-link"><span>color.palette.alpha.black.75</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000bf"></span><span class="hex-value">#000000bf</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-80.html" class="token-link"><span>color.palette.alpha.black.80</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000cc"></span><span class="hex-value">#000000cc</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-85.html" class="token-link"><span>color.palette.alpha.black.85</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000d9"></span><span class="hex-value">#000000d9</span></span></td></tr>
+              <tr><td><a href="tokens/palette-alpha-black-90.html" class="token-link"><span>color.palette.alpha.black.90</span></a></td><td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: #000000e6"></span><span class="hex-value">#000000e6</span></span></td></tr>
+            </tbody>
+          </table>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="color-roles.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Color Roles</span>
+            </span>
+          </a>
+          <a href="../typography/index.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Typography</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

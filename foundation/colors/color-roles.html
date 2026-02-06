@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Roles - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../tokens.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="color-system.html">Color</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Color Roles</span>
+          </nav>
+          <h1>Color Roles</h1>
+          <p class="hero-description"
+             data-en="The color system provides a structured approach to using colors consistently across the LINE GIFTSHOP platform. It defines how colors are organized, named, and applied throughout the design system."
+             data-ko="컬러 시스템은 LINE GIFTSHOP 플랫폼 전반에서 색상을 일관되게 사용하기 위한 체계적인 접근 방식을 제공합니다. 색상의 구성, 명명 및 디자인 시스템 전반에 걸친 적용 방법을 정의합니다."
+             data-zh="颜色系统为在LINE GIFTSHOP平台上一致使用颜色提供了结构化的方法。它定义了颜色的组织方式、命名规则以及在整个设计系统中的应用方式。"
+             data-th="ระบบสีให้แนวทางที่เป็นระบบสำหรับการใช้สีอย่างสอดคล้องกันทั่วทั้งแพลตฟอร์ม LINE GIFTSHOP โดยกำหนดวิธีการจัดระเบียบ การตั้งชื่อ และการนำไปใช้ในระบบการออกแบบ">
+            The color system provides a structured approach to using colors consistently across the LINE GIFTSHOP platform. It defines how colors are organized, named, and applied throughout the design system.
+          </p>
+          <div class="hero-image">
+            <img src="../../assets/images/hero-new.jpeg" alt="Color Roles Hero">
+          </div>
+          <div class="category-links">
+            <a href="#background" class="category-link">
+              <span>Background</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#foreground" class="category-link">
+              <span>Foreground</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#border" class="category-link">
+              <span>Border</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#expressive-theme" class="category-link">
+              <span>Expressive Theme</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Role-based Color System</h2>
+          <div class="content-with-image">
+            <div class="content-text">
+              <h3>Systematic Color Structure</h3>
+              <p data-en="Semantic color tokens define colors based on the role and purpose of UI elements. Each category such as Background, Foreground, and Border provides colors appropriate for the function of the element. This system ensures consistent color usage by designers and developers, and automatically applies appropriate colors when switching themes, including dark mode."
+                 data-ko="시맨틱 컬러 토큰은 UI 요소의 역할과 목적에 따라 색상을 정의합니다. 배경, 전경, 테두리와 같은 각 카테고리는 요소의 기능에 적합한 색상을 제공합니다. 이 시스템은 디자이너와 개발자의 일관된 색상 사용을 보장하며, 다크 모드를 포함한 테마 전환 시 적절한 색상을 자동으로 적용합니다."
+                 data-zh="语义颜色令牌根据UI元素的角色和用途定义颜色。背景、前景和边框等各类别为元素的功能提供适当的颜色。该系统确保设计师和开发人员一致使用颜色，并在切换主题（包括深色模式）时自动应用适当的颜色。"
+                 data-th="โทเค็นสีความหมายกำหนดสีตามบทบาทและวัตถุประสงค์ขององค์ประกอบ UI แต่ละหมวดหมู่เช่น พื้นหลัง พื้นหน้า และขอบ ให้สีที่เหมาะสมกับฟังก์ชันขององค์ประกอบ ระบบนี้รับประกันการใช้สีที่สอดคล้องกันโดยนักออกแบบและนักพัฒนา และใช้สีที่เหมาะสมโดยอัตโนมัติเมื่อสลับธีม รวมถึงโหมดมืด">Semantic color tokens define colors based on the role and purpose of UI elements. Each category such as Background, Foreground, and Border provides colors appropriate for the function of the element. This system ensures consistent color usage by designers and developers, and automatically applies appropriate colors when switching themes, including dark mode.</p>
+            </div>
+            <div class="content-image">
+              <img src="../../assets/images/content-image.jpeg" alt="Semantic Color Token">
+            </div>
+          </div>
+          <div class="content-with-image">
+            <div class="content-text">
+              <h3>Background & Surface</h3>
+              <p data-en="Background tokens define the background color of UI surfaces such as pages, cards, and modals. They express hierarchy through Primary, Secondary, and Tertiary levels, and convey meaning through Brand, Accent, and Status colors."
+                 data-ko="배경 토큰은 페이지, 카드, 모달과 같은 UI 표면의 배경색을 정의합니다. Primary, Secondary, Tertiary 레벨을 통해 계층 구조를 표현하고, 브랜드, 액센트, 상태 색상을 통해 의미를 전달합니다."
+                 data-zh="背景令牌定义页面、卡片和模态框等UI表面的背景颜色。它们通过主要、次要和第三级别表达层次结构，并通过品牌、强调和状态颜色传达含义。"
+                 data-th="โทเค็นพื้นหลังกำหนดสีพื้นหลังของพื้นผิว UI เช่น หน้า การ์ด และโมดัล พวกมันแสดงลำดับชั้นผ่านระดับหลัก รอง และตติยภูมิ และสื่อความหมายผ่านสีแบรนด์ สีเน้น และสีสถานะ">Background tokens define the background color of UI surfaces such as pages, cards, and modals. They express hierarchy through Primary, Secondary, and Tertiary levels, and convey meaning through Brand, Accent, and Status colors.</p>
+            </div>
+            <div class="content-image">
+              <img src="../../assets/images/content-image.jpeg" alt="Background Colors">
+            </div>
+          </div>
+          <div class="content-with-image">
+            <div class="content-text">
+              <h3>Foreground & Text</h3>
+              <p data-en="Foreground tokens define the colors of foreground elements such as text and icons. They provide highly readable colors that consider background contrast, and ensure accessibility with On-color tokens that match each background color."
+                 data-ko="전경 토큰은 텍스트, 아이콘과 같은 전경 요소의 색상을 정의합니다. 배경 대비를 고려한 가독성 높은 색상을 제공하며, 각 배경색에 맞는 On-color 토큰으로 접근성을 보장합니다."
+                 data-zh="前景令牌定义文本和图标等前景元素的颜色。它们提供考虑背景对比度的高可读性颜色，并通过与每种背景颜色匹配的On-color令牌确保可访问性。"
+                 data-th="โทเค็นพื้นหน้ากำหนดสีขององค์ประกอบพื้นหน้าเช่น ข้อความและไอคอน พวกมันให้สีที่อ่านง่ายมากโดยพิจารณาคอนทราสต์พื้นหลัง และรับประกันการเข้าถึงด้วยโทเค็น On-color ที่ตรงกับแต่ละสีพื้นหลัง">Foreground tokens define the colors of foreground elements such as text and icons. They provide highly readable colors that consider background contrast, and ensure accessibility with On-color tokens that match each background color.</p>
+            </div>
+            <div class="content-image">
+              <img src="../../assets/images/content-image.jpeg" alt="Foreground Colors">
+            </div>
+          </div>
+          <div class="content-with-image">
+            <div class="content-text">
+              <h3>Border & Divider</h3>
+              <p data-en="Border tokens define colors used for borders, dividers, and outlines. They clarify boundaries between elements and provide visual distinction based on state or importance."
+                 data-ko="테두리 토큰은 테두리, 구분선, 아웃라인에 사용되는 색상을 정의합니다. 요소 간의 경계를 명확히 하고 상태나 중요도에 따른 시각적 구분을 제공합니다."
+                 data-zh="边框令牌定义用于边框、分隔线和轮廓的颜色。它们明确元素之间的边界，并根据状态或重要性提供视觉区分。"
+                 data-th="โทเค็นขอบกำหนดสีที่ใช้สำหรับขอบ ตัวแบ่ง และเส้นขอบนอก พวกมันชี้แจงขอบเขตระหว่างองค์ประกอบและให้ความแตกต่างทางภาพตามสถานะหรือความสำคัญ">Border tokens define colors used for borders, dividers, and outlines. They clarify boundaries between elements and provide visual distinction based on state or importance.</p>
+            </div>
+            <div class="content-image">
+              <img src="../../assets/images/content-image.jpeg" alt="Border Colors">
+            </div>
+          </div>
+          <h2>Semantic Color Token</h2>
+        </section>
+
+        <!-- Background Section -->
+        <section class="semantic-section" id="background">
+          <h3>Background</h3>
+          <p class="description"
+             data-en="Background colors are used for the backgrounds of pages, cards, and components."
+             data-ko="배경색은 페이지, 카드, 컴포넌트의 배경에 사용됩니다."
+             data-zh="背景颜色用于页面、卡片和组件的背景。"
+             data-th="สีพื้นหลังใช้สำหรับพื้นหลังของหน้า การ์ด และคอมโพเนนต์">Background colors are used for the backgrounds of pages, cards, and components.</p>
+
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.primary</span></a></span>
+                    <span class="token-description">Color used for the default page background.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="tokens/palette-white.html" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.secondary</span></a></span>
+                    <span class="token-description">Color used for card and section backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-100)"></span><a href="tokens/palette-gray-100.html" class="token-link"><span>$color.palette.gray.100</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.tertiary</span></a></span>
+                    <span class="token-description">Color used for backgrounds that separate areas.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-150)"></span><a href="tokens/palette-gray-150.html" class="token-link"><span>$color.palette.gray.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.brand-strong</span></a></span>
+                    <span class="token-description">Color used for primary CTA buttons.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-800)"></span><a href="tokens/palette-green-800.html" class="token-link"><span>$color.palette.green.800</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.brand-primary</span></a></span>
+                    <span class="token-description">Color used for brand buttons and selected states.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-700)"></span><a href="tokens/palette-green-700.html" class="token-link"><span>$color.palette.green.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.brand-secondary</span></a></span>
+                    <span class="token-description">Color used for brand information backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-200)"></span><a href="tokens/palette-green-200.html" class="token-link"><span>$color.palette.green.200</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.brand-tertiary</span></a></span>
+                    <span class="token-description">Color used for light brand backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-100)"></span><a href="tokens/palette-green-100.html" class="token-link"><span>$color.palette.green.100</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.attention-solid</span></a></span>
+                    <span class="token-description">Color used for error buttons and delete buttons.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-700)"></span><a href="tokens/palette-red-700.html" class="token-link"><span>$color.palette.red.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.attention-weak</span></a></span>
+                    <span class="token-description">Color used for warning message backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-150)"></span><a href="tokens/palette-red-150.html" class="token-link"><span>$color.palette.red.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.accent-solid</span></a></span>
+                    <span class="token-description">Color used for promotion and special feature buttons.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-h600)"></span><a href="tokens/palette-deep-purple-h600.html" class="token-link"><span>$color.palette.deep-purple.h600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.accent-weak</span></a></span>
+                    <span class="token-description">Color used for promotion message backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-150)"></span><a href="tokens/palette-deep-purple-150.html" class="token-link"><span>$color.palette.deep-purple.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.success-solid</span></a></span>
+                    <span class="token-description">Color used for completion buttons and success badges.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-700)"></span><a href="tokens/palette-blue-700.html" class="token-link"><span>$color.palette.blue.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.success-weak</span></a></span>
+                    <span class="token-description">Color used for success message backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-500)"></span><a href="tokens/palette-blue-500.html" class="token-link"><span>$color.palette.blue.500</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.magic-solid</span></a></span>
+                    <span class="token-description">Color used for special moments like birthdays and events.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-600)"></span><a href="tokens/palette-red-600.html" class="token-link"><span>$color.palette.red.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.notice-solid</span></a></span>
+                    <span class="token-description">Color used for notice badges.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-slate-500)"></span><a href="tokens/palette-slate-500.html" class="token-link"><span>$color.palette.slate.500</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.notice-weak</span></a></span>
+                    <span class="token-description">Color used for notice message backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-slate-150)"></span><a href="tokens/palette-slate-150.html" class="token-link"><span>$color.palette.slate.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.information-solid</span></a></span>
+                    <span class="token-description">Color used for info buttons and help badges.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-600)"></span><a href="tokens/palette-blue-600.html" class="token-link"><span>$color.palette.blue.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.information-weak</span></a></span>
+                    <span class="token-description">Color used for information message backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-100)"></span><a href="tokens/palette-blue-100.html" class="token-link"><span>$color.palette.blue.100</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.disabled</span></a></span>
+                    <span class="token-description">Color used for disabled elements.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-150)"></span><a href="tokens/palette-gray-150.html" class="token-link"><span>$color.palette.gray.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.elevated</span></a></span>
+                    <span class="token-description">Color used for modals, popups, and dropdowns.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="tokens/palette-white.html" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.secondary-on-elevated</span></a></span>
+                    <span class="token-description">Color used for sections inside modals.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-200)"></span><a href="tokens/palette-gray-200.html" class="token-link"><span>$color.palette.gray.200</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.on-secondary</span></a></span>
+                    <span class="token-description">Color used for nested backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-200)"></span><a href="tokens/palette-gray-200.html" class="token-link"><span>$color.palette.gray.200</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.inverse</span></a></span>
+                    <span class="token-description">Color used for dark theme elements.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-800)"></span><a href="tokens/palette-gray-800.html" class="token-link"><span>$color.palette.gray.800</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.strong</span></a></span>
+                    <span class="token-description">Color used for backgrounds requiring maximum contrast.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-900)"></span><a href="tokens/palette-gray-900.html" class="token-link"><span>$color.palette.gray.900</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.on-image</span></a></span>
+                    <span class="token-description">Color used for semi-transparent backgrounds over images.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: var(--palette-alpha-black-4)"></span><a href="tokens/palette-alpha-black-4.html" class="token-link"><span>$color.palette.alpha.black.4</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.bg.overlay</span></a></span>
+                    <span class="token-description">Color used for modal dim overlay.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip alpha" style="--alpha-color: var(--palette-alpha-black-35)"></span><a href="tokens/palette-alpha-black-35.html" class="token-link"><span>$color.palette.alpha.black.35</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Foreground Section -->
+        <section class="semantic-section" id="foreground">
+          <h3>Foreground</h3>
+          <p class="description"
+             data-en="Foreground colors are used for foreground elements such as text and icons."
+             data-ko="전경색은 텍스트, 아이콘과 같은 전경 요소에 사용됩니다."
+             data-zh="前景颜色用于文本和图标等前景元素。"
+             data-th="สีพื้นหน้าใช้สำหรับองค์ประกอบพื้นหน้าเช่น ข้อความและไอคอน">Foreground colors are used for foreground elements such as text and icons.</p>
+
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.primary</span></a></span>
+                    <span class="token-description">Color used for primary text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-900)"></span><a href="color-palette.html#gray-900" class="token-link"><span>$color.palette.gray.900</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.secondary</span></a></span>
+                    <span class="token-description">Color used for secondary text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-700)"></span><a href="color-palette.html#gray-700" class="token-link"><span>$color.palette.gray.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.disabled</span></a></span>
+                    <span class="token-description">Color used for disabled text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-350)"></span><a href="color-palette.html#gray-350" class="token-link"><span>$color.palette.gray.350</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-disabled</span></a></span>
+                    <span class="token-description">Color used for text on disabled backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-350)"></span><a href="color-palette.html#gray-350" class="token-link"><span>$color.palette.gray.350</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.brand-primary</span></a></span>
+                    <span class="token-description">Color used for brand text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-700)"></span><a href="color-palette.html#green-700" class="token-link"><span>$color.palette.green.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-brand-primary</span></a></span>
+                    <span class="token-description">Color used for text on brand backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.attention-solid</span></a></span>
+                    <span class="token-description">Color used for error and warning text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-700)"></span><a href="color-palette.html#red-700" class="token-link"><span>$color.palette.red.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.accent-solid</span></a></span>
+                    <span class="token-description">Color used for accent text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-h600)"></span><a href="color-palette.html#deep-purple-h600" class="token-link"><span>$color.palette.deep-purple.h600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.success-solid</span></a></span>
+                    <span class="token-description">Color used for success text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-700)"></span><a href="color-palette.html#blue-700" class="token-link"><span>$color.palette.blue.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.magic-solid</span></a></span>
+                    <span class="token-description">Color used for text on special occasions.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-600)"></span><a href="color-palette.html#red-600" class="token-link"><span>$color.palette.red.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.notice-solid</span></a></span>
+                    <span class="token-description">Color used for notice text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-slate-500)"></span><a href="color-palette.html#slate-500" class="token-link"><span>$color.palette.slate.500</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.information-solid</span></a></span>
+                    <span class="token-description">Color used for information text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-600)"></span><a href="color-palette.html#blue-600" class="token-link"><span>$color.palette.blue.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-accent</span></a></span>
+                    <span class="token-description">Color used for text on accent backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-attention</span></a></span>
+                    <span class="token-description">Color used for text on warning backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-success</span></a></span>
+                    <span class="token-description">Color used for text on success backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-magic</span></a></span>
+                    <span class="token-description">Color used for text on special backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-notice</span></a></span>
+                    <span class="token-description">Color used for text on notice backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-information</span></a></span>
+                    <span class="token-description">Color used for text on information backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-inverse</span></a></span>
+                    <span class="token-description">Color used for text on inverse backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.on-strong</span></a></span>
+                    <span class="token-description">Color used for text on strong backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.fg.link</span></a></span>
+                    <span class="token-description">Color used for link text.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-700)"></span><a href="color-palette.html#blue-700" class="token-link"><span>$color.palette.blue.700</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Border Section -->
+        <section class="semantic-section" id="border">
+          <h3>Border</h3>
+          <p class="description"
+             data-en="Border colors are used for borders, dividers, etc."
+             data-ko="테두리 색상은 테두리, 구분선 등에 사용됩니다."
+             data-zh="边框颜色用于边框、分隔线等。"
+             data-th="สีขอบใช้สำหรับขอบ ตัวแบ่ง ฯลฯ">Border colors are used for borders, dividers, etc.</p>
+
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.primary</span></a></span>
+                    <span class="token-description">Color used for primary borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-900)"></span><a href="color-palette.html#gray-900" class="token-link"><span>$color.palette.gray.900</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.secondary</span></a></span>
+                    <span class="token-description">Color used for secondary borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-300)"></span><a href="color-palette.html#gray-300" class="token-link"><span>$color.palette.gray.300</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.tertiary</span></a></span>
+                    <span class="token-description">Color used for light borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-200)"></span><a href="color-palette.html#gray-200" class="token-link"><span>$color.palette.gray.200</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.brand-solid</span></a></span>
+                    <span class="token-description">Color used for brand borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-700)"></span><a href="color-palette.html#green-700" class="token-link"><span>$color.palette.green.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.brand-weak</span></a></span>
+                    <span class="token-description">Color used for light brand borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-200)"></span><a href="color-palette.html#green-200" class="token-link"><span>$color.palette.green.200</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.accent-solid</span></a></span>
+                    <span class="token-description">Color used for accent borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-700)"></span><a href="color-palette.html#red-700" class="token-link"><span>$color.palette.red.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.attention-solid</span></a></span>
+                    <span class="token-description">Color used for attention borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-h600)"></span><a href="color-palette.html#deep-purple-h600" class="token-link"><span>$color.palette.deep-purple.h600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.success-solid</span></a></span>
+                    <span class="token-description">Color used for success borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-500)"></span><a href="color-palette.html#blue-500" class="token-link"><span>$color.palette.blue.500</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.magic-solid</span></a></span>
+                    <span class="token-description">Color used for borders on special occasions.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-600)"></span><a href="color-palette.html#red-600" class="token-link"><span>$color.palette.red.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.notice-solid</span></a></span>
+                    <span class="token-description">Color used for notice borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-slate-500)"></span><a href="color-palette.html#slate-500" class="token-link"><span>$color.palette.slate.500</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.information-solid</span></a></span>
+                    <span class="token-description">Color used for information borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-600)"></span><a href="color-palette.html#blue-600" class="token-link"><span>$color.palette.blue.600</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.inverse</span></a></span>
+                    <span class="token-description">Color used for inverse borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-accent</span></a></span>
+                    <span class="token-description">Color used for borders on accent backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-attention</span></a></span>
+                    <span class="token-description">Color used for borders on warning backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-success</span></a></span>
+                    <span class="token-description">Color used for borders on success backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-magic</span></a></span>
+                    <span class="token-description">Color used for borders on special backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-notice</span></a></span>
+                    <span class="token-description">Color used for borders on notice backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-information</span></a></span>
+                    <span class="token-description">Color used for borders on information backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-inverse</span></a></span>
+                    <span class="token-description">Color used for borders on inverse backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.on-disabled</span></a></span>
+                    <span class="token-description">Color used for borders on disabled backgrounds.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-white)"></span><a href="color-palette.html#white" class="token-link"><span>$color.palette.white</span></a></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="token-cell">
+                    <span class="token-name"><a href="#" class="token-link"><span>$color.border.disabled</span></a></span>
+                    <span class="token-description">Color used for disabled borders.</span>
+                  </div>
+                </td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-gray-200)"></span><a href="color-palette.html#gray-200" class="token-link"><span>$color.palette.gray.200</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Expressive Theme Section -->
+        <section class="semantic-section" id="expressive-theme">
+          <h3>Expressive Theme</h3>
+          <p class="description"
+             data-en="Expressive theme colors used to express various emotions and moods."
+             data-ko="다양한 감정과 분위기를 표현하는 데 사용되는 표현적 테마 색상입니다."
+             data-zh="用于表达各种情感和情绪的表现性主题颜色。"
+             data-th="สีธีมแบบแสดงออกที่ใช้เพื่อแสดงอารมณ์และความรู้สึกต่างๆ">Expressive theme colors used to express various emotions and moods.</p>
+
+          <table class="token-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.lightgreen-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-green-700)"></span><a href="color-palette.html#lightgreen-700" class="token-link"><span>$color.palette.lightgreen.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.lightgreen-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E9FAE3"></span><a href="color-palette.html#lightgreen-150" class="token-link"><span>$color.palette.lightgreen.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.teal-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #19BFA1"></span><a href="color-palette.html#teal-700" class="token-link"><span>$color.palette.teal.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.teal-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E6FAF6"></span><a href="color-palette.html#teal-150" class="token-link"><span>$color.palette.teal.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.cyan-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #1CB8B8"></span><a href="color-palette.html#cyan-700" class="token-link"><span>$color.palette.cyan.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.cyan-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E3FCFC"></span><a href="color-palette.html#cyan-150" class="token-link"><span>$color.palette.cyan.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.lightblue-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #00B8E5"></span><a href="color-palette.html#lightblue-700" class="token-link"><span>$color.palette.light-blue.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.lightblue-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E8F9FC"></span><a href="color-palette.html#lightblue-150" class="token-link"><span>$color.palette.light-blue.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.skyblue-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #1A9CFF"></span><a href="color-palette.html#skyblue-700" class="token-link"><span>$color.palette.sky-blue.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.skyblue-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E8F5FF"></span><a href="color-palette.html#skyblue-150" class="token-link"><span>$color.palette.sky-blue.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.blue-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-700)"></span><a href="color-palette.html#blue-700" class="token-link"><span>$color.palette.blue.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.blue-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-blue-150)"></span><a href="color-palette.html#blue-150" class="token-link"><span>$color.palette.blue.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.indigo-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #5F5FED"></span><a href="color-palette.html#indigo-700" class="token-link"><span>$color.palette.indigo.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.indigo-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #E8E8FC"></span><a href="color-palette.html#indigo-150" class="token-link"><span>$color.palette.indigo.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.deeppurple-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-700)"></span><a href="color-palette.html#deep-purple-700" class="token-link"><span>$color.palette.deep-purple.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.deeppurple-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-deep-purple-150)"></span><a href="color-palette.html#deep-purple-150" class="token-link"><span>$color.palette.deep-purple.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.purple-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #C355D9"></span><a href="color-palette.html#purple-700" class="token-link"><span>$color.palette.purple.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.purple-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #F4E8F7"></span><a href="color-palette.html#purple-150" class="token-link"><span>$color.palette.purple.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.magenta-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #F74397"></span><a href="color-palette.html#magenta-700" class="token-link"><span>$color.palette.magenta.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.magenta-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FCEDF6"></span><a href="color-palette.html#magenta-150" class="token-link"><span>$color.palette.magenta.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.pink-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FF1F8F"></span><a href="color-palette.html#magenta-h600" class="token-link"><span>$color.palette.magenta.h600</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.red-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-700)"></span><a href="color-palette.html#red-700" class="token-link"><span>$color.palette.red.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.red-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: var(--palette-red-150)"></span><a href="color-palette.html#red-150" class="token-link"><span>$color.palette.red.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.orange-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FF6F36"></span><a href="color-palette.html#orange-700" class="token-link"><span>$color.palette.orange.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.orange-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FFF4F0"></span><a href="color-palette.html#orange-150" class="token-link"><span>$color.palette.orange.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.amber-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FA9E1E"></span><a href="color-palette.html#amber-700" class="token-link"><span>$color.palette.amber.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.amber-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FFFCE8"></span><a href="color-palette.html#amber-150" class="token-link"><span>$color.palette.amber.150</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.yellow-solid</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FFD900"></span><a href="color-palette.html#yellow-700" class="token-link"><span>$color.palette.yellow.700</span></a></span></td>
+              </tr>
+              <tr>
+                <td><span class="token-name"><a href="#" class="token-link"><span>$color.expressive.yellow-weak</span></a></span></td>
+                <td><span class="token-value"><span class="color-chip" style="background: #FDFFEB"></span><a href="color-palette.html#yellow-150" class="token-link"><span>$color.palette.yellow.150</span></a></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="color-system.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Color System</span>
+            </span>
+          </a>
+          <a href="color-palette.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Color Palette</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

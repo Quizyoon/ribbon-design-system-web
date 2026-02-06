@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card - Components - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="../styling/colors.html">Colors</a></li>
+                <li><a href="../styling/typography.html">Typography</a></li>
+                <li><a href="../styling/spacing.html">Spacing</a></li>
+                <li><a href="../styling/icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="card.html" class="active">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="#">Components</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Card</span>
+          </nav>
+          <h1>Card <span class="version-tag">v1.0.0</span></h1>
+          <p class="hero-description"
+             data-en="Cards are container components that group related content and actions."
+             data-ko="카드는 관련된 콘텐츠와 액션을 그룹화하는 컨테이너 컴포넌트입니다."
+             data-zh="卡片是将相关内容和操作分组的容器组件。"
+             data-th="Card เป็นคอมโพเนนต์คอนเทนเนอร์ที่จัดกลุ่มเนื้อหาและการดำเนินการที่เกี่ยวข้อง">
+            카드는 관련된 콘텐츠와 액션을 그룹화하는 컨테이너 컴포넌트입니다.
+          </p>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="semantic-section">
+          <h2 data-en="Getting Started" data-ko="시작하기" data-zh="开始使用" data-th="เริ่มต้นใช้งาน">시작하기</h2>
+        </section>
+
+        <div class="install-steps">
+          <!-- Step 1: Import -->
+          <div class="install-step">
+            <div class="install-step-number">1</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Import the Card component." data-ko="Card 컴포넌트를 import 합니다." data-zh="导入 Card 组件。" data-th="นำเข้าคอมโพเนนต์ Card">Card 컴포넌트를 import 합니다.</h3>
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <span class="code-filename">
+                    <span class="code-file-icon javascript">JS</span>
+                    ES Module
+                  </span>
+                  <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+                <pre class="code-block"><code><span class="keyword">import</span> { <span class="component">CCard</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span></code></pre>
+              </div>
+
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <span class="code-filename">
+                    <span class="code-file-icon vue">VUE</span>
+                    Vue SFC
+                  </span>
+                  <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+                <pre class="code-block"><code><span class="tag">&lt;template&gt;</span>
+  <span class="tag">&lt;<span class="component">CCard</span>&gt;</span>
+    <span class="tag">&lt;p&gt;</span>카드 내용<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;/template&gt;</span>
+
+<span class="tag">&lt;script setup&gt;</span>
+<span class="keyword">import</span> { <span class="component">CCard</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span>
+<span class="tag">&lt;/script&gt;</span></code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Basic Usage -->
+          <div class="install-step">
+            <div class="install-step-number">2</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Basic Card usage." data-ko="가장 기본적인 Card 사용 방법입니다." data-zh="最基本的 Card 使用方法。" data-th="วิธีใช้งาน Card พื้นฐาน">가장 기본적인 Card 사용 방법입니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <div class="demo-card demo-card--elevated" style="max-width: 280px;">
+                    <p style="margin: 0; font-weight: 600;" data-en="Product Card" data-ko="상품 카드" data-zh="商品卡片" data-th="การ์ดสินค้า">상품 카드</p>
+                    <p style="margin: 8px 0 0 0; font-size: 14px; color: #666;" data-en="Basic usage example of the card component." data-ko="카드 컴포넌트의 기본 사용 예시입니다." data-zh="卡片组件的基本使用示例。" data-th="ตัวอย่างการใช้งานพื้นฐานของคอมโพเนนต์ Card">카드 컴포넌트의 기본 사용 예시입니다.</p>
+                  </div>
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Basic Usage
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span>&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span data-en="Card content" data-ko="카드 내용" data-zh="卡片内容" data-th="เนื้อหาการ์ด">카드 내용</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Variant -->
+          <div class="install-step">
+            <div class="install-step-number">3</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Use the variant prop to create cards with different styles." data-ko="variant prop을 사용하여 다양한 스타일의 카드를 만들 수 있습니다." data-zh="使用 variant prop 创建不同样式的卡片。" data-th="ใช้ prop variant เพื่อสร้าง Card ที่มีสไตล์ต่างๆ">variant prop을 사용하여 다양한 스타일의 카드를 만들 수 있습니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <div class="card-row">
+                    <div class="demo-card demo-card--elevated" style="max-width: 160px;">
+                      <p style="margin: 0; font-weight: 600;">Elevated</p>
+                    </div>
+                    <div class="demo-card demo-card--outlined" style="max-width: 160px;">
+                      <p style="margin: 0; font-weight: 600;">Outlined</p>
+                    </div>
+                    <div class="demo-card demo-card--filled" style="max-width: 160px;">
+                      <p style="margin: 0; font-weight: 600;">Filled</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Variants
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"elevated"</span>&gt;</span>Elevated<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"outlined"</span>&gt;</span>Outlined<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"filled"</span>&gt;</span>Filled<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Advanced Usage -->
+          <div class="install-step">
+            <div class="install-step-number">4</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Use slots to add headers and footers." data-ko="슬롯을 활용하여 헤더와 푸터를 추가합니다." data-zh="使用插槽添加页眉和页脚。" data-th="ใช้ slot เพื่อเพิ่ม header และ footer">슬롯을 활용하여 헤더와 푸터를 추가합니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <div class="demo-card demo-card--elevated" style="max-width: 280px;">
+                    <div style="border-bottom: 1px solid #E0E0E0; padding-bottom: 12px; margin-bottom: 12px;">
+                      <p style="margin: 0; font-weight: 600;" data-en="Card Title" data-ko="카드 제목" data-zh="卡片标题" data-th="ชื่อการ์ด">카드 제목</p>
+                    </div>
+                    <p style="margin: 0; font-size: 14px; color: #666;" data-en="This is the card content. Detailed description goes here." data-ko="카드 내용입니다. 여기에 상세 설명이 들어갑니다." data-zh="这是卡片内容。详细描述在此处。" data-th="นี่คือเนื้อหาการ์ด รายละเอียดอยู่ที่นี่">카드 내용입니다. 여기에 상세 설명이 들어갑니다.</p>
+                    <div style="border-top: 1px solid #E0E0E0; padding-top: 12px; margin-top: 12px; display: flex; gap: 8px; justify-content: flex-end;">
+                      <button style="padding: 8px 16px; border: 1px solid #E0E0E0; border-radius: 8px; background: white; cursor: pointer;" data-en="Cancel" data-ko="취소" data-zh="取消" data-th="ยกเลิก">취소</button>
+                      <button style="padding: 8px 16px; border: none; border-radius: 8px; background: #06C755; color: white; cursor: pointer;" data-en="Confirm" data-ko="확인" data-zh="确认" data-th="ยืนยัน">확인</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Advanced Usage
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span>&gt;</span>
+  <span class="tag">&lt;template</span> <span class="attr">#header</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3&gt;</span><span data-en="Card Title" data-ko="카드 제목" data-zh="卡片标题" data-th="ชื่อการ์ด">카드 제목</span><span class="tag">&lt;/h3&gt;</span>
+  <span class="tag">&lt;/template&gt;</span>
+
+  <span class="tag">&lt;p&gt;</span><span data-en="This is the card content." data-ko="카드 내용입니다." data-zh="这是卡片内容。" data-th="นี่คือเนื้อหาการ์ด">카드 내용입니다.</span><span class="tag">&lt;/p&gt;</span>
+
+  <span class="tag">&lt;template</span> <span class="attr">#footer</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"outline"</span>&gt;</span><span data-en="Cancel" data-ko="취소" data-zh="取消" data-th="ยกเลิก">취소</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
+    <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Confirm" data-ko="확인" data-zh="确认" data-th="ยืนยัน">확인</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
+  <span class="tag">&lt;/template&gt;</span>
+<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Properties -->
+        <section class="semantic-section">
+          <h2>Properties</h2>
+        </section>
+
+        <table class="props-table">
+          <thead>
+            <tr>
+              <th data-en="Prop" data-ko="Prop" data-zh="属性" data-th="Prop">Prop</th>
+              <th data-en="Type" data-ko="Type" data-zh="类型" data-th="Type">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>variant?</code></td>
+              <td><code>"elevated" | "outlined" | "filled"</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>"elevated"</code></div>
+                  <p class="prop-description" data-en="Sets the visual style of the card." data-ko="카드의 시각적 스타일을 설정합니다." data-zh="设置卡片的视觉样式。" data-th="กำหนดสไตล์การแสดงผลของ Card">카드의 시각적 스타일을 설정합니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>padding?</code></td>
+              <td><code>"none" | "sm" | "md" | "lg"</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>"md"</code></div>
+                  <p class="prop-description" data-en="Sets the inner padding size of the card." data-ko="카드 내부 패딩 크기를 설정합니다." data-zh="设置卡片内部的间距大小。" data-th="กำหนดขนาด padding ภายใน Card">카드 내부 패딩 크기를 설정합니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="boolean" onclick="togglePropDetails(this)">
+              <td><code>clickable?</code></td>
+              <td><code>boolean</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>false</code></div>
+                  <p class="prop-description" data-en="Makes the card clickable. Hover/active state styles are applied." data-ko="카드를 클릭 가능한 상태로 설정합니다. hover/active 상태 스타일이 적용됩니다." data-zh="使卡片可点击。将应用 hover/active 状态样式。" data-th="ทำให้ Card คลิกได้ จะใช้สไตล์สถานะ hover/active">카드를 클릭 가능한 상태로 설정합니다. hover/active 상태 스타일이 적용됩니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="function" onclick="togglePropDetails(this)">
+              <td><code>onClick?</code></td>
+              <td><code>() =&gt; void</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <p class="prop-description" data-en="Event handler called when the card is clicked." data-ko="카드 클릭 시 호출되는 이벤트 핸들러입니다." data-zh="点击卡片时调用的事件处理程序。" data-th="ตัวจัดการเหตุการณ์ที่เรียกเมื่อคลิก Card">카드 클릭 시 호출되는 이벤트 핸들러입니다.</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Overview -->
+        <section class="semantic-section" id="overview">
+          <h2 data-en="Overview" data-ko="개요" data-zh="概述" data-th="ภาพรวม">개요</h2>
+        </section>
+
+        <!-- Variant -->
+        <section class="semantic-section">
+          <h3 data-en="Variant" data-ko="스타일" data-zh="样式" data-th="รูปแบบ">스타일</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div class="card-row">
+              <div class="demo-card demo-card--elevated" style="max-width: 160px;">
+                <p style="margin: 0; font-weight: 600;">Elevated</p>
+              </div>
+              <div class="demo-card demo-card--outlined" style="max-width: 160px;">
+                <p style="margin: 0; font-weight: 600;">Outlined</p>
+              </div>
+              <div class="demo-card demo-card--filled" style="max-width: 160px;">
+                <p style="margin: 0; font-weight: 600;">Filled</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                Variant
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"elevated"</span>&gt;</span>Elevated<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"outlined"</span>&gt;</span>Outlined<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">variant</span>=<span class="string">"filled"</span>&gt;</span>Filled<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Padding -->
+        <section class="semantic-section">
+          <h3 data-en="Padding" data-ko="패딩" data-zh="内边距" data-th="Padding">패딩</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div class="card-row">
+              <div class="demo-card demo-card--elevated demo-card--padding-none" style="max-width: 120px;">
+                <p style="margin: 0; font-size: 13px;">None</p>
+              </div>
+              <div class="demo-card demo-card--elevated demo-card--padding-sm" style="max-width: 120px;">
+                <p style="margin: 0; font-size: 13px;">Small</p>
+              </div>
+              <div class="demo-card demo-card--elevated demo-card--padding-md" style="max-width: 120px;">
+                <p style="margin: 0; font-size: 13px;">Medium</p>
+              </div>
+              <div class="demo-card demo-card--elevated demo-card--padding-lg" style="max-width: 120px;">
+                <p style="margin: 0; font-size: 13px;">Large</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                Padding
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span> <span class="attr">padding</span>=<span class="string">"none"</span>&gt;</span>None<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">padding</span>=<span class="string">"sm"</span>&gt;</span>Small<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">padding</span>=<span class="string">"md"</span>&gt;</span>Medium<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CCard</span> <span class="attr">padding</span>=<span class="string">"lg"</span>&gt;</span>Large<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Clickable -->
+        <section class="semantic-section">
+          <h3 data-en="Clickable" data-ko="클릭 가능" data-zh="可点击" data-th="คลิกได้">클릭 가능</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div class="card-row">
+              <div class="demo-card demo-card--elevated demo-card--clickable" style="max-width: 200px;">
+                <p style="margin: 0; font-weight: 600;" data-en="Clickable" data-ko="클릭 가능" data-zh="可点击" data-th="คลิกได้">클릭 가능</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #666;" data-en="Click this card" data-ko="이 카드를 클릭하세요" data-zh="点击此卡片" data-th="คลิกการ์ดนี้">이 카드를 클릭하세요</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                Clickable
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CCard</span> <span class="attr">clickable</span> <span class="attr">@click</span>=<span class="string">"handleClick"</span>&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span data-en="Clickable" data-ko="클릭 가능" data-zh="可点击" data-th="คลิกได้">클릭 가능</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span data-en="Click this card" data-ko="이 카드를 클릭하세요" data-zh="点击此卡片" data-th="คลิกการ์ดนี้">이 카드를 클릭하세요</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/<span class="component">CCard</span>&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Related -->
+        <div class="quick-links">
+          <a href="../../foundation/colors/tokens.html#surface-colors" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Colors</span>
+              <span class="quick-link-desc" data-en="Check Surface color tokens." data-ko="Surface 색상 토큰을 확인하세요." data-zh="查看 Surface 颜色令牌。" data-th="ดูโทเค็นสี Surface">Surface 색상 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="../../foundation/shadow/index.html" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Shadow</span>
+              <span class="quick-link-desc" data-en="Check shadow tokens." data-ko="그림자 토큰을 확인하세요." data-zh="查看阴影令牌。" data-th="ดูโทเค็นเงา">그림자 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="../../foundation/spacing/tokens.html" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Spacing</span>
+              <span class="quick-link-desc" data-en="Check spacing tokens." data-ko="간격 토큰을 확인하세요." data-zh="查看间距令牌。" data-th="ดูโทเค็นระยะห่าง">간격 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="../../foundation/radius/index.html" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Radius</span>
+              <span class="quick-link-desc" data-en="Check border radius tokens." data-ko="모서리 반경 토큰을 확인하세요." data-zh="查看圆角令牌。" data-th="ดูโทเค็นรัศมีขอบ">모서리 반경 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="content-footer">
+      <a href="input.html" class="footer-nav prev">
+        <span class="nav-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </span>
+        <span class="nav-text">
+          <span class="nav-label">Previous</span>
+          <span class="nav-title">Input</span>
+        </span>
+      </a>
+    </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script>
+    async function copyCodeBlock(button) {
+      const container = button.closest('.code-block-wrapper');
+      const codeEl = container.querySelector('code');
+      const text = codeEl.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+
+    async function copyExampleCode(button) {
+      const container = button.closest('.example-code');
+      const preEl = container.querySelector('pre');
+      const text = preEl.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+
+    // Package manager tabs
+    function switchPkgTab(button, pkg) {
+      const container = button.closest('.pkg-code-block');
+
+      // Update tab active state
+      container.querySelectorAll('.pkg-tab').forEach(tab => tab.classList.remove('active'));
+      button.classList.add('active');
+
+      // Update content visibility
+      container.querySelectorAll('.pkg-code-content').forEach(content => content.classList.remove('active'));
+      container.querySelector(`.pkg-code-content[data-pkg="${pkg}"]`).classList.add('active');
+    }
+
+    async function copyPkgCode(button) {
+      const container = button.closest('.pkg-code-block');
+      const activeContent = container.querySelector('.pkg-code-content.active');
+      const text = activeContent.querySelector('pre').textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+
+    async function copySimpleCode(button) {
+      const container = button.closest('.simple-code-block') || button.closest('.simple-code-body');
+      const preEl = container.querySelector('pre');
+      const text = preEl.textContent;
+      const originalIcon = button.innerHTML;
+      const checkIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>`;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.innerHTML = checkIcon;
+        button.classList.add('copied');
+        setTimeout(() => {
+          button.innerHTML = originalIcon;
+          button.classList.remove('copied');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+  </script>
+</body>
+</html>

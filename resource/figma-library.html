@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Library - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header-left">
+      <a href="../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../about.html">About</a>
+        <a href="../index.html">Docs</a>
+        <a href="../web/index.html">Web</a>
+        <a href="../resource/index.html" class="active">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Resource</div>
+          <ul class="nav-list">
+            <li><a href="figma-library.html" class="active">Figma Library</a></li>
+            <li><a href="github-repository.html">GitHub Repository</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="index.html">Resource</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Figma Library</span>
+          </nav>
+          <h1>Figma Library</h1>
+          <p class="hero-description"
+             data-en="Access the official LINE GIFTSHOP Design System Figma library with all components and design tokens."
+             data-ko="모든 컴포넌트와 디자인 토큰이 포함된 공식 LINE GIFTSHOP 디자인 시스템 Figma 라이브러리에 접근하세요."
+             data-zh="访问包含所有组件和设计令牌的官方 LINE GIFTSHOP 设计系统 Figma 库。"
+             data-th="เข้าถึงไลบรารี Figma ของ LINE GIFTSHOP Design System อย่างเป็นทางการพร้อมคอมโพเนนต์และโทเค็นการออกแบบทั้งหมด">
+            Access the official LINE GIFTSHOP Design System Figma library with all components and design tokens.
+          </p>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Getting Access</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <h3>Request Access</h3>
+              <p>Contact the design team to get access to the Figma library. You'll need a Figma account to view and use the components.</p>
+              <h3>Library Features</h3>
+              <p>The Figma library includes all design tokens, components, and patterns used in the LINE GIFTSHOP Design System.</p>
+            </div>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Resource Overview</span>
+            </span>
+          </a>
+          <a href="github-repository.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">GitHub Repository</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

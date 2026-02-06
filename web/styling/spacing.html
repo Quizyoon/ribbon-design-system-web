@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacing - Styling - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="spacing.html" class="active">Spacing</a></li>
+                <li><a href="icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="../components/button.html">Button</a></li>
+                <li><a href="../components/input.html">Input</a></li>
+                <li><a href="../components/card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="colors.html">Styling</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Spacing</span>
+          </nav>
+          <h1>Spacing</h1>
+          <p class="hero-description"
+             data-en="This guide explains how to use LINE GIFTSHOP design system spacing tokens in your web projects."
+             data-ko="이 가이드는 웹 프로젝트에서 LINE GIFTSHOP 디자인 시스템 간격 토큰을 사용하는 방법을 설명합니다."
+             data-zh="本指南介绍如何在您的网页项目中使用 LINE GIFTSHOP 设计系统间距令牌。"
+             data-th="คู่มือนี้อธิบายวิธีการใช้โทเค็นระยะห่างของระบบการออกแบบ LINE GIFTSHOP ในโปรเจกต์เว็บของคุณ">
+            This guide explains how to use LINE GIFTSHOP design system spacing tokens in your web projects.
+          </p>
+          <div class="category-links">
+            <a href="#usage-principles" class="category-link">
+              <span>Usage Principles</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#css-variables" class="category-link">
+              <span>CSS Variables</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#best-practices" class="category-link">
+              <span>Best Practices</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#common-patterns" class="category-link">
+              <span>Common Patterns</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#tailwind" class="category-link">
+              <span>Tailwind Integration</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Usage Principles -->
+        <section class="semantic-section" id="usage-principles">
+          <h2 data-en="Usage Principles" data-ko="사용 원칙" data-zh="使用原则" data-th="หลักการใช้งาน">Usage Principles</h2>
+        </section>
+
+        <section class="usage-section">
+          <h4 class="recommended">Recommended</h4>
+          <div class="code-block">
+            <code><span class="code-comment">/* Using Component Token */</span>
+<span class="code-selector">.button</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--component-button-padding-m)</span>;
+}
+
+<span class="code-comment">/* Using Semantic Token */</span>
+<span class="code-selector">.card</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--spacing-m)</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="usage-section">
+          <h4 class="not-recommended">Not Recommended</h4>
+          <div class="code-block">
+            <code><span class="code-comment">/* Using Dimension directly */</span>
+<span class="code-selector">.element</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--dimension-x3)</span>;
+}</code>
+          </div>
+        </section>
+
+        <!-- CSS Variables -->
+        <section class="semantic-section" id="css-variables">
+          <h2 data-en="CSS Variables" data-ko="CSS 변수" data-zh="CSS 变量" data-th="ตัวแปร CSS">CSS Variables</h2>
+          <h3 data-en="Spacing Tokens" data-ko="간격 토큰" data-zh="间距令牌" data-th="โทเค็นระยะห่าง">Spacing Tokens</h3>
+          <p class="description"
+             data-en="Spacing CSS variables to use in your project."
+             data-ko="프로젝트에서 사용할 간격 CSS 변수입니다."
+             data-zh="在您的项目中使用的间距 CSS 变量。"
+             data-th="ตัวแปร CSS ระยะห่างที่จะใช้ในโปรเจกต์ของคุณ">Spacing CSS variables to use in your project.</p>
+          <div class="code-block">
+            <code>:root {
+  <span class="code-comment">/* Spacing Tokens */</span>
+  <span class="code-property">--spacing-2xs</span>: <span class="code-value">2px</span>;
+  <span class="code-property">--spacing-xs</span>: <span class="code-value">4px</span>;
+  <span class="code-property">--spacing-s</span>: <span class="code-value">8px</span>;
+  <span class="code-property">--spacing-m</span>: <span class="code-value">12px</span>;
+  <span class="code-property">--spacing-m-plus</span>: <span class="code-value">14px</span>;
+  <span class="code-property">--spacing-l</span>: <span class="code-value">16px</span>;
+  <span class="code-property">--spacing-xl</span>: <span class="code-value">20px</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Component Tokens" data-ko="컴포넌트 토큰" data-zh="组件令牌" data-th="โทเค็นคอมโพเนนต์">Component Tokens</h3>
+          <p class="description"
+             data-en="Component-specific spacing CSS variables."
+             data-ko="컴포넌트별 간격 CSS 변수입니다."
+             data-zh="组件特定的间距 CSS 变量。"
+             data-th="ตัวแปร CSS ระยะห่างเฉพาะคอมโพเนนต์">Component-specific spacing CSS variables.</p>
+          <div class="code-block">
+            <code>:root {
+  <span class="code-comment">/* Button Gap */</span>
+  <span class="code-property">--component-button-gap-2</span>: <span class="code-value">var(--spacing-2xs)</span>;
+  <span class="code-property">--component-button-gap-4</span>: <span class="code-value">var(--spacing-xs)</span>;
+
+  <span class="code-comment">/* Button Padding */</span>
+  <span class="code-property">--component-button-padding-xs</span>: <span class="code-value">var(--spacing-s)</span>;
+  <span class="code-property">--component-button-padding-s</span>: <span class="code-value">var(--spacing-m)</span>;
+  <span class="code-property">--component-button-padding-m</span>: <span class="code-value">var(--spacing-m-plus)</span>;
+  <span class="code-property">--component-button-padding-l</span>: <span class="code-value">var(--spacing-l)</span>;
+  <span class="code-property">--component-button-padding-xl</span>: <span class="code-value">var(--spacing-xl)</span>;
+}</code>
+          </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="semantic-section" id="best-practices">
+          <h2 data-en="Best Practices" data-ko="모범 사례" data-zh="最佳实践" data-th="แนวทางปฏิบัติที่ดีที่สุด">Best Practices</h2>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="1. Token Priority" data-ko="1. 토큰 우선순위" data-zh="1. 令牌优先级" data-th="1. ลำดับความสำคัญของโทเค็น">1. Token Priority</h3>
+          <div class="info-box">
+            <div class="info-box-title"
+                 data-en="Token Priority"
+                 data-ko="토큰 우선순위"
+                 data-zh="令牌优先级"
+                 data-th="ลำดับความสำคัญของโทเค็น">Token Priority</div>
+            <ol>
+              <li><strong>Component Token</strong> - For component development</li>
+              <li><strong>Semantic Token</strong> - For general layouts</li>
+              <li><strong>Dimension</strong> - Do not use</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="2. Consistency" data-ko="2. 일관성" data-zh="2. 一致性" data-th="2. ความสอดคล้อง">2. Consistency</h3>
+          <p class="description"
+             data-en="Use the same token for the same purpose."
+             data-ko="동일한 목적에는 동일한 토큰을 사용합니다."
+             data-zh="为相同目的使用相同的令牌。"
+             data-th="ใช้โทเค็นเดียวกันสำหรับวัตถุประสงค์เดียวกัน">Use the same token for the same purpose.</p>
+          <div class="code-block">
+            <code><span class="code-comment">/* Use the same token for the same purpose */</span>
+<span class="code-selector">.card-header</span>,
+<span class="code-selector">.card-body</span>,
+<span class="code-selector">.card-footer</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--spacing-m)</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="3. Responsive Design" data-ko="3. 반응형 디자인" data-zh="3. 响应式设计" data-th="3. การออกแบบแบบตอบสนอง">3. Responsive Design</h3>
+          <p class="description"
+             data-en="Utilize tokens for responsive design."
+             data-ko="반응형 디자인을 위해 토큰을 활용합니다."
+             data-zh="利用令牌进行响应式设计。"
+             data-th="ใช้โทเค็นสำหรับการออกแบบแบบตอบสนอง">Utilize tokens for responsive design.</p>
+          <div class="code-block">
+            <code><span class="code-selector">.container</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--spacing-m)</span>;
+}
+
+<span class="code-keyword">@media</span> (min-width: 768px) {
+  <span class="code-selector">.container</span> {
+    <span class="code-property">padding</span>: <span class="code-value">var(--spacing-l)</span>;
+  }
+}</code>
+          </div>
+        </section>
+
+        <!-- Common Patterns -->
+        <section class="semantic-section" id="common-patterns">
+          <h2 data-en="Common Patterns" data-ko="일반적인 패턴" data-zh="常见模式" data-th="รูปแบบทั่วไป">Common Patterns</h2>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Button Styling" data-ko="버튼 스타일링" data-zh="按钮样式" data-th="การจัดสไตล์ปุ่ม">Button Styling</h3>
+          <div class="code-block">
+            <code><span class="code-selector">.button</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--component-button-padding-m)</span>;
+  <span class="code-property">gap</span>: <span class="code-value">var(--component-button-gap-4)</span>;
+}
+
+<span class="code-selector">.button--small</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--component-button-padding-s)</span>;
+  <span class="code-property">gap</span>: <span class="code-value">var(--component-button-gap-2)</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Card Layout" data-ko="카드 레이아웃" data-zh="卡片布局" data-th="เค้าโครงการ์ด">Card Layout</h3>
+          <div class="code-block">
+            <code><span class="code-selector">.card</span> {
+  <span class="code-property">padding</span>: <span class="code-value">var(--spacing-m)</span>;
+  <span class="code-property">margin-bottom</span>: <span class="code-value">var(--spacing-l)</span>;
+  <span class="code-property">gap</span>: <span class="code-value">var(--spacing-s)</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Form Elements" data-ko="폼 요소" data-zh="表单元素" data-th="องค์ประกอบฟอร์ม">Form Elements</h3>
+          <div class="code-block">
+            <code><span class="code-selector">.form-field</span> {
+  <span class="code-property">margin-bottom</span>: <span class="code-value">var(--spacing-m)</span>;
+}
+
+<span class="code-selector">.form-label</span> {
+  <span class="code-property">margin-bottom</span>: <span class="code-value">var(--spacing-xs)</span>;
+}</code>
+          </div>
+        </section>
+
+        <!-- Tailwind Integration -->
+        <section class="semantic-section" id="tailwind">
+          <h2 data-en="Tailwind Integration" data-ko="Tailwind 통합" data-zh="Tailwind 集成" data-th="การรวม Tailwind">Tailwind Integration</h2>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Configuration" data-ko="구성" data-zh="配置" data-th="การกำหนดค่า">Configuration</h3>
+          <p class="description"
+             data-en="Add spacing tokens to tailwind.config.js."
+             data-ko="tailwind.config.js에 간격 토큰을 추가합니다."
+             data-zh="将间距令牌添加到 tailwind.config.js。"
+             data-th="เพิ่มโทเค็นระยะห่างใน tailwind.config.js">Add spacing tokens to tailwind.config.js.</p>
+          <div class="code-block">
+            <code><span class="code-comment">// tailwind.config.js</span>
+module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        <span class="code-string">'2xs'</span>: <span class="code-string">'var(--spacing-2xs)'</span>,
+        <span class="code-string">'xs'</span>: <span class="code-string">'var(--spacing-xs)'</span>,
+        <span class="code-string">'s'</span>: <span class="code-string">'var(--spacing-s)'</span>,
+        <span class="code-string">'m'</span>: <span class="code-string">'var(--spacing-m)'</span>,
+        <span class="code-string">'m-plus'</span>: <span class="code-string">'var(--spacing-m-plus)'</span>,
+        <span class="code-string">'l'</span>: <span class="code-string">'var(--spacing-l)'</span>,
+        <span class="code-string">'xl'</span>: <span class="code-string">'var(--spacing-xl)'</span>,
+      }
+    }
+  }
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h3 data-en="Usage" data-ko="사용법" data-zh="用法" data-th="การใช้งาน">Usage</h3>
+          <div class="code-block">
+            <code><span class="code-comment">&lt;!-- Using Tailwind classes --&gt;</span>
+&lt;<span class="code-keyword">div</span> <span class="code-property">class</span>=<span class="code-string">"p-m mb-l"</span>&gt;
+  Component
+&lt;/<span class="code-keyword">div</span>&gt;</code>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="typography.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Typography</span>
+            </span>
+          </a>
+          <a href="../components/navigation/header.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Header</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

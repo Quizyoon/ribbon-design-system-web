@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIFF Setup - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../../web/index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="installation/nextjs.html">Next.js</a></li>
+                    <li><a href="installation/vue.html">Vue 3</a></li>
+                    <li><a href="installation/vite.html">Vite</a></li>
+                    <li><a href="installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="liff-setup.html" class="active">LIFF Setup</a></li>
+                <li><a href="quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="../styling/colors.html">Colors</a></li>
+                <li><a href="../styling/typography.html">Typography</a></li>
+                <li><a href="../styling/spacing.html">Spacing</a></li>
+                <li><a href="../styling/icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="../components/button.html">Button</a></li>
+                <li><a href="../components/input.html">Input</a></li>
+                <li><a href="../components/card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="installation.html">Getting Started</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">LIFF Setup</span>
+          </nav>
+          <h1>LIFF Setup</h1>
+          <p class="hero-description"
+             data-en="Configure LINE Front-end Framework (LIFF) for your application."
+             data-ko="애플리케이션에 LINE Front-end Framework(LIFF)를 설정하세요."
+             data-zh="为您的应用程序配置 LINE 前端框架 (LIFF)。"
+             data-th="กำหนดค่า LINE Front-end Framework (LIFF) สำหรับแอปพลิเคชันของคุณ">
+            Configure LINE Front-end Framework (LIFF) for your application.
+          </p>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Configuration</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <h3>1. Create LIFF App</h3>
+              <p data-en="Create a LIFF app in the LINE Developers Console and get your LIFF ID."
+                 data-ko="LINE Developers Console에서 LIFF 앱을 생성하고 LIFF ID를 받으세요."
+                 data-zh="在 LINE Developers Console 中创建 LIFF 应用并获取您的 LIFF ID。"
+                 data-th="สร้างแอป LIFF ใน LINE Developers Console และรับ LIFF ID ของคุณ">Create a LIFF app in the LINE Developers Console and get your LIFF ID.</p>
+              <h3>2. Initialize LIFF</h3>
+              <p data-en="Initialize LIFF in your application entry point with your LIFF ID."
+                 data-ko="LIFF ID를 사용하여 애플리케이션 진입점에서 LIFF를 초기화하세요."
+                 data-zh="使用您的 LIFF ID 在应用程序入口点初始化 LIFF。"
+                 data-th="เริ่มต้น LIFF ในจุดเริ่มต้นของแอปพลิเคชันด้วย LIFF ID ของคุณ">Initialize LIFF in your application entry point with your LIFF ID.</p>
+              <h3>3. Configure Provider</h3>
+              <p data-en="Wrap your application with the LiffProvider component."
+                 data-ko="LiffProvider 컴포넌트로 애플리케이션을 감싸세요."
+                 data-zh="使用 LiffProvider 组件包装您的应用程序。"
+                 data-th="ห่อแอปพลิเคชันของคุณด้วยคอมโพเนนต์ LiffProvider">Wrap your application with the LiffProvider component.</p>
+            </div>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="installation/cdn.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">CDN Installation</span>
+            </span>
+          </a>
+          <a href="quick-start.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Quick Start</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input - Components - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="../styling/colors.html">Colors</a></li>
+                <li><a href="../styling/typography.html">Typography</a></li>
+                <li><a href="../styling/spacing.html">Spacing</a></li>
+                <li><a href="../styling/icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="input.html" class="active">Input</a></li>
+                <li><a href="card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="#">Components</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Input</span>
+          </nav>
+          <h1>Input <span class="version-tag">v1.0.0</span></h1>
+          <p class="hero-description"
+             data-en="A form component for receiving text input from users."
+             data-ko="사용자로부터 텍스트 입력을 받는 폼 컴포넌트입니다."
+             data-zh="用于接收用户文本输入的表单组件。"
+             data-th="คอมโพเนนต์ฟอร์มสำหรับรับข้อความจากผู้ใช้">
+            사용자로부터 텍스트 입력을 받는 폼 컴포넌트입니다.
+          </p>
+        </section>
+
+        <!-- Usage -->
+        <div class="install-steps">
+          <!-- Step 1: Import -->
+          <div class="install-step">
+            <div class="install-step-number">1</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Import the CInput component." data-ko="CInput 컴포넌트를 import 합니다." data-zh="导入 CInput 组件。" data-th="นำเข้าคอมโพเนนต์ CInput">CInput 컴포넌트를 import 합니다.</h3>
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <span class="code-filename">
+                    <span class="code-file-icon javascript">JAVASCRIPT</span>
+                    ES Module
+                  </span>
+                  <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+                <pre class="code-block"><code><span class="keyword">import</span> { <span class="component">CInput</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span></code></pre>
+              </div>
+
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <span class="code-filename">
+                    <span class="code-file-icon vue">VUE</span>
+                    Vue SFC
+                  </span>
+                  <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+                <pre class="code-block"><code><span class="tag">&lt;template&gt;</span>
+  <span class="tag">&lt;<span class="component">CInput</span></span> <span class="attr">v-model</span>=<span class="string">"value"</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;/template&gt;</span>
+
+<span class="tag">&lt;script setup&gt;</span>
+<span class="keyword">import</span> { ref } <span class="keyword">from</span> <span class="string">'vue'</span>
+<span class="keyword">import</span> { <span class="component">CInput</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span>
+
+<span class="keyword">const</span> value = ref(<span class="string">''</span>)
+<span class="tag">&lt;/script&gt;</span></code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Basic Usage -->
+          <div class="install-step">
+            <div class="install-step-number">2</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Basic Input usage." data-ko="가장 기본적인 Input 사용 방법입니다." data-zh="最基本的 Input 使用方法。" data-th="วิธีใช้งาน Input พื้นฐาน">가장 기본적인 Input 사용 방법입니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <input type="text" class="gs-input" data-placeholder-en="Enter text" data-placeholder-ko="텍스트를 입력하세요" data-placeholder-zh="请输入文本" data-placeholder-th="กรอกข้อความ" placeholder="텍스트를 입력하세요" style="max-width: 320px;">
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Basic Usage
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CInput</span> <span class="attr">v-model</span>=<span class="string">"value"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Enter text" data-ko="텍스트를 입력하세요" data-zh="请输入文本" data-th="กรอกข้อความ">텍스트를 입력하세요</span>"</span> /&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Type -->
+          <div class="install-step">
+            <div class="install-step-number">3</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Use the type prop to specify various input types." data-ko="type prop을 사용하여 다양한 입력 타입을 지정할 수 있습니다." data-zh="使用 type prop 指定各种输入类型。" data-th="ใช้ prop type เพื่อระบุประเภทการป้อนข้อมูลต่างๆ">type prop을 사용하여 다양한 입력 타입을 지정할 수 있습니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px;">
+                    <input type="text" class="gs-input" data-placeholder-en="Text" data-placeholder-ko="텍스트" data-placeholder-zh="文本" data-placeholder-th="ข้อความ" placeholder="텍스트">
+                    <input type="email" class="gs-input" data-placeholder-en="Email" data-placeholder-ko="이메일" data-placeholder-zh="电子邮件" data-placeholder-th="อีเมล" placeholder="이메일">
+                    <input type="password" class="gs-input" data-placeholder-en="Password" data-placeholder-ko="비밀번호" data-placeholder-zh="密码" data-placeholder-th="รหัสผ่าน" placeholder="비밀번호">
+                    <input type="number" class="gs-input" data-placeholder-en="Number" data-placeholder-ko="숫자" data-placeholder-zh="数字" data-placeholder-th="ตัวเลข" placeholder="숫자">
+                  </div>
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Types
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Text" data-ko="텍스트" data-zh="文本" data-th="ข้อความ">텍스트</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Password" data-ko="비밀번호" data-zh="密码" data-th="รหัสผ่าน">비밀번호</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Number" data-ko="숫자" data-zh="数字" data-th="ตัวเลข">숫자</span>"</span> /&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Advanced Usage -->
+          <div class="install-step">
+            <div class="install-step-number">4</div>
+            <div class="install-step-content">
+              <h3 class="install-step-title" data-en="Combine various styles and features." data-ko="다양한 스타일과 기능을 조합하여 사용할 수 있습니다." data-zh="可以组合使用各种样式和功能。" data-th="สามารถรวมสไตล์และฟีเจอร์ต่างๆ เข้าด้วยกันได้">다양한 스타일과 기능을 조합하여 사용할 수 있습니다.</h3>
+              <div class="example-block">
+                <div class="example-preview">
+                  <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px;">
+                    <div class="gs-textfield">
+                      <label class="gs-textfield__label" data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</label>
+                      <input type="email" class="gs-textfield__input" data-placeholder-en="Enter email" data-placeholder-ko="이메일을 입력하세요" data-placeholder-zh="请输入电子邮件" data-placeholder-th="กรอกอีเมล" placeholder="이메일을 입력하세요">
+                    </div>
+                    <div class="gs-textfield">
+                      <label class="gs-textfield__label" data-en="Password" data-ko="비밀번호" data-zh="密码" data-th="รหัสผ่าน">비밀번호</label>
+                      <input type="password" class="gs-textfield__input" data-placeholder-en="Enter password" data-placeholder-ko="비밀번호를 입력하세요" data-placeholder-zh="请输入密码" data-placeholder-th="กรอกรหัสผ่าน" placeholder="비밀번호를 입력하세요">
+                      <span class="gs-textfield__helper" data-en="Enter at least 8 characters" data-ko="8자 이상 입력해주세요" data-zh="请输入至少8个字符" data-th="กรอกอย่างน้อย 8 ตัวอักษร">8자 이상 입력해주세요</span>
+                    </div>
+                    <div class="gs-textfield gs-textfield--error">
+                      <label class="gs-textfield__label" data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</label>
+                      <input type="email" class="gs-textfield__input" value="invalid-email">
+                      <span class="gs-textfield__helper gs-textfield__helper--error" data-en="Please enter a valid email address" data-ko="올바른 이메일 주소를 입력하세요" data-zh="请输入有效的电子邮件地址" data-th="กรุณากรอกที่อยู่อีเมลที่ถูกต้อง">올바른 이메일 주소를 입력하세요</span>
+                    </div>
+                    <input type="text" class="gs-input" disabled data-placeholder-en="Disabled" data-placeholder-ko="비활성화됨" data-placeholder-zh="已禁用" data-placeholder-th="ปิดใช้งาน" placeholder="비활성화됨">
+                  </div>
+                </div>
+                <div class="code-block-wrapper">
+                  <div class="code-block-header">
+                    <span class="code-filename">
+                      <span class="code-file-icon vue">VUE</span>
+                      Advanced Usage
+                    </span>
+                    <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <pre class="code-block"><code><span class="comment" data-en="&lt;!-- With label --&gt;" data-ko="&lt;!-- 레이블과 함께 사용 --&gt;" data-zh="&lt;!-- 带标签使用 --&gt;" data-th="&lt;!-- ใช้กับ label --&gt;">&lt;!-- 레이블과 함께 사용 --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">v-model</span>=<span class="string">"email"</span> <span class="attr">label</span>=<span class="string">"<span data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</span>"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Enter email" data-ko="이메일을 입력하세요" data-zh="请输入电子邮件" data-th="กรอกอีเมล">이메일을 입력하세요</span>"</span> /&gt;</span>
+
+<span class="comment" data-en="&lt;!-- With helper text --&gt;" data-ko="&lt;!-- 도움말 텍스트와 함께 사용 --&gt;" data-zh="&lt;!-- 带帮助文本使用 --&gt;" data-th="&lt;!-- ใช้กับข้อความช่วยเหลือ --&gt;">&lt;!-- 도움말 텍스트와 함께 사용 --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">v-model</span>=<span class="string">"password"</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">label</span>=<span class="string">"<span data-en="Password" data-ko="비밀번호" data-zh="密码" data-th="รหัสผ่าน">비밀번호</span>"</span> <span class="attr">helperText</span>=<span class="string">"<span data-en="Enter at least 8 characters" data-ko="8자 이상 입력해주세요" data-zh="请输入至少8个字符" data-th="กรอกอย่างน้อย 8 ตัวอักษร">8자 이상 입력해주세요</span>"</span> /&gt;</span>
+
+<span class="comment" data-en="&lt;!-- Error state --&gt;" data-ko="&lt;!-- 에러 상태 --&gt;" data-zh="&lt;!-- 错误状态 --&gt;" data-th="&lt;!-- สถานะข้อผิดพลาด --&gt;">&lt;!-- 에러 상태 --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">v-model</span>=<span class="string">"email"</span> <span class="attr">label</span>=<span class="string">"<span data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</span>"</span> <span class="attr">:error</span>=<span class="string">"true"</span> <span class="attr">errorMessage</span>=<span class="string">"<span data-en="Please enter a valid email address" data-ko="올바른 이메일 주소를 입력하세요" data-zh="请输入有效的电子邮件地址" data-th="กรุณากรอกที่อยู่อีเมลที่ถูกต้อง">올바른 이메일 주소를 입력하세요</span>"</span> /&gt;</span>
+
+<span class="comment" data-en="&lt;!-- Disabled state --&gt;" data-ko="&lt;!-- 비활성화 상태 --&gt;" data-zh="&lt;!-- 禁用状态 --&gt;" data-th="&lt;!-- สถานะปิดใช้งาน --&gt;">&lt;!-- 비활성화 상태 --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">disabled</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Disabled" data-ko="비활성화됨" data-zh="已禁用" data-th="ปิดใช้งาน">비활성화됨</span>"</span> /&gt;</span></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Properties -->
+        <section class="semantic-section">
+          <h2>Properties</h2>
+        </section>
+
+        <table class="props-table">
+          <thead>
+            <tr>
+              <th data-en="Prop" data-ko="Prop" data-zh="属性" data-th="Prop">Prop</th>
+              <th data-en="Type" data-ko="Type" data-zh="类型" data-th="Type">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>type?</code></td>
+              <td><code>"text" | "email" | "password" | "number" | "tel"</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>"text"</code></div>
+                  <p class="prop-description" data-en="Sets the type of the input field." data-ko="입력 필드의 타입을 설정합니다." data-zh="设置输入字段的类型。" data-th="กำหนดประเภทของช่องป้อนข้อมูล">입력 필드의 타입을 설정합니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>size?</code></td>
+              <td><code>"small" | "medium" | "large"</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>"medium"</code></div>
+                  <p class="prop-description" data-en="Sets the size of the input field." data-ko="입력 필드의 크기를 설정합니다." data-zh="设置输入字段的大小。" data-th="กำหนดขนาดของช่องป้อนข้อมูล">입력 필드의 크기를 설정합니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>label?</code></td>
+              <td><code>string</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>undefined</code></div>
+                  <p class="prop-description" data-en="Label text displayed above the input field." data-ko="입력 필드 상단에 표시되는 레이블 텍스트입니다." data-zh="显示在输入字段上方的标签文本。" data-th="ข้อความ label ที่แสดงด้านบนช่องป้อนข้อมูล">입력 필드 상단에 표시되는 레이블 텍스트입니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>placeholder?</code></td>
+              <td><code>string</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>undefined</code></div>
+                  <p class="prop-description" data-en="Placeholder text displayed before input." data-ko="입력 전 표시되는 플레이스홀더 텍스트입니다." data-zh="输入前显示的占位符文本。" data-th="ข้อความ placeholder ที่แสดงก่อนป้อนข้อมูล">입력 전 표시되는 플레이스홀더 텍스트입니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>helperText?</code></td>
+              <td><code>string</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>undefined</code></div>
+                  <p class="prop-description" data-en="Helper text displayed below the input field." data-ko="입력 필드 하단에 표시되는 도움말 텍스트입니다." data-zh="显示在输入字段下方的帮助文本。" data-th="ข้อความช่วยเหลือที่แสดงด้านล่างช่องป้อนข้อมูล">입력 필드 하단에 표시되는 도움말 텍스트입니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="boolean" onclick="togglePropDetails(this)">
+              <td><code>error?</code></td>
+              <td><code>boolean</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>false</code></div>
+                  <p class="prop-description" data-en="Shows error state." data-ko="에러 상태를 표시합니다." data-zh="显示错误状态。" data-th="แสดงสถานะข้อผิดพลาด">에러 상태를 표시합니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="string" onclick="togglePropDetails(this)">
+              <td><code>errorMessage?</code></td>
+              <td><code>string</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>undefined</code></div>
+                  <p class="prop-description" data-en="Message displayed in error state." data-ko="에러 상태일 때 표시되는 메시지입니다." data-zh="错误状态时显示的消息。" data-th="ข้อความที่แสดงในสถานะข้อผิดพลาด">에러 상태일 때 표시되는 메시지입니다.</p>
+                </div>
+              </td>
+            </tr>
+            <tr class="prop-row" data-type="boolean" onclick="togglePropDetails(this)">
+              <td><code>disabled?</code></td>
+              <td><code>boolean</code></td>
+            </tr>
+            <tr class="prop-details">
+              <td colspan="2">
+                <div class="prop-details-content">
+                  <div class="prop-default"><span class="prop-default-label">Default</span> <code>false</code></div>
+                  <p class="prop-description" data-en="Disables the input field." data-ko="입력 필드를 비활성화합니다." data-zh="禁用输入字段。" data-th="ปิดใช้งานช่องป้อนข้อมูล">입력 필드를 비활성화합니다.</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Overview -->
+        <section class="semantic-section" id="overview">
+          <h2 data-en="Overview" data-ko="개요" data-zh="概述" data-th="ภาพรวม">개요</h2>
+        </section>
+
+        <!-- Size -->
+        <section class="semantic-section">
+          <h3 data-en="Size" data-ko="크기" data-zh="尺寸" data-th="ขนาด">크기</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px;">
+              <input type="text" class="gs-input gs-input--sm" placeholder="Small (36px)">
+              <input type="text" class="gs-input" data-placeholder-en="Medium (44px) - default" data-placeholder-ko="Medium (44px) - 기본" data-placeholder-zh="Medium (44px) - 默认" data-placeholder-th="Medium (44px) - ค่าเริ่มต้น" placeholder="Medium (44px) - 기본">
+              <input type="text" class="gs-input gs-input--lg" placeholder="Large (52px)">
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                Size
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CInput</span> <span class="attr">size</span>=<span class="string">"small"</span> <span class="attr">placeholder</span>=<span class="string">"Small"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">size</span>=<span class="string">"medium"</span> <span class="attr">placeholder</span>=<span class="string">"Medium"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">size</span>=<span class="string">"large"</span> <span class="attr">placeholder</span>=<span class="string">"Large"</span> /&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Type -->
+        <section class="semantic-section">
+          <h3 data-en="Type" data-ko="타입" data-zh="类型" data-th="ประเภท">타입</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px;">
+              <input type="text" class="gs-input" data-placeholder-en="text (default)" data-placeholder-ko="text (기본)" data-placeholder-zh="text (默认)" data-placeholder-th="text (ค่าเริ่มต้น)" placeholder="text (기본)">
+              <input type="email" class="gs-input" placeholder="email">
+              <input type="password" class="gs-input" placeholder="password">
+              <input type="number" class="gs-input" placeholder="number">
+              <input type="tel" class="gs-input" placeholder="tel">
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                Type
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Text" data-ko="텍스트" data-zh="文本" data-th="ข้อความ">텍스트</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Email" data-ko="이메일" data-zh="电子邮件" data-th="อีเมล">이메일</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Password" data-ko="비밀번호" data-zh="密码" data-th="รหัสผ่าน">비밀번호</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Number" data-ko="숫자" data-zh="数字" data-th="ตัวเลข">숫자</span>"</span> /&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">placeholder</span>=<span class="string">"<span data-en="Phone" data-ko="전화번호" data-zh="电话号码" data-th="หมายเลขโทรศัพท์">전화번호</span>"</span> /&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- State -->
+        <section class="semantic-section">
+          <h3 data-en="State" data-ko="상태" data-zh="状态" data-th="สถานะ">상태</h3>
+        </section>
+
+        <div class="example-block">
+          <div class="example-preview">
+            <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px;">
+              <input type="text" class="gs-input" placeholder="Default">
+              <input type="text" class="gs-input" value="Filled" style="border-color: var(--color-brand);">
+              <input type="text" class="gs-input gs-input--error" value="Error" style="border-color: #FF0066;">
+              <input type="text" class="gs-input" placeholder="Disabled" disabled>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span class="code-filename">
+                <span class="code-file-icon vue">VUE</span>
+                State
+              </span>
+              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            <pre class="code-block"><code><span class="comment">&lt;!-- Default --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">placeholder</span>=<span class="string">"Default"</span> /&gt;</span>
+
+<span class="comment" data-en="&lt;!-- Focused (auto applied) --&gt;" data-ko="&lt;!-- Focused (자동 적용) --&gt;" data-zh="&lt;!-- Focused (自动应用) --&gt;" data-th="&lt;!-- Focused (ใช้อัตโนมัติ) --&gt;">&lt;!-- Focused (자동 적용) --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">placeholder</span>=<span class="string">"Click to focus"</span> /&gt;</span>
+
+<span class="comment">&lt;!-- Error --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">:error</span>=<span class="string">"true"</span> <span class="attr">errorMessage</span>=<span class="string">"<span data-en="Error message" data-ko="에러 메시지" data-zh="错误消息" data-th="ข้อความผิดพลาด">에러 메시지</span>"</span> /&gt;</span>
+
+<span class="comment">&lt;!-- Disabled --&gt;</span>
+<span class="tag">&lt;<span class="component">CInput</span> <span class="attr">disabled</span> <span class="attr">placeholder</span>=<span class="string">"Disabled"</span> /&gt;</span></code></pre>
+          </div>
+        </div>
+
+        <!-- Related -->
+        <div class="quick-links">
+          <a href="../../foundation/dimension/tokens.html#input-height" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Dimension</span>
+              <span class="quick-link-desc" data-en="Check input field height tokens." data-ko="입력 필드 높이 토큰을 확인하세요." data-zh="查看输入字段高度令牌。" data-th="ดูโทเค็นความสูงช่องป้อนข้อมูล">입력 필드 높이 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="../../foundation/colors/tokens.html#input-colors" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Colors</span>
+              <span class="quick-link-desc" data-en="Check input field color tokens." data-ko="입력 필드 색상 토큰을 확인하세요." data-zh="查看输入字段颜色令牌。" data-th="ดูโทเค็นสีช่องป้อนข้อมูล">입력 필드 색상 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="../../foundation/typography/tokens.html" class="quick-link">
+            <div class="quick-link-text">
+              <span class="quick-link-title">Typography</span>
+              <span class="quick-link-desc" data-en="Check text style tokens." data-ko="텍스트 스타일 토큰을 확인하세요." data-zh="查看文本样式令牌。" data-th="ดูโทเค็นสไตล์ข้อความ">텍스트 스타일 토큰을 확인하세요.</span>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="button.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Button</span>
+            </span>
+          </a>
+          <a href="card.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Card</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script>
+    async function copyCodeBlock(button) {
+      const container = button.closest('.code-block-wrapper');
+      const codeEl = container.querySelector('code');
+      const text = codeEl.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+
+    async function copyExampleCode(button) {
+      const container = button.closest('.example-code');
+      const preEl = container.querySelector('pre');
+      const text = preEl.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+  </script>
+</body>
+</html>

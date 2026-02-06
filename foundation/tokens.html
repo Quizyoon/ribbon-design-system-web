@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokens - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Header -->
+    <header class="header">
+    <div class="header-left">
+      <a href="../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../about.html">About</a>
+        <a href="../index.html" class="active">Docs</a>
+        <a href="../web/index.html">Web</a>
+        <a href="../resource/index.html">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="#">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="colors/index.html">Overview</a></li>
+                    <li><a href="colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="typography/index.html">Overview</a></li>
+                    <li><a href="typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="dimension/index.html">Overview</a></li>
+                    <li><a href="dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="spacing/index.html">Overview</a></li>
+                    <li><a href="spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="radius/index.html">Radius</a></li>
+                <li><a href="border/index.html">Border</a></li>
+                <li><a href="shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="icon/index.html">Overview</a></li>
+                    <li><a href="icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/navigation/header.html">Header</a></li>
+                    <li><a href="../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/input/button.html">Button</a></li>
+                    <li><a href="../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/display/card.html">Card</a></li>
+                    <li><a href="../components/display/badge.html">Badge</a></li>
+                    <li><a href="../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="tokens.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Tokens</span>
+          </nav>
+          <h1>Tokens</h1>
+          <p class="hero-description"
+             data-en="Design tokens are the visual design atoms of the design system. They are named entities that store visual design attributes."
+             data-ko="디자인 토큰은 디자인 시스템의 시각적 디자인 원자입니다. 시각적 디자인 속성을 저장하는 명명된 엔티티입니다."
+             data-zh="设计令牌是设计系统的视觉设计原子。它们是存储视觉设计属性的命名实体。"
+             data-th="Design tokens คือหน่วยย่อยของการออกแบบภาพในระบบการออกแบบ เป็นเอนทิตีที่มีชื่อซึ่งเก็บคุณสมบัติการออกแบบภาพ">
+            Design tokens are the visual design atoms of the design system. They are named entities that store visual design attributes.
+          </p>
+        </section>
+
+        <section class="tokens-section">
+          <h2>What are Design Tokens?</h2>
+          <div class="content-block">
+            <div class="content-text"
+                 data-en="Tokens are representations of design decisions. They abstract raw values into scalable, meaningful, and readable labels spanning across teams and platforms. Design tokens help maintain consistency across different platforms and make it easier to update the design system."
+                 data-ko="토큰은 디자인 결정의 표현입니다. 원시 값을 팀과 플랫폼 전반에 걸쳐 확장 가능하고 의미 있으며 읽기 쉬운 레이블로 추상화합니다. 디자인 토큰은 다양한 플랫폼 간의 일관성을 유지하고 디자인 시스템을 더 쉽게 업데이트할 수 있도록 도와줍니다."
+                 data-zh="令牌是设计决策的表示。它们将原始值抽象为跨团队和平台的可扩展、有意义且可读的标签。设计令牌有助于在不同平台之间保持一致性，并使设计系统的更新更加容易。"
+                 data-th="Tokens คือการแสดงผลของการตัดสินใจด้านการออกแบบ มันแปลงค่าดิบให้เป็นป้ายกำกับที่ปรับขนาดได้ มีความหมาย และอ่านได้ง่ายข้ามทีมและแพลตฟอร์ม Design tokens ช่วยรักษาความสอดคล้องกันระหว่างแพลตฟอร์มต่างๆ และทำให้การอัปเดตระบบการออกแบบง่ายขึ้น">
+              <p>Tokens are representations of design decisions. They abstract raw values into scalable, meaningful, and readable labels spanning across teams and platforms.</p>
+              <p>Design tokens help maintain consistency across different platforms and make it easier to update the design system.</p>
+            </div>
+          </div>
+
+          <div class="token-group">
+            <h3>Token Categories</h3>
+            <p>Our design tokens are organized into the following categories:</p>
+
+            <table class="token-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="color/color-system.html">Colors</a></td>
+                  <td>Brand colors, semantic colors, and color palettes</td>
+                </tr>
+                <tr>
+                  <td><a href="typography/index.html">Typography</a></td>
+                  <td>Font families, sizes, weights, and line heights</td>
+                </tr>
+                <tr>
+                  <td><a href="spacing.html">Spacing</a></td>
+                  <td>Margins, paddings, and gaps</td>
+                </tr>
+                <tr>
+                  <td><a href="border-radius.html">Border Radius</a></td>
+                  <td>Corner radius values for UI elements</td>
+                </tr>
+                <tr>
+                  <td><a href="shadows.html">Shadows</a></td>
+                  <td>Elevation and shadow styles</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Overview</span>
+            </span>
+          </a>
+          <a href="color/color-system.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Color System</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

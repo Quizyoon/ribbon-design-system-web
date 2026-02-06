@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <a href="../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../about.html">About</a>
+        <a href="../index.html" class="active">Docs</a>
+        <a href="../web/index.html">Web</a>
+        <a href="../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="index.html" class="active">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="colors/index.html">Overview</a></li>
+                    <li><a href="colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="typography/index.html">Overview</a></li>
+                    <li><a href="typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="dimension/index.html">Overview</a></li>
+                    <li><a href="dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="spacing/index.html">Overview</a></li>
+                    <li><a href="spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="radius/index.html">Radius</a></li>
+                <li><a href="border/index.html">Border</a></li>
+                <li><a href="shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="icon/index.html">Overview</a></li>
+                    <li><a href="icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/navigation/header.html">Header</a></li>
+                    <li><a href="../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/input/button.html">Button</a></li>
+                    <li><a href="../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/display/card.html">Card</a></li>
+                    <li><a href="../components/display/badge.html">Badge</a></li>
+                    <li><a href="../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Docs</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Foundation</span>
+          </nav>
+          <h1>Foundation</h1>
+          <p class="hero-description"
+             data-en="Foundation is the core building blocks of the design system. It provides consistent design tokens for colors, typography, spacing, and more to ensure visual consistency across the LINE GIFTSHOP platform."
+             data-ko="Foundation은 디자인 시스템의 핵심 구성 요소입니다. 색상, 타이포그래피, 간격 등을 위한 일관된 디자인 토큰을 제공하여 LINE GIFTSHOP 플랫폼 전반에 걸쳐 시각적 일관성을 보장합니다."
+             data-zh="Foundation是设计系统的核心构建块。它为颜色、排版、间距等提供一致的设计令牌，以确保LINE GIFTSHOP平台的视觉一致性。"
+             data-th="Foundation เป็นองค์ประกอบหลักของระบบการออกแบบ มันให้โทเค็นการออกแบบที่สอดคล้องกันสำหรับสี การพิมพ์ ระยะห่าง และอื่นๆ เพื่อให้แน่ใจว่ามีความสอดคล้องทางภาพทั่วทั้งแพลตฟอร์ม LINE GIFTSHOP">
+            Foundation is the core building blocks of the design system. It provides consistent design tokens for colors, typography, spacing, and more to ensure visual consistency across the LINE GIFTSHOP platform.
+          </p>
+          <div class="hero-image">
+            <img src="../assets/images/hero-new.jpeg" alt="Foundation Hero">
+          </div>
+          <div class="category-links">
+            <a href="#token-structure" class="category-link">
+              <span>Token Structure</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#token-hierarchy" class="category-link">
+              <span>Token Hierarchy</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#usage" class="category-link">
+              <span>Usage</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Design Token System</h2>
+        </section>
+
+        <div class="content-section-group">
+          <section class="content-section" id="token-structure">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Token Structure</h3>
+                <p data-en="Foundation consists of multiple categories that work together to create a cohesive design language. Colors define the visual palette, Typography handles text styling across languages, Dimension provides base measurement units, and Spacing ensures consistent layout rhythm."
+                   data-ko="Foundation은 일관된 디자인 언어를 만들기 위해 함께 작동하는 여러 카테고리로 구성됩니다. Colors는 시각적 팔레트를 정의하고, Typography는 언어별 텍스트 스타일링을 처리하며, Dimension은 기본 측정 단위를 제공하고, Spacing은 일관된 레이아웃 리듬을 보장합니다."
+                   data-zh="Foundation由多个类别组成，它们共同创建一致的设计语言。Colors定义视觉调色板，Typography处理跨语言的文本样式，Dimension提供基本测量单位，Spacing确保一致的布局节奏。"
+                   data-th="Foundation ประกอบด้วยหลายหมวดหมู่ที่ทำงานร่วมกันเพื่อสร้างภาษาการออกแบบที่สอดคล้องกัน Colors กำหนดจานสีภาพ Typography จัดการการจัดรูปแบบข้อความข้ามภาษา Dimension ให้หน่วยวัดพื้นฐาน และ Spacing รับประกันจังหวะเลย์เอาต์ที่สอดคล้องกัน">Foundation consists of multiple categories that work together to create a cohesive design language. Colors define the visual palette, Typography handles text styling across languages, Dimension provides base measurement units, and Spacing ensures consistent layout rhythm.</p>
+              </div>
+              <div class="content-image">
+                <img src="../assets/images/content-image.jpeg" alt="Token Structure">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="token-hierarchy">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Token Hierarchy</h3>
+                <p data-en="Foundation tokens follow a three-tier hierarchy: Core (Primitive) tokens contain raw values like colors and sizes, Semantic tokens define purpose-based values like backgrounds and text colors, and Component tokens provide specific values for UI components. This hierarchy ensures maintainability and consistency."
+                   data-ko="Foundation 토큰은 3단계 계층 구조를 따릅니다: Core (Primitive) 토큰은 색상과 크기 같은 원시 값을 포함하고, Semantic 토큰은 배경과 텍스트 색상 같은 목적 기반 값을 정의하며, Component 토큰은 UI 컴포넌트를 위한 특정 값을 제공합니다. 이 계층 구조는 유지보수성과 일관성을 보장합니다."
+                   data-zh="Foundation令牌遵循三层层次结构：Core（Primitive）令牌包含颜色和尺寸等原始值，Semantic令牌定义背景和文本颜色等基于用途的值，Component令牌为UI组件提供特定值。这种层次结构确保可维护性和一致性。"
+                   data-th="โทเค็น Foundation ปฏิบัติตามลำดับชั้นสามระดับ: โทเค็น Core (Primitive) มีค่าดิบเช่นสีและขนาด โทเค็น Semantic กำหนดค่าตามวัตถุประสงค์เช่นพื้นหลังและสีข้อความ และโทเค็น Component ให้ค่าเฉพาะสำหรับส่วนประกอบ UI ลำดับชั้นนี้รับประกันการบำรุงรักษาและความสอดคล้อง">Foundation tokens follow a three-tier hierarchy: Core (Primitive) tokens contain raw values like colors and sizes, Semantic tokens define purpose-based values like backgrounds and text colors, and Component tokens provide specific values for UI components. This hierarchy ensures maintainability and consistency.</p>
+              </div>
+              <div class="content-image">
+                <img src="../assets/images/content-image.jpeg" alt="Token Hierarchy">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="usage">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Usage Guidelines</h3>
+                <p data-en="Always use Semantic or Component tokens in your implementations instead of Core tokens directly. This approach ensures that theme changes and updates propagate correctly throughout the system. All measurements follow a 4px grid system for consistent alignment and spacing."
+                   data-ko="구현 시 항상 Core 토큰 대신 Semantic 또는 Component 토큰을 사용하세요. 이 접근 방식은 테마 변경과 업데이트가 시스템 전체에 올바르게 전파되도록 보장합니다. 모든 측정값은 일관된 정렬과 간격을 위해 4px 그리드 시스템을 따릅니다."
+                   data-zh="在实现中始终使用Semantic或Component令牌，而不是直接使用Core令牌。这种方法确保主题更改和更新在整个系统中正确传播。所有测量值都遵循4px网格系统，以确保一致的对齐和间距。"
+                   data-th="ใช้โทเค็น Semantic หรือ Component ในการใช้งานของคุณเสมอแทนที่จะใช้โทเค็น Core โดยตรง วิธีนี้ช่วยให้การเปลี่ยนแปลงธีมและการอัปเดตแพร่กระจายอย่างถูกต้องทั่วทั้งระบบ การวัดทั้งหมดเป็นไปตามระบบกริด 4px เพื่อการจัดตำแหน่งและระยะห่างที่สอดคล้องกัน">Always use Semantic or Component tokens in your implementations instead of Core tokens directly. This approach ensures that theme changes and updates propagate correctly throughout the system. All measurements follow a 4px grid system for consistent alignment and spacing.</p>
+              </div>
+              <div class="content-image">
+                <img src="../assets/images/content-image.jpeg" alt="Usage Guidelines">
+              </div>
+            </div>
+          </section>
+        </div>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Docs Overview</span>
+            </span>
+          </a>
+          <a href="colors/index.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Colors</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

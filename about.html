@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .about-page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #F5F5F5;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      position: relative;
+      overflow: hidden;
+      padding-top: 60px;
+      box-sizing: border-box;
+    }
+
+    .background-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      gap: 20px 40px;
+      font-size: 80px;
+      font-weight: 700;
+      color: #000000;
+      z-index: 0;
+      pointer-events: none;
+      padding: 0;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .scene {
+      width: 300px;
+      height: 300px;
+      perspective: 800px;
+      z-index: 1;
+    }
+
+    .gift-box {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+      transition: transform 0.1s ease-out;
+    }
+
+    .box-face {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: #FFFFFF;
+    }
+
+    .box-front {
+      transform: translateZ(150px);
+    }
+
+    .box-back {
+      transform: rotateY(180deg) translateZ(150px);
+    }
+
+    .box-right {
+      transform: rotateY(90deg) translateZ(150px);
+    }
+
+    .box-left {
+      transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    .box-top {
+      transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .box-bottom {
+      transform: rotateX(-90deg) translateZ(150px);
+    }
+
+    /* Ribbon on each face */
+    .ribbon-h, .ribbon-v {
+      position: absolute;
+      background: #FF334B;
+    }
+
+    .ribbon-h {
+      width: 100%;
+      height: 36px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .ribbon-v {
+      width: 36px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <a href="about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="about.html" class="active">About</a>
+        <a href="index.html">Docs</a>
+        <a href="web/index.html">Web</a>
+        <a href="resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-page">
+    <div class="background-text">
+      Gift 贈り物 プレゼント 礼物 Regalo Cadeau Geschenk Presente Подарок هدية उपहार Quà tặng ของขวัญ Hadiah Hediye Prezent Gåva Present Δώρο מתנה 선물 Dárek Darček Poklon Dar Gave Lahja Dhurata Cadouri Hədiyyə Сыйлық Бэлэг Sovg'a Dovaną Kingitus Dāvana Hadya Kipawa Zawadi Mphatso Isipho Chipo Koha Taonga 禮物 ギフト Kado Pabuya Regaluhan Gift 贈り物 プレゼント 礼物 Regalo Cadeau Geschenk Presente Подарок هدية उपहार Quà tặng ของขวัญ Hadiah Hediye Prezent Gåva Present Δώρο מתנה 선물 Dárek Darček Poklon Dar Gave Lahja Dhurata Cadouri Hədiyyə Сыйлық Бэлэг Sovg'a Dovaną Kingitus Dāvana Hadya Kipawa Zawadi Mphatso Isipho Chipo Koha Taonga 禮物 ギフト Kado Pabuya Regaluhan
+    </div>
+    <div class="scene" id="scene">
+      <div class="gift-box" id="cube">
+        <div class="box-face box-front">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="box-face box-back">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="box-face box-right">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="box-face box-left">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="box-face box-top">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+        <div class="box-face box-bottom">
+          <div class="ribbon-h"></div>
+          <div class="ribbon-v"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cube = document.getElementById('cube');
+    const maxRotation = 120;
+
+    document.addEventListener('mousemove', (e) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const rotateY = ((e.clientX - centerX) / centerX) * maxRotation;
+      const rotateX = -((e.clientY - centerY) / centerY) * maxRotation;
+
+      cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

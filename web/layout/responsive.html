@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive - Layout - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="../styling/colors.html">Colors</a></li>
+                <li><a href="../styling/typography.html">Typography</a></li>
+                <li><a href="../styling/spacing.html">Spacing</a></li>
+                <li><a href="../styling/icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="container.html">Container</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="flex.html">Flex</a></li>
+                <li><a href="responsive.html" class="active">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="../components/button.html">Button</a></li>
+                <li><a href="../components/input.html">Input</a></li>
+                <li><a href="../components/card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="#">Layout</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Responsive</span>
+          </nav>
+          <h1>Responsive</h1>
+          <p class="hero-description">
+            반응형 디자인을 위한 브레이크포인트와 유틸리티 클래스입니다.
+          </p>
+        </section>
+
+        <!-- Breakpoints -->
+        <section class="semantic-section">
+          <h2>Breakpoints</h2>
+          <p class="description">LINE GIFTSHOP Design System의 기본 브레이크포인트입니다.</p>
+        </section>
+
+        <table class="token-table">
+          <thead>
+            <tr>
+              <th>Breakpoint</th>
+              <th>Prefix</th>
+              <th>Min Width</th>
+              <th>CSS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mobile</td>
+              <td><code>sm:</code></td>
+              <td>640px</td>
+              <td><code>@media (min-width: 640px)</code></td>
+            </tr>
+            <tr>
+              <td>Tablet</td>
+              <td><code>md:</code></td>
+              <td>768px</td>
+              <td><code>@media (min-width: 768px)</code></td>
+            </tr>
+            <tr>
+              <td>Desktop</td>
+              <td><code>lg:</code></td>
+              <td>1024px</td>
+              <td><code>@media (min-width: 1024px)</code></td>
+            </tr>
+            <tr>
+              <td>Large Desktop</td>
+              <td><code>xl:</code></td>
+              <td>1280px</td>
+              <td><code>@media (min-width: 1280px)</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Responsive Grid -->
+        <section class="semantic-section">
+          <h2>Responsive Grid</h2>
+          <p class="description">브레이크포인트별로 그리드 열 수를 변경합니다.</p>
+        </section>
+
+        <div class="code-block-wrapper">
+          <div class="code-block-header">
+            <span class="code-filename">
+              <span class="code-file-icon html">html</span>
+              Responsive Grid
+            </span>
+            <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre class="code-block"><code><span class="comment">&lt;!-- 1 column on mobile, 2 on tablet, 4 on desktop --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"gs-grid gs-grid-cols-1 md:gs-grid-cols-2 lg:gs-grid-cols-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Item 1<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Item 2<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Item 3<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Item 4<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <!-- Responsive Display -->
+        <section class="semantic-section">
+          <h2>Responsive Display</h2>
+          <p class="description">브레이크포인트별로 요소를 표시하거나 숨깁니다.</p>
+        </section>
+
+        <div class="code-block-wrapper">
+          <div class="code-block-header">
+            <span class="code-filename">
+              <span class="code-file-icon html">html</span>
+              Responsive Display
+            </span>
+            <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre class="code-block"><code><span class="comment">&lt;!-- Hidden on mobile, visible on tablet and up --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"gs-hidden md:gs-block"</span><span class="tag">&gt;</span>
+  Desktop Sidebar
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Visible on mobile, hidden on tablet and up --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"gs-block md:gs-hidden"</span><span class="tag">&gt;</span>
+  Mobile Menu Button
+<span class="tag">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <!-- Responsive Spacing -->
+        <section class="semantic-section">
+          <h2>Responsive Spacing</h2>
+          <p class="description">브레이크포인트별로 패딩과 마진을 조정합니다.</p>
+        </section>
+
+        <div class="code-block-wrapper">
+          <div class="code-block-header">
+            <span class="code-filename">
+              <span class="code-file-icon html">html</span>
+              Responsive Spacing
+            </span>
+            <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre class="code-block"><code><span class="comment">&lt;!-- Padding: 16px on mobile, 32px on tablet, 48px on desktop --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"gs-p-4 md:gs-p-8 lg:gs-p-12"</span><span class="tag">&gt;</span>
+  Content with responsive padding
+<span class="tag">&lt;/div&gt;</span></code></pre>
+        </div>
+
+        <!-- Responsive Flex -->
+        <section class="semantic-section">
+          <h2>Responsive Flex Direction</h2>
+          <p class="description">브레이크포인트별로 Flex 방향을 변경합니다.</p>
+        </section>
+
+        <div class="code-block-wrapper">
+          <div class="code-block-header">
+            <span class="code-filename">
+              <span class="code-file-icon html">html</span>
+              Responsive Flex
+            </span>
+            <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <pre class="code-block"><code><span class="comment">&lt;!-- Column on mobile, row on tablet and up --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="string">"gs-flex gs-flex-col md:gs-flex-row gs-gap-4"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Left / Top<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div&gt;</span>Right / Bottom<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+        </div>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="flex.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Flex</span>
+            </span>
+          </a>
+          <a href="../components/button.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Button</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script>
+    async function copyCodeBlock(button) {
+      const container = button.closest('.code-block-wrapper');
+      const codeEl = container.querySelector('code');
+      const text = codeEl.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        button.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        `;
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          `;
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+  </script>
+</body>
+</html>

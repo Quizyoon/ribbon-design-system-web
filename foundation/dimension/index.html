@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimension - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Dimension</span>
+          </nav>
+          <h1>Dimension</h1>
+          <p class="hero-description"
+             data-en="The dimension system provides primitive values that serve as the foundation for all sizing in the LINE GIFTSHOP platform. Based on a 4px grid system, it ensures visual consistency across all components."
+             data-ko="Dimension 시스템은 LINE GIFTSHOP 플랫폼의 모든 크기 지정에 기초가 되는 기본 값을 제공합니다. 4px 그리드 시스템을 기반으로 모든 컴포넌트에서 시각적 일관성을 보장합니다."
+             data-zh="尺寸系统提供作为LINE GIFTSHOP平台所有尺寸基础的原始值。基于4px网格系统，确保所有组件的视觉一致性。"
+             data-th="ระบบมิติให้ค่าพื้นฐานที่เป็นรากฐานสำหรับการกำหนดขนาดทั้งหมดในแพลตฟอร์ม LINE GIFTSHOP อิงจากระบบกริด 4px เพื่อให้มั่นใจในความสอดคล้องทางภาพในทุกคอมโพเนนต์">
+            The dimension system provides primitive values that serve as the foundation for all sizing in the LINE GIFTSHOP platform. Based on a 4px grid system, it ensures visual consistency across all components.
+          </p>
+          <div class="hero-image">
+            <img src="../../assets/images/hero-new.jpeg" alt="Dimension System Hero">
+          </div>
+          <div class="category-links">
+            <a href="#grid-system" class="category-link">
+              <span>4px Grid</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#scale" class="category-link">
+              <span>Scale</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#usage" class="category-link">
+              <span>Usage</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>4px Grid Foundation</h2>
+        </section>
+
+        <div class="content-section-group">
+          <section class="content-section">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Consistent Spacing System</h3>
+                <p data-en="Dimension is the foundation of all size values in the design system. It provides a consistent size system based on a 4px grid, serving as base values for Spacing, Border Radius, Icon Size, and more. As a Core Token, it is referenced by Semantic and Component Tokens to maintain visual harmony."
+                   data-ko="Dimension은 디자인 시스템에서 사용되는 모든 크기의 기준이 됩니다. 4px 그리드 시스템을 기반으로 일관된 크기 체계를 제공하며, Spacing, Border Radius, Icon Size 등의 기준 값으로 사용됩니다. Core Token으로서 Semantic과 Component Token들이 참조하여 시각적 조화를 유지합니다."
+                   data-zh="Dimension是设计系统中所有尺寸值的基础。它基于4px网格系统提供一致的尺寸体系，作为Spacing、Border Radius、Icon Size等的基准值。作为Core Token，被Semantic和Component Token引用以保持视觉和谐。"
+                   data-th="Dimension เป็นรากฐานของค่าขนาดทั้งหมดในระบบการออกแบบ มันให้ระบบขนาดที่สอดคล้องกันโดยอิงจากกริด 4px ใช้เป็นค่าพื้นฐานสำหรับ Spacing, Border Radius, Icon Size และอื่นๆ ในฐานะ Core Token มันถูกอ้างอิงโดย Semantic และ Component Token เพื่อรักษาความกลมกลืนทางภาพ">Dimension is the foundation of all size values in the design system. It provides a consistent size system based on a 4px grid, serving as base values for Spacing, Border Radius, Icon Size, and more. As a Core Token, it is referenced by Semantic and Component Tokens to maintain visual harmony.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="4px Grid System">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="grid-system">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>4px Grid System</h3>
+                <p data-en="All Dimension values are defined based on 4px. This consistent base unit ensures that all spacing and sizing across the platform maintains visual rhythm and alignment."
+                   data-ko="모든 Dimension 값은 4px를 기준으로 정의됩니다. 이 일관된 기본 단위는 플랫폼 전체의 모든 간격과 크기가 시각적 리듬과 정렬을 유지하도록 합니다."
+                   data-zh="所有Dimension值都基于4px定义。这个一致的基本单位确保平台上所有间距和尺寸保持视觉节奏和对齐。"
+                   data-th="ค่า Dimension ทั้งหมดถูกกำหนดโดยอิงจาก 4px หน่วยพื้นฐานที่สอดคล้องกันนี้ทำให้มั่นใจว่าระยะห่างและขนาดทั้งหมดบนแพลตฟอร์มรักษาจังหวะภาพและการจัดตำแหน่ง">All Dimension values are defined based on 4px. This consistent base unit ensures that all spacing and sizing across the platform maintains visual rhythm and alignment.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="4px Grid">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="scale">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Scale Values</h3>
+                <p data-en="Dimension provides a comprehensive scale from x0_5 (2px) to x16 (64px) and beyond. Each scale value is calculated by multiplying the base unit (4px) by the scale factor."
+                   data-ko="Dimension은 x0_5 (2px)부터 x16 (64px) 이상까지 포괄적인 스케일을 제공합니다. 각 스케일 값은 기본 단위(4px)에 스케일 팩터를 곱하여 계산됩니다."
+                   data-zh="Dimension提供从x0_5 (2px)到x16 (64px)及以上的全面刻度。每个刻度值通过将基本单位(4px)乘以刻度因子计算得出。"
+                   data-th="Dimension ให้ scale ที่ครอบคลุมตั้งแต่ x0_5 (2px) ถึง x16 (64px) และมากกว่า แต่ละค่า scale คำนวณโดยการคูณหน่วยพื้นฐาน (4px) ด้วย scale factor">Dimension provides a comprehensive scale from x0_5 (2px) to x16 (64px) and beyond. Each scale value is calculated by multiplying the base unit (4px) by the scale factor.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Scale Values">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="usage">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Usage Principle</h3>
+                <p data-en="Dimension is a Core Token and should not be used directly in components. Instead, use Semantic Tokens (like Spacing) or Component Tokens that reference Dimension values. This abstraction layer allows for easier maintenance and theme switching."
+                   data-ko="Dimension은 Core Token이므로 컴포넌트에서 직접 사용하면 안 됩니다. 대신 Dimension 값을 참조하는 Semantic Token(예: Spacing)이나 Component Token을 사용하세요. 이 추상화 레이어를 통해 유지보수와 테마 전환이 용이해집니다."
+                   data-zh="Dimension是Core Token，不应直接在组件中使用。相反，应使用引用Dimension值的Semantic Token（如Spacing）或Component Token。这个抽象层使维护和主题切换更加容易。"
+                   data-th="Dimension เป็น Core Token และไม่ควรใช้โดยตรงในคอมโพเนนต์ ให้ใช้ Semantic Token (เช่น Spacing) หรือ Component Token ที่อ้างอิงค่า Dimension แทน ชั้นนามธรรมนี้ช่วยให้การบำรุงรักษาและการสลับธีมง่ายขึ้น">Dimension is a Core Token and should not be used directly in components. Instead, use Semantic Tokens (like Spacing) or Component Tokens that reference Dimension values. This abstraction layer allows for easier maintenance and theme switching.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Usage Principle">
+              </div>
+            </div>
+          </section>
+        </div>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../index.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Foundation</span>
+            </span>
+          </a>
+          <a href="tokens.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Dimension Tokens</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

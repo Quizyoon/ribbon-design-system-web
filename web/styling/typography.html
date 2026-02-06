@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography - Styling - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="typography.html" class="active">Typography</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+                <li><a href="icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="../components/button.html">Button</a></li>
+                <li><a href="../components/input.html">Input</a></li>
+                <li><a href="../components/card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="colors.html">Styling</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Typography</span>
+          </nav>
+          <h1>Typography</h1>
+          <p class="hero-description"
+             data-en="How to use Typography CSS variables and classes."
+             data-ko="Typography CSS 변수와 클래스 사용법입니다."
+             data-zh="如何使用 Typography CSS 变量和类。"
+             data-th="วิธีใช้ตัวแปร CSS และคลาสของ Typography">
+            How to use Typography CSS variables and classes.
+          </p>
+        </section>
+
+        <section class="semantic-section">
+          <h2>CSS Implementation</h2>
+          <div class="code-block">
+            <code><span class="code-comment">/* Title XL */</span>
+<span class="code-selector">.text-title-xl</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t9)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-title-t9-en)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-bold)</span>;
+}
+
+<span class="code-comment">/* Body MD */</span>
+<span class="code-selector">.text-body-md</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t4)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-body-t4)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-regular)</span>;
+}
+
+<span class="code-comment">/* Caption SM */</span>
+<span class="code-selector">.text-caption-sm</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t1)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-body-t1-en)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-regular)</span>;
+}</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Usage</h2>
+          <div class="code-block">
+            <code><span class="code-comment">&lt;!-- HTML Usage --&gt;</span>
+&lt;<span class="code-keyword">h1</span> <span class="code-property">class</span>=<span class="code-string">"text-title-2xl"</span>&gt;Page Title&lt;/<span class="code-keyword">h1</span>&gt;
+&lt;<span class="code-keyword">h2</span> <span class="code-property">class</span>=<span class="code-string">"text-title-xl"</span>&gt;Section Title&lt;/<span class="code-keyword">h2</span>&gt;
+&lt;<span class="code-keyword">h3</span> <span class="code-property">class</span>=<span class="code-string">"text-title-lg"</span>&gt;Card Title&lt;/<span class="code-keyword">h3</span>&gt;
+&lt;<span class="code-keyword">p</span> <span class="code-property">class</span>=<span class="code-string">"text-body-md"</span>&gt;Body text&lt;/<span class="code-keyword">p</span>&gt;
+&lt;<span class="code-keyword">span</span> <span class="code-property">class</span>=<span class="code-string">"text-caption-sm"</span>&gt;Label&lt;/<span class="code-keyword">span</span>&gt;</code>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Multi-language Support</h2>
+          <div class="code-block">
+            <code><span class="code-comment">/* English */</span>
+<span class="code-selector">.text-title-xl-en</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t9)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-title-t9-en)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-bold)</span>;
+  <span class="code-property">font-family</span>: <span class="code-value">var(--typography-font-family-en)</span>;
+}
+
+<span class="code-comment">/* Traditional Chinese */</span>
+<span class="code-selector">.text-title-xl-tw</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t9)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-title-t9-tw)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-bold)</span>;
+  <span class="code-property">font-family</span>: <span class="code-value">var(--typography-font-family-tw)</span>;
+}
+
+<span class="code-comment">/* Thai */</span>
+<span class="code-selector">.text-title-xl-th</span> {
+  <span class="code-property">font-size</span>: <span class="code-value">var(--typography-font-size-t9)</span>;
+  <span class="code-property">line-height</span>: <span class="code-value">var(--typography-line-height-title-t9-th)</span>;
+  <span class="code-property">font-weight</span>: <span class="code-value">var(--typography-font-weight-bold)</span>;
+  <span class="code-property">font-family</span>: <span class="code-value">var(--typography-font-family-th)</span>;
+}</code>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="colors.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Colors</span>
+            </span>
+          </a>
+          <a href="spacing.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Spacing</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

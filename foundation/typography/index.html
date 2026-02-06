@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html" class="active">Docs</a>
+        <a href="../../web/index.html">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Docs</div>
+          <ul class="nav-list">
+            <li><a href="../../index.html">Overview</a></li>
+            <li class="has-children expanded">
+              <a href="../index.html">Foundation</a>
+              <ul class="nav-sublist">
+                <li><a href="../index.html">Overview</a></li>
+                <li class="has-children">
+                  <a href="../colors/index.html">Colors</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../colors/index.html">Overview</a></li>
+                    <li><a href="../colors/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../typography/index.html">Typography</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../typography/index.html">Overview</a></li>
+                    <li><a href="../typography/typography-styles.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../dimension/index.html">Dimension</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../dimension/index.html">Overview</a></li>
+                    <li><a href="../dimension/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="../spacing/index.html">Spacing</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../spacing/index.html">Overview</a></li>
+                    <li><a href="../spacing/tokens.html">Tokens</a></li>
+                  </ul>
+                </li>
+                <li><a href="../radius/index.html">Radius</a></li>
+                <li><a href="../border/index.html">Border</a></li>
+                <li><a href="../shadow/index.html">Shadow</a></li>
+                <li class="has-children">
+                  <a href="../icon/index.html">Icon</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../icon/index.html">Overview</a></li>
+                    <li><a href="../icon/library.html">Library</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="#">Navigation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/navigation/header.html">Header</a></li>
+                    <li><a href="../../components/navigation/tab-bar.html">Tab Bar</a></li>
+                    <li><a href="../../components/navigation/navigation-bar.html">Navigation Bar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Input</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/input/button.html">Button</a></li>
+                    <li><a href="../../components/input/textfield.html">TextField</a></li>
+                    <li><a href="../../components/input/checkbox.html">Checkbox</a></li>
+                    <li><a href="../../components/input/radio.html">Radio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Display</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/display/card.html">Card</a></li>
+                    <li><a href="../../components/display/badge.html">Badge</a></li>
+                    <li><a href="../../components/display/avatar.html">Avatar</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#">Feedback</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../../components/feedback/alert.html">Alert</a></li>
+                    <li><a href="../../components/feedback/toast.html">Toast</a></li>
+                    <li><a href="../../components/feedback/dialog.html">Dialog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Guidelines</a>
+              <ul class="nav-sublist">
+                <li><a href="../../guidelines/accessibility.html">Accessibility</a></li>
+                <li><a href="../../guidelines/best-practice.html">Best Practice</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Foundation</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Typography</span>
+          </nav>
+          <h1>Typography</h1>
+          <p class="hero-description"
+             data-en="The typography system provides consistent text styles across multiple languages in the LINE GIFTSHOP platform. It defines how text is styled, sized, and weighted throughout the design system."
+             data-ko="Typography 시스템은 LINE GIFTSHOP 플랫폼에서 다국어 환경에 걸쳐 일관된 텍스트 스타일을 제공합니다. 디자인 시스템 전반에 걸쳐 텍스트의 스타일, 크기 및 굵기를 정의합니다."
+             data-zh="排版系统在LINE GIFTSHOP平台上为多种语言提供一致的文本样式。它定义了整个设计系统中文本的样式、大小和粗细。"
+             data-th="ระบบตัวอักษรให้รูปแบบข้อความที่สอดคล้องกันในหลายภาษาบนแพลตฟอร์ม LINE GIFTSHOP กำหนดวิธีการจัดรูปแบบ ขนาด และน้ำหนักของข้อความตลอดทั้งระบบการออกแบบ">
+            The typography system provides consistent text styles across multiple languages in the LINE GIFTSHOP platform. It defines how text is styled, sized, and weighted throughout the design system.
+          </p>
+          <div class="hero-image">
+            <img src="../../assets/images/hero-new.jpeg" alt="Typography System Hero">
+          </div>
+          <div class="category-links">
+            <a href="#title" class="category-link">
+              <span>Title</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#body" class="category-link">
+              <span>Body</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#core" class="category-link">
+              <span>Core</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="semantic-section">
+          <h2>Multi-language Typography</h2>
+        </section>
+
+        <div class="content-section-group">
+          <section class="content-section">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Language-optimized Text Styles</h3>
+                <p data-en="Typography tokens are designed to support multiple languages including English, Korean, Chinese, and Thai. Each language has optimized font families and line heights to ensure readability and visual consistency across all locales."
+                   data-ko="Typography 토큰은 영어, 한국어, 중국어, 태국어를 포함한 다국어를 지원하도록 설계되었습니다. 각 언어는 모든 지역에서 가독성과 시각적 일관성을 보장하기 위해 최적화된 폰트 패밀리와 행간을 가집니다."
+                   data-zh="排版令牌旨在支持多种语言，包括英语、韩语、中文和泰语。每种语言都有优化的字体系列和行高，以确保所有地区的可读性和视觉一致性。"
+                   data-th="โทเค็นตัวอักษรได้รับการออกแบบเพื่อรองรับหลายภาษารวมถึงภาษาอังกฤษ เกาหลี จีน และไทย แต่ละภาษามีตระกูลฟอนต์และความสูงบรรทัดที่เหมาะสมเพื่อให้มั่นใจในความสามารถในการอ่านและความสอดคล้องทางภาพในทุกภูมิภาค">Typography tokens are designed to support multiple languages including English, Korean, Chinese, and Thai. Each language has optimized font families and line heights to ensure readability and visual consistency across all locales.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Multi-language Typography">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="title">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Title Styles</h3>
+                <p data-en="Title styles are used for headings and emphasized text. They support sizes from T2 to T10, with both Regular and Bold weights. Title styles have tighter line heights optimized for short, impactful text."
+                   data-ko="Title 스타일은 제목과 강조 텍스트에 사용됩니다. T2부터 T10까지의 사이즈를 지원하며, Regular와 Bold 굵기를 모두 제공합니다. Title 스타일은 짧고 임팩트 있는 텍스트에 최적화된 더 좁은 행간을 가집니다."
+                   data-zh="标题样式用于标题和强调文本。它们支持从T2到T10的尺寸，包括Regular和Bold两种粗细。标题样式具有针对简短有力文本优化的较紧凑行高。"
+                   data-th="รูปแบบหัวเรื่องใช้สำหรับหัวข้อและข้อความเน้น รองรับขนาดตั้งแต่ T2 ถึง T10 ทั้งน้ำหนัก Regular และ Bold รูปแบบหัวเรื่องมีความสูงบรรทัดที่แน่นกว่าซึ่งเหมาะสำหรับข้อความสั้นที่มีพลัง">Title styles are used for headings and emphasized text. They support sizes from T2 to T10, with both Regular and Bold weights. Title styles have tighter line heights optimized for short, impactful text.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Title Styles">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="body">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Body Styles</h3>
+                <p data-en="Body styles are designed for paragraph text and longer content. They support sizes from T1 to T5, with line heights optimized for comfortable reading. Body text uses more generous line spacing to improve readability in longer passages."
+                   data-ko="Body 스타일은 본문 텍스트와 긴 콘텐츠를 위해 설계되었습니다. T1부터 T5까지의 사이즈를 지원하며, 편안한 읽기에 최적화된 행간을 가집니다. Body 텍스트는 긴 문장에서 가독성을 높이기 위해 더 넉넉한 줄 간격을 사용합니다."
+                   data-zh="正文样式专为段落文本和较长内容设计。它们支持从T1到T5的尺寸，行高针对舒适阅读进行了优化。正文文本使用更宽松的行距以提高长篇内容的可读性。"
+                   data-th="รูปแบบเนื้อหาออกแบบสำหรับข้อความย่อหน้าและเนื้อหายาว รองรับขนาดตั้งแต่ T1 ถึง T5 โดยมีความสูงบรรทัดที่เหมาะสำหรับการอ่านที่สะดวกสบาย ข้อความเนื้อหาใช้ระยะห่างบรรทัดที่มากขึ้นเพื่อปรับปรุงความสามารถในการอ่านในเนื้อหายาว">Body styles are designed for paragraph text and longer content. They support sizes from T1 to T5, with line heights optimized for comfortable reading. Body text uses more generous line spacing to improve readability in longer passages.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Body Styles">
+              </div>
+            </div>
+          </section>
+
+          <section class="content-section" id="core">
+            <div class="content-with-image">
+              <div class="content-text">
+                <h3>Core Tokens</h3>
+                <p data-en="Core typography tokens include Font Family, Font Weight, Font Size, and Line Height. These primitive values are combined to create the Style tokens. Core tokens should not be used directly - use Style tokens instead for consistent typography."
+                   data-ko="Core 타이포그래피 토큰은 Font Family, Font Weight, Font Size, Line Height를 포함합니다. 이러한 기본 값들이 조합되어 Style 토큰을 생성합니다. Core 토큰은 직접 사용하지 말고 일관된 타이포그래피를 위해 Style 토큰을 사용하세요."
+                   data-zh="核心排版令牌包括字体系列、字体粗细、字体大小和行高。这些原始值组合创建Style令牌。不应直接使用核心令牌，请使用Style令牌以保持一致的排版。"
+                   data-th="โทเค็นตัวอักษรหลักประกอบด้วย Font Family, Font Weight, Font Size และ Line Height ค่าพื้นฐานเหล่านี้รวมกันเพื่อสร้างโทเค็น Style ไม่ควรใช้โทเค็นหลักโดยตรง ให้ใช้โทเค็น Style แทนเพื่อความสอดคล้องของตัวอักษร">Core typography tokens include Font Family, Font Weight, Font Size, and Line Height. These primitive values are combined to create the Style tokens. Core tokens should not be used directly - use Style tokens instead for consistent typography.</p>
+              </div>
+              <div class="content-image">
+                <img src="../../assets/images/content-image.jpeg" alt="Core Tokens">
+              </div>
+            </div>
+          </section>
+        </div>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../colors/tokens.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Color Tokens</span>
+            </span>
+          </a>
+          <a href="typography-styles.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Typography Tokens</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

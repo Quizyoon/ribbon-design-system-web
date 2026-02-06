@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors - Styling - LINE GIFTSHOP Design System</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="../../about.html" class="logo">LINE GIFTSHOP</a>
+    </div>
+    <div class="header-right">
+      <nav class="header-nav">
+        <a href="../../about.html">About</a>
+        <a href="../../index.html">Docs</a>
+        <a href="../index.html" class="active">Web</a>
+        <a href="../../resource/index.html">Resource</a>
+        
+      </nav>
+      <div class="header-icons">
+        <div class="lang-dropdown">
+          <button class="lang-btn" aria-label="Language" onclick="toggleLangMenu()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="currentLang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" onclick="setLang('EN', 'English')" class="active">English</a>
+            <a href="#" onclick="setLang('KO', '한국어')">한국어</a>
+            <a href="#" onclick="setLang('ZH', '中文')">中文</a>
+            <a href="#" onclick="setLang('TH', 'ไทย')">ไทย</a>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-title">Web</div>
+          <ul class="nav-list">
+            <li><a href="../index.html">Overview</a></li>
+            <li class="has-children">
+              <a href="#">Getting Started</a>
+              <ul class="nav-sublist">
+                <li class="has-children">
+                  <a href="../getting-started/installation/index.html">Installation</a>
+                  <ul class="nav-sublist">
+                    <li><a href="../getting-started/installation/nextjs.html">Next.js</a></li>
+                    <li><a href="../getting-started/installation/vue.html">Vue 3</a></li>
+                    <li><a href="../getting-started/installation/vite.html">Vite</a></li>
+                    <li><a href="../getting-started/installation/cdn.html">CDN</a></li>
+                  </ul>
+                </li>
+                <li><a href="../getting-started/liff-setup.html">LIFF Setup</a></li>
+                <li><a href="../getting-started/quick-start.html">Quick Start</a></li>
+              </ul>
+            </li>
+            <li class="has-children expanded">
+              <a href="#">Styling</a>
+              <ul class="nav-sublist">
+                <li><a href="colors.html" class="active">Colors</a></li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+                <li><a href="icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Layout</a>
+              <ul class="nav-sublist">
+                <li><a href="../layout/container.html">Container</a></li>
+                <li><a href="../layout/grid.html">Grid</a></li>
+                <li><a href="../layout/flex.html">Flex</a></li>
+                <li><a href="../layout/responsive.html">Responsive</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href="#">Components</a>
+              <ul class="nav-sublist">
+                <li><a href="../components/button.html">Button</a></li>
+                <li><a href="../components/input.html">Input</a></li>
+                <li><a href="../components/card.html">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="content-wrapper">
+        <section class="hero-section">
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item"><a href="../index.html">Web</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item"><a href="colors.html">Styling</a></span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current">Colors</span>
+          </nav>
+          <h1>Colors</h1>
+          <p class="hero-description"
+             data-en="This guide explains how to use LINE GIFTSHOP design system color tokens in your web projects."
+             data-ko="이 가이드는 웹 프로젝트에서 LINE GIFTSHOP 디자인 시스템 색상 토큰을 사용하는 방법을 설명합니다."
+             data-zh="本指南介绍如何在您的网页项目中使用 LINE GIFTSHOP 设计系统颜色令牌。"
+             data-th="คู่มือนี้อธิบายวิธีการใช้โทเค็นสีของระบบการออกแบบ LINE GIFTSHOP ในโปรเจกต์เว็บของคุณ">
+            This guide explains how to use LINE GIFTSHOP design system color tokens in your web projects.
+          </p>
+        </section>
+
+        <!-- Installation -->
+        <section class="semantic-section" id="installation">
+          <h2 data-en="Installation" data-ko="설치" data-zh="安装" data-th="การติดตั้ง">Installation</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="Install the design system package using npm or yarn."
+                 data-ko="npm 또는 yarn을 사용하여 디자인 시스템 패키지를 설치합니다."
+                 data-zh="使用 npm 或 yarn 安装设计系统包。"
+                 data-th="ติดตั้งแพ็คเกจระบบการออกแบบโดยใช้ npm หรือ yarn">Install the design system package using npm or yarn.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">bash</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="comment"># npm</span>
+npm install @line-giftshop/design-system
+
+<span class="comment"># yarn</span>
+yarn add @line-giftshop/design-system
+
+<span class="comment"># pnpm</span>
+pnpm add @line-giftshop/design-system</code></pre>
+          </div>
+
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="Import the CSS file into your project."
+                 data-ko="CSS 파일을 프로젝트에 가져옵니다."
+                 data-zh="将 CSS 文件导入到您的项目中。"
+                 data-th="นำเข้าไฟล์ CSS ลงในโปรเจกต์ของคุณ">Import the CSS file into your project.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">typescript</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="comment">// main.tsx or App.tsx</span>
+<span class="keyword">import</span> <span class="string">'@line-giftshop/design-system/styles/colors.css'</span>;</code></pre>
+          </div>
+        </section>
+
+        <!-- Usage -->
+        <section class="semantic-section" id="usage">
+          <h2 data-en="Usage" data-ko="사용법" data-zh="用法" data-th="การใช้งาน">Usage</h2>
+
+          <!-- CSS Variables -->
+          <h3 id="css-variables" data-en="CSS Variables" data-ko="CSS 변수" data-zh="CSS 变量" data-th="ตัวแปร CSS">CSS Variables</h3>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="You can access color tokens using CSS variables. All tokens start with the --color- prefix."
+                 data-ko="CSS 변수를 사용하여 색상 토큰에 접근할 수 있습니다. 모든 토큰은 --color- 접두사로 시작합니다."
+                 data-zh="您可以使用 CSS 变量访问颜色令牌。所有令牌都以 --color- 前缀开头。"
+                 data-th="คุณสามารถเข้าถึงโทเค็นสีโดยใช้ตัวแปร CSS ทุกโทเค็นเริ่มต้นด้วยคำนำหน้า --color-">You can access color tokens using CSS variables. All tokens start with the <code>--color-</code> prefix.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">css</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="class-name">.my-component</span> {
+  <span class="comment">/* Brand colors */</span>
+  <span class="property">background-color</span>: <span class="function">var</span>(<span class="variable">--color-primary</span>);           <span class="comment">/* #06C755 */</span>
+  <span class="property">color</span>: <span class="function">var</span>(<span class="variable">--color-text-primary</span>);                 <span class="comment">/* #111111 */</span>
+
+  <span class="comment">/* Semantic colors */</span>
+  <span class="property">border-color</span>: <span class="function">var</span>(<span class="variable">--color-border-default</span>);        <span class="comment">/* #E0E0E0 */</span>
+
+  <span class="comment">/* Feedback colors */</span>
+  <span class="property">--success</span>: <span class="function">var</span>(<span class="variable">--color-success</span>);                   <span class="comment">/* Green */</span>
+  <span class="property">--error</span>: <span class="function">var</span>(<span class="variable">--color-error</span>);                       <span class="comment">/* Red */</span>
+  <span class="property">--warning</span>: <span class="function">var</span>(<span class="variable">--color-warning</span>);                   <span class="comment">/* Orange */</span>
+}</code></pre>
+          </div>
+
+          <!-- React/JSX -->
+          <h3 id="react-jsx" data-en="React / JSX" data-ko="React / JSX" data-zh="React / JSX" data-th="React / JSX">React / JSX</h3>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="You can use inline styles in React components, or import and use the token object."
+                 data-ko="React 컴포넌트에서 인라인 스타일을 사용하거나 토큰 객체를 가져와서 사용할 수 있습니다."
+                 data-zh="您可以在 React 组件中使用内联样式，或导入并使用令牌对象。"
+                 data-th="คุณสามารถใช้สไตล์อินไลน์ในคอมโพเนนต์ React หรือนำเข้าและใช้ออบเจ็กต์โทเค็น">You can use inline styles in React components, or import and use the token object.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">tsx</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> { <span class="variable">colors</span> } <span class="keyword">from</span> <span class="string">'@line-giftshop/design-system'</span>;
+
+<span class="keyword">function</span> <span class="function">MyComponent</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span>
+      <span class="attr-name">style</span>=<span class="punctuation">{{</span>
+        <span class="comment">// Using CSS variables</span>
+        <span class="property">backgroundColor</span>: <span class="string">'var(--color-primary)'</span>,
+
+        <span class="comment">// Using token object</span>
+        <span class="property">color</span>: <span class="variable">colors</span>.<span class="property">text</span>.<span class="property">primary</span>,
+        <span class="property">borderColor</span>: <span class="variable">colors</span>.<span class="property">border</span>.<span class="property">default</span>,
+      <span class="punctuation">}}</span>
+    <span class="tag">&gt;</span>
+      LINE GIFTSHOP
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</code></pre>
+          </div>
+
+          <!-- Styled Components -->
+          <h3 id="styled-components" data-en="Styled Components" data-ko="Styled Components" data-zh="Styled Components" data-th="Styled Components">Styled Components</h3>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="Here is how to use tokens with Styled Components or Emotion."
+                 data-ko="Styled Components 또는 Emotion에서 토큰을 사용하는 방법입니다."
+                 data-zh="以下是如何在 Styled Components 或 Emotion 中使用令牌。"
+                 data-th="นี่คือวิธีใช้โทเค็นกับ Styled Components หรือ Emotion">Here is how to use tokens with Styled Components or Emotion.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">tsx</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> <span class="variable">styled</span> <span class="keyword">from</span> <span class="string">'styled-components'</span>;
+<span class="keyword">import</span> { <span class="variable">colors</span> } <span class="keyword">from</span> <span class="string">'@line-giftshop/design-system'</span>;
+
+<span class="keyword">const</span> <span class="variable">PrimaryButton</span> = <span class="variable">styled</span>.<span class="function">button</span><span class="string">`
+  background-color: ${colors.primary};
+  color: ${colors.text.inverse};
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &amp;:hover {
+    background-color: ${colors.primary.hover};
+  }
+
+  &amp;:disabled {
+    background-color: ${colors.disabled.background};
+    color: ${colors.disabled.text};
+  }
+`</span>;
+
+<span class="keyword">const</span> <span class="variable">Card</span> = <span class="variable">styled</span>.<span class="function">div</span><span class="string">`
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 12px;
+  padding: 24px;
+`</span>;</code></pre>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <h3 id="tailwind" data-en="Tailwind CSS" data-ko="Tailwind CSS" data-zh="Tailwind CSS" data-th="Tailwind CSS">Tailwind CSS</h3>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="To use with Tailwind CSS, register custom colors in tailwind.config.js."
+                 data-ko="Tailwind CSS에서 사용하려면 tailwind.config.js에 사용자 정의 색상을 등록합니다."
+                 data-zh="要与 Tailwind CSS 一起使用，请在 tailwind.config.js 中注册自定义颜色。"
+                 data-th="หากต้องการใช้กับ Tailwind CSS ให้ลงทะเบียนสีที่กำหนดเองใน tailwind.config.js">To use with Tailwind CSS, register custom colors in <code>tailwind.config.js</code>.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">javascript</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="comment">// tailwind.config.js</span>
+<span class="keyword">const</span> { <span class="variable">tailwindColors</span> } = <span class="function">require</span>(<span class="string">'@line-giftshop/design-system/tailwind'</span>);
+
+<span class="variable">module</span>.<span class="property">exports</span> = {
+  <span class="property">theme</span>: {
+    <span class="property">extend</span>: {
+      <span class="property">colors</span>: <span class="variable">tailwindColors</span>,
+    },
+  },
+};</code></pre>
+          </div>
+
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="Now you can use tokens in Tailwind classes."
+                 data-ko="이제 Tailwind 클래스에서 토큰을 사용할 수 있습니다."
+                 data-zh="现在您可以在 Tailwind 类中使用令牌。"
+                 data-th="ตอนนี้คุณสามารถใช้โทเค็นในคลาส Tailwind ได้แล้ว">Now you can use tokens in Tailwind classes.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">html</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="comment">&lt;!-- Brand colors --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr-name">class</span>=<span class="attr-value">"bg-line-primary text-white hover:bg-line-primary-hover"</span><span class="tag">&gt;</span>
+  Buy Now
+<span class="tag">&lt;/button&gt;</span>
+
+<span class="comment">&lt;!-- Semantic colors --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr-name">class</span>=<span class="attr-value">"bg-line-surface border border-line-border"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;p</span> <span class="attr-name">class</span>=<span class="attr-value">"text-line-text-primary"</span><span class="tag">&gt;</span>Content<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Status colors --&gt;</span>
+<span class="tag">&lt;span</span> <span class="attr-name">class</span>=<span class="attr-value">"text-line-success"</span><span class="tag">&gt;</span>Payment Complete<span class="tag">&lt;/span&gt;</span>
+<span class="tag">&lt;span</span> <span class="attr-name">class</span>=<span class="attr-value">"text-line-error"</span><span class="tag">&gt;</span>Error Occurred<span class="tag">&lt;/span&gt;</span></code></pre>
+          </div>
+        </section>
+
+        <!-- LIFF Environment -->
+        <section class="semantic-section" id="liff">
+          <h2 data-en="Using in LIFF Environment" data-ko="LIFF 환경에서 사용하기" data-zh="在 LIFF 环境中使用" data-th="การใช้งานในสภาพแวดล้อม LIFF">Using in LIFF Environment</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="In the LIFF (LINE Front-end Framework) environment, colors are applied considering the characteristics of the browser within the LINE app."
+                 data-ko="LIFF (LINE Front-end Framework) 환경에서는 LINE 앱 내 브라우저의 특성을 고려하여 색상이 적용됩니다."
+                 data-zh="在 LIFF（LINE 前端框架）环境中，颜色的应用会考虑 LINE 应用内浏览器的特性。"
+                 data-th="ในสภาพแวดล้อม LIFF (LINE Front-end Framework) สีจะถูกนำไปใช้โดยพิจารณาลักษณะเฉพาะของเบราว์เซอร์ภายในแอป LINE">In the LIFF (LINE Front-end Framework) environment, colors are applied considering the characteristics of the browser within the LINE app.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">tsx</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> { <span class="variable">useLiff</span> } <span class="keyword">from</span> <span class="string">'@line-giftshop/design-system/hooks'</span>;
+<span class="keyword">import</span> { <span class="variable">colors</span> } <span class="keyword">from</span> <span class="string">'@line-giftshop/design-system'</span>;
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">const</span> { <span class="variable">isInClient</span>, <span class="variable">colorScheme</span> } = <span class="function">useLiff</span>();
+
+  <span class="comment">// Check if running inside LINE app</span>
+  <span class="keyword">const</span> <span class="variable">statusBarColor</span> = <span class="variable">isInClient</span>
+    ? <span class="variable">colors</span>.<span class="property">primary</span>
+    : <span class="variable">colors</span>.<span class="property">background</span>.<span class="property">primary</span>;
+
+  <span class="comment">// Match LINE app color scheme</span>
+  <span class="keyword">useEffect</span>(() => {
+    <span class="keyword">if</span> (<span class="variable">colorScheme</span> === <span class="string">'dark'</span>) {
+      <span class="variable">document</span>.<span class="property">documentElement</span>.<span class="function">setAttribute</span>(<span class="string">'data-theme'</span>, <span class="string">'dark'</span>);
+    }
+  }, [<span class="variable">colorScheme</span>]);
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr-name">style</span>=<span class="punctuation">{{</span> <span class="property">backgroundColor</span>: <span class="variable">statusBarColor</span> <span class="punctuation">}}</span><span class="tag">&gt;</span>
+      {<span class="comment">/* ... */</span>}
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</code></pre>
+          </div>
+
+          <div class="content-block">
+            <div class="content-text">
+              <h3 data-en="LIFF Status Bar Color Setting" data-ko="LIFF 상태 바 색상 설정" data-zh="LIFF 状态栏颜色设置" data-th="การตั้งค่าสีแถบสถานะ LIFF">LIFF Status Bar Color Setting</h3>
+              <p data-en="You can set the status bar color to the brand color within the LINE app."
+                 data-ko="LINE 앱 내에서 상태 바 색상을 브랜드 색상으로 설정할 수 있습니다."
+                 data-zh="您可以在 LINE 应用中将状态栏颜色设置为品牌颜色。"
+                 data-th="คุณสามารถตั้งค่าสีแถบสถานะเป็นสีแบรนด์ภายในแอป LINE ได้">You can set the status bar color to the brand color within the LINE app.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">tsx</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> <span class="variable">liff</span> <span class="keyword">from</span> <span class="string">'@line/liff'</span>;
+
+<span class="comment">// Set status bar to LINE GIFTSHOP brand color</span>
+<span class="variable">liff</span>.<span class="function">init</span>({
+  <span class="property">liffId</span>: <span class="string">'YOUR_LIFF_ID'</span>
+}).<span class="function">then</span>(() => {
+  <span class="comment">// Set status bar color on iOS</span>
+  <span class="keyword">const</span> <span class="variable">meta</span> = <span class="variable">document</span>.<span class="function">createElement</span>(<span class="string">'meta'</span>);
+  <span class="variable">meta</span>.<span class="property">name</span> = <span class="string">'theme-color'</span>;
+  <span class="variable">meta</span>.<span class="property">content</span> = <span class="string">'#06C755'</span>; <span class="comment">// LINE Green</span>
+  <span class="variable">document</span>.<span class="property">head</span>.<span class="function">appendChild</span>(<span class="variable">meta</span>);
+});</code></pre>
+          </div>
+        </section>
+
+        <!-- Dark Mode -->
+        <section class="semantic-section" id="dark-mode">
+          <h2 data-en="Dark Mode Implementation" data-ko="다크 모드 구현" data-zh="深色模式实现" data-th="การใช้งานโหมดมืด">Dark Mode Implementation</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="The design system supports both light and dark modes. Switch themes using the data-theme attribute."
+                 data-ko="디자인 시스템은 라이트 모드와 다크 모드를 모두 지원합니다. data-theme 속성을 사용하여 테마를 전환합니다."
+                 data-zh="设计系统支持浅色和深色模式。使用 data-theme 属性切换主题。"
+                 data-th="ระบบการออกแบบรองรับทั้งโหมดสว่างและโหมดมืด สลับธีมโดยใช้แอตทริบิวต์ data-theme">The design system supports both light and dark modes. Switch themes using the <code>data-theme</code> attribute.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">tsx</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> { <span class="variable">useState</span>, <span class="variable">useEffect</span> } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">useTheme</span>() {
+  <span class="keyword">const</span> [<span class="variable">theme</span>, <span class="variable">setTheme</span>] = <span class="function">useState</span>&lt;<span class="string">'light'</span> | <span class="string">'dark'</span>&gt;(<span class="string">'light'</span>);
+
+  <span class="function">useEffect</span>(() => {
+    <span class="comment">// Detect system settings</span>
+    <span class="keyword">const</span> <span class="variable">mediaQuery</span> = <span class="variable">window</span>.<span class="function">matchMedia</span>(<span class="string">'(prefers-color-scheme: dark)'</span>);
+    <span class="function">setTheme</span>(<span class="variable">mediaQuery</span>.<span class="property">matches</span> ? <span class="string">'dark'</span> : <span class="string">'light'</span>);
+
+    <span class="keyword">const</span> <span class="variable">handler</span> = (<span class="variable">e</span>: <span class="type">MediaQueryListEvent</span>) => {
+      <span class="function">setTheme</span>(<span class="variable">e</span>.<span class="property">matches</span> ? <span class="string">'dark'</span> : <span class="string">'light'</span>);
+    };
+
+    <span class="variable">mediaQuery</span>.<span class="function">addEventListener</span>(<span class="string">'change'</span>, <span class="variable">handler</span>);
+    <span class="keyword">return</span> () => <span class="variable">mediaQuery</span>.<span class="function">removeEventListener</span>(<span class="string">'change'</span>, <span class="variable">handler</span>);
+  }, []);
+
+  <span class="function">useEffect</span>(() => {
+    <span class="variable">document</span>.<span class="property">documentElement</span>.<span class="function">setAttribute</span>(<span class="string">'data-theme'</span>, <span class="variable">theme</span>);
+  }, [<span class="variable">theme</span>]);
+
+  <span class="keyword">const</span> <span class="variable">toggleTheme</span> = () => {
+    <span class="function">setTheme</span>(<span class="variable">prev</span> => <span class="variable">prev</span> === <span class="string">'light'</span> ? <span class="string">'dark'</span> : <span class="string">'light'</span>);
+  };
+
+  <span class="keyword">return</span> { <span class="variable">theme</span>, <span class="variable">toggleTheme</span> };
+}</code></pre>
+          </div>
+
+          <div class="content-block">
+            <div class="content-text">
+              <h3 data-en="Automatic Dark Mode Color Switching" data-ko="자동 다크 모드 색상 전환" data-zh="自动深色模式颜色切换" data-th="การสลับสีโหมดมืดอัตโนมัติ">Automatic Dark Mode Color Switching</h3>
+              <p data-en="When using CSS variables, colors are automatically changed when switching themes."
+                 data-ko="CSS 변수를 사용하면 테마 전환 시 색상이 자동으로 변경됩니다."
+                 data-zh="使用 CSS 变量时，切换主题时颜色会自动更改。"
+                 data-th="เมื่อใช้ตัวแปร CSS สีจะเปลี่ยนโดยอัตโนมัติเมื่อสลับธีม">When using CSS variables, colors are automatically changed when switching themes.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">css</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="comment">/* Component styles - automatically changes based on theme */</span>
+<span class="class-name">.card</span> {
+  <span class="property">background</span>: <span class="function">var</span>(<span class="variable">--color-background-primary</span>);   <span class="comment">/* Light: #FFFFFF, Dark: #1E1E1E */</span>
+  <span class="property">color</span>: <span class="function">var</span>(<span class="variable">--color-text-primary</span>);              <span class="comment">/* Light: #111111, Dark: #FFFFFF */</span>
+  <span class="property">border</span>: <span class="number">1px</span> <span class="keyword">solid</span> <span class="function">var</span>(<span class="variable">--color-border-default</span>); <span class="comment">/* auto switch */</span>
+}
+
+<span class="comment">/* Brand colors remain the same regardless of theme */</span>
+<span class="class-name">.brand-text</span> {
+  <span class="property">color</span>: <span class="function">var</span>(<span class="variable">--color-primary</span>);  <span class="comment">/* Always #06C755 */</span>
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- TypeScript -->
+        <section class="semantic-section" id="typescript">
+          <h2 data-en="TypeScript Type Definitions" data-ko="TypeScript 타입 정의" data-zh="TypeScript 类型定义" data-th="คำจำกัดความประเภท TypeScript">TypeScript Type Definitions</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="Color token types are provided for type safety."
+                 data-ko="타입 안정성을 위해 색상 토큰 타입이 제공됩니다."
+                 data-zh="为类型安全提供颜色令牌类型。"
+                 data-th="มีประเภทโทเค็นสีสำหรับความปลอดภัยของประเภท">Color token types are provided for type safety.</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-block-lang">typescript</span>
+              <button class="code-block-copy" onclick="copyCode(this)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code><span class="keyword">import</span> <span class="keyword">type</span> {
+  <span class="type">ColorToken</span>,
+  <span class="type">SemanticColor</span>,
+  <span class="type">PaletteColor</span>
+} <span class="keyword">from</span> <span class="string">'@line-giftshop/design-system'</span>;
+
+<span class="comment">// Color token type</span>
+<span class="keyword">type</span> <span class="type">ColorToken</span> =
+  | <span class="string">'primary'</span>
+  | <span class="string">'secondary'</span>
+  | <span class="string">'success'</span>
+  | <span class="string">'warning'</span>
+  | <span class="string">'error'</span>
+  | <span class="string">'info'</span>;
+
+<span class="comment">// Semantic color type</span>
+<span class="keyword">interface</span> <span class="type">SemanticColor</span> {
+  <span class="property">text</span>: {
+    <span class="property">primary</span>: <span class="type">string</span>;
+    <span class="property">secondary</span>: <span class="type">string</span>;
+    <span class="property">disabled</span>: <span class="type">string</span>;
+    <span class="property">inverse</span>: <span class="type">string</span>;
+  };
+  <span class="property">background</span>: {
+    <span class="property">primary</span>: <span class="type">string</span>;
+    <span class="property">secondary</span>: <span class="type">string</span>;
+    <span class="property">elevated</span>: <span class="type">string</span>;
+  };
+  <span class="property">border</span>: {
+    <span class="property">default</span>: <span class="type">string</span>;
+    <span class="property">strong</span>: <span class="type">string</span>;
+  };
+}
+
+<span class="comment">// Usage example</span>
+<span class="keyword">function</span> <span class="function">getColorValue</span>(<span class="variable">token</span>: <span class="type">ColorToken</span>): <span class="type">string</span> {
+  <span class="keyword">return</span> <span class="variable">colors</span>[<span class="variable">token</span>];
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Full Color List -->
+        <section class="semantic-section" id="color-list">
+          <h2 data-en="Full Color List" data-ko="전체 색상 목록" data-zh="完整颜色列表" data-th="รายการสีทั้งหมด">Full Color List</h2>
+          <div class="content-block">
+            <div class="content-text">
+              <p data-en="All color tokens and values can be found on the Color Palette page in the Docs."
+                 data-ko="모든 색상 토큰과 값은 문서의 Color Palette 페이지에서 확인할 수 있습니다."
+                 data-zh="所有颜色令牌和值可以在文档的 Color Palette 页面中找到。"
+                 data-th="โทเค็นสีและค่าทั้งหมดสามารถพบได้ในหน้า Color Palette ในเอกสาร">All color tokens and values can be found on the Color Palette page in the Docs.</p>
+            </div>
+          </div>
+          <div class="category-links">
+            <a href="../../foundation/colors/color-palette.html" class="category-link">
+              <span>Color Palette</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="../../foundation/colors/color-roles.html" class="category-link">
+              <span>Color Roles</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="../../foundation/colors/color-system.html" class="category-link">
+              <span>Color System</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </section>      </div>
+    </main>
+
+    <footer class="content-footer">
+          <a href="../getting-started/quick-start.html" class="footer-nav prev">
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </span>
+            <span class="nav-text">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Quick Start</span>
+            </span>
+          </a>
+          <a href="typography.html" class="footer-nav next">
+            <span class="nav-text">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Typography</span>
+            </span>
+            <span class="nav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </footer>
+  </div>
+
+  <script src="../../script.js"></script>
+  <script>
+    function copyCode(button) {
+      const codeBlock = button.closest('.code-block');
+      const code = codeBlock.querySelector('code').innerText;
+
+      navigator.clipboard.writeText(code).then(() => {
+        const span = button.querySelector('span');
+        const originalText = span.textContent;
+        span.textContent = 'Copied!';
+        button.classList.add('copied');
+
+        setTimeout(() => {
+          span.textContent = originalText;
+          button.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
