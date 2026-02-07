@@ -1,0 +1,77 @@
+{
+  "fontFamily": {
+    "en": { "value": "SF Pro", "type": "fontFamilies", "description": "English 폰트" },
+    "tw": { "value": "SF Pro", "type": "fontFamilies", "description": "TW 폰트" },
+    "th": { "value": "Thonburi", "type": "fontFamilies", "description": "Thai 폰트" }
+  },
+  "fontWeight": {
+    "regular": { "value": "400", "type": "fontWeights" },
+    "bold": { "value": "700", "type": "fontWeights" }
+  },
+  "fontSize": {
+    "t1": { "value": "10px", "type": "fontSizes" },
+    "t2": { "value": "12px", "type": "fontSizes" },
+    "t3": { "value": "13px", "type": "fontSizes" },
+    "t4": { "value": "14px", "type": "fontSizes" },
+    "t5": { "value": "16px", "type": "fontSizes" },
+    "t6": { "value": "18px", "type": "fontSizes" },
+    "t7": { "value": "20px", "type": "fontSizes" },
+    "t8": { "value": "24px", "type": "fontSizes" },
+    "t9": { "value": "28px", "type": "fontSizes" },
+    "t10": { "value": "35px", "type": "fontSizes" }
+  },
+  "lineHeight": {
+    "title": {
+      "t2": { "value": { "tw": "16px", "th": "18px", "en": "18px" }, "type": "lineHeights" },
+      "t3": { "value": { "tw": "16px", "th": "18px", "en": "18px" }, "type": "lineHeights" },
+      "t4": { "value": { "tw": "18px", "th": "22px", "en": "22px" }, "type": "lineHeights" },
+      "t5": { "value": { "tw": "22px", "th": "26px", "en": "26px" }, "type": "lineHeights" },
+      "t6": { "value": { "tw": "24px", "th": "28px", "en": "28px" }, "type": "lineHeights" },
+      "t7": { "value": { "tw": "30px", "th": "30px", "en": "30px" }, "type": "lineHeights" },
+      "t8": { "value": { "tw": "31px", "th": "38px", "en": "38px" }, "type": "lineHeights" },
+      "t9": { "value": { "tw": "36px", "th": "44px", "en": "44px" }, "type": "lineHeights" },
+      "t10": { "value": { "tw": "45px", "th": "56px", "en": "56px" }, "type": "lineHeights" }
+    },
+    "body": {
+      "t1": { "value": { "tw": "16px", "th": "18px", "en": "18px" }, "type": "lineHeights" },
+      "t2": { "value": { "tw": "18px", "th": "20px", "en": "20px" }, "type": "lineHeights" },
+      "t3": { "value": { "tw": "18px", "th": "22px", "en": "22px" }, "type": "lineHeights" },
+      "t4": { "value": { "tw": "22px", "th": "22px", "en": "22px" }, "type": "lineHeights" },
+      "t5": { "value": { "tw": "26px", "th": "26px", "en": "26px" }, "type": "lineHeights" }
+    }
+  },
+  "styles": {
+    "title": {
+      "2xl-regular": { "value": { "fontSize": "{fontSize.t10}", "lineHeight": "{lineHeight.title.t10}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "2xl-bold": { "value": { "fontSize": "{fontSize.t10}", "lineHeight": "{lineHeight.title.t10}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "xl-regular": { "value": { "fontSize": "{fontSize.t9}", "lineHeight": "{lineHeight.title.t9}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "xl-bold": { "value": { "fontSize": "{fontSize.t9}", "lineHeight": "{lineHeight.title.t9}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "lg-regular": { "value": { "fontSize": "{fontSize.t8}", "lineHeight": "{lineHeight.title.t8}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "lg-bold": { "value": { "fontSize": "{fontSize.t8}", "lineHeight": "{lineHeight.title.t8}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "md-regular": { "value": { "fontSize": "{fontSize.t7}", "lineHeight": "{lineHeight.title.t7}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "md-bold": { "value": { "fontSize": "{fontSize.t7}", "lineHeight": "{lineHeight.title.t7}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "sm-regular": { "value": { "fontSize": "{fontSize.t6}", "lineHeight": "{lineHeight.title.t6}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "sm-bold": { "value": { "fontSize": "{fontSize.t6}", "lineHeight": "{lineHeight.title.t6}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "xs-regular": { "value": { "fontSize": "{fontSize.t5}", "lineHeight": "{lineHeight.title.t5}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "xs-bold": { "value": { "fontSize": "{fontSize.t5}", "lineHeight": "{lineHeight.title.t5}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "2xs-regular": { "value": { "fontSize": "{fontSize.t4}", "lineHeight": "{lineHeight.title.t4}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "2xs-bold": { "value": { "fontSize": "{fontSize.t4}", "lineHeight": "{lineHeight.title.t4}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "3xs-regular": { "value": { "fontSize": "{fontSize.t3}", "lineHeight": "{lineHeight.title.t3}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "3xs-bold": { "value": { "fontSize": "{fontSize.t3}", "lineHeight": "{lineHeight.title.t3}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "4xs-regular": { "value": { "fontSize": "{fontSize.t2}", "lineHeight": "{lineHeight.title.t2}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "4xs-bold": { "value": { "fontSize": "{fontSize.t2}", "lineHeight": "{lineHeight.title.t2}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" }
+    },
+    "body": {
+      "lg-regular": { "value": { "fontSize": "{fontSize.t5}", "lineHeight": "{lineHeight.body.t5}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "lg-bold": { "value": { "fontSize": "{fontSize.t5}", "lineHeight": "{lineHeight.body.t5}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "md-regular": { "value": { "fontSize": "{fontSize.t4}", "lineHeight": "{lineHeight.body.t4}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "md-bold": { "value": { "fontSize": "{fontSize.t4}", "lineHeight": "{lineHeight.body.t4}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "sm-regular": { "value": { "fontSize": "{fontSize.t3}", "lineHeight": "{lineHeight.body.t3}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "sm-bold": { "value": { "fontSize": "{fontSize.t3}", "lineHeight": "{lineHeight.body.t3}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "xs-regular": { "value": { "fontSize": "{fontSize.t2}", "lineHeight": "{lineHeight.body.t2}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "xs-bold": { "value": { "fontSize": "{fontSize.t2}", "lineHeight": "{lineHeight.body.t2}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" },
+      "2xs-regular": { "value": { "fontSize": "{fontSize.t1}", "lineHeight": "{lineHeight.body.t1}", "fontWeight": "{fontWeight.regular}" }, "type": "typography" },
+      "2xs-bold": { "value": { "fontSize": "{fontSize.t1}", "lineHeight": "{lineHeight.body.t1}", "fontWeight": "{fontWeight.bold}" }, "type": "typography" }
+    }
+  }
+}

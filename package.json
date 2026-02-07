@@ -1,0 +1,25 @@
+{
+  "name": "line-giftshop-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quizyoon/ribbon-design-system-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Quizyoon/ribbon-design-system-web/issues"
+  },
+  "homepage": "https://github.com/Quizyoon/ribbon-design-system-web#readme",
+  "devDependencies": {
+    "style-dictionary": "^5.2.0"
+  }
+}

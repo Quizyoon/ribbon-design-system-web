@@ -1,0 +1,199 @@
+/* Ribbon Button Component - Auto-generated from design tokens */
+
+.ribbon-button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ribbon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: var(--button-height-m);
+  padding: 0 var(--button-padding-m);
+  font-size: var(--styles-title-2xs-bold-font-size);
+  line-height: var(--styles-title-2xs-bold-line-height);
+  font-weight: var(--styles-title-2xs-bold-font-weight);
+  border-radius: var(--button-radius-m);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: var(--button-gap-m);
+  color: var(--color-button-brand-solid-fg);
+  background: var(--color-button-brand-solid-bg);
+}
+.ribbon-button:active {
+  background: var(--color-button-brand-solid-bg-pressed);
+}
+
+/* ── Size: xsmall ── */
+.ribbon-button--xsmall {
+  height: var(--button-height-xs);
+  padding: 0 var(--button-padding-xs);
+  font-size: var(--styles-title-4xs-bold-font-size);
+  line-height: var(--styles-title-4xs-bold-line-height);
+  font-weight: var(--styles-title-4xs-bold-font-weight);
+  border-radius: var(--button-radius-xs);
+  gap: var(--button-gap-xs);
+}
+.ribbon-button--xsmall .ribbon-button__icon { width: var(--icon-size-xs); height: var(--icon-size-xs); }
+.ribbon-button--xsmall .ribbon-button__icon svg { width: var(--icon-size-xs); height: var(--icon-size-xs); }
+.ribbon-button--xsmall.ribbon-button--icon-left { padding: 0 var(--spacing-m-plus) 0 var(--button-padding-xs); }
+.ribbon-button--xsmall.ribbon-button--icon-right { padding: 0 var(--button-padding-xs) 0 var(--spacing-m-plus); }
+
+/* ── Size: small ── */
+.ribbon-button--small {
+  height: var(--button-height-s);
+  padding: 0 var(--button-padding-s);
+  font-size: var(--styles-title-2xs-bold-font-size);
+  line-height: var(--styles-title-2xs-bold-line-height);
+  font-weight: var(--styles-title-2xs-bold-font-weight);
+  border-radius: var(--button-radius-s);
+  gap: var(--button-gap-s);
+}
+.ribbon-button--small .ribbon-button__icon { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--small .ribbon-button__icon svg { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--small.ribbon-button--icon-left { padding: 0 var(--button-padding-xl) 0 var(--button-padding-s); }
+.ribbon-button--small.ribbon-button--icon-right { padding: 0 var(--button-padding-s) 0 var(--button-padding-xl); }
+
+/* ── Size: medium ── */
+.ribbon-button--medium {
+  height: var(--button-height-m);
+  padding: 0 var(--button-padding-m);
+  font-size: var(--styles-title-2xs-bold-font-size);
+  line-height: var(--styles-title-2xs-bold-line-height);
+  font-weight: var(--styles-title-2xs-bold-font-weight);
+  border-radius: var(--button-radius-m);
+  gap: var(--button-gap-m);
+}
+.ribbon-button--medium .ribbon-button__icon { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--medium .ribbon-button__icon svg { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--medium.ribbon-button--icon-left { padding: 0 var(--button-padding-l) 0 var(--button-padding-m); }
+.ribbon-button--medium.ribbon-button--icon-right { padding: 0 var(--button-padding-m) 0 var(--button-padding-l); }
+
+/* ── Size: large ── */
+.ribbon-button--large {
+  height: var(--button-height-l);
+  padding: 0 var(--button-padding-l);
+  font-size: var(--styles-title-xs-bold-font-size);
+  line-height: var(--styles-title-xs-bold-line-height);
+  font-weight: var(--styles-title-xs-bold-font-weight);
+  border-radius: var(--button-radius-l);
+  gap: var(--button-gap-l);
+}
+.ribbon-button--large .ribbon-button__icon { width: var(--icon-size-m); height: var(--icon-size-m); }
+.ribbon-button--large .ribbon-button__icon svg { width: var(--icon-size-m); height: var(--icon-size-m); }
+.ribbon-button--large.ribbon-button--icon-left { padding: 0 var(--button-padding-l) 0 var(--button-padding-m); }
+.ribbon-button--large.ribbon-button--icon-right { padding: 0 var(--button-padding-m) 0 var(--button-padding-l); }
+
+/* ── Size: xlarge ── */
+.ribbon-button--xlarge {
+  height: var(--button-height-xl);
+  padding: 0 var(--button-padding-xl);
+  font-size: var(--styles-title-xs-bold-font-size);
+  line-height: var(--styles-title-xs-bold-line-height);
+  font-weight: var(--styles-title-xs-bold-font-weight);
+  border-radius: var(--button-radius-xl);
+  gap: var(--button-gap-xl);
+}
+.ribbon-button--xlarge .ribbon-button__icon { width: var(--icon-size-l); height: var(--icon-size-l); }
+.ribbon-button--xlarge .ribbon-button__icon svg { width: var(--icon-size-l); height: var(--icon-size-l); }
+.ribbon-button--xlarge.ribbon-button--icon-left { padding: 0 var(--button-padding-l) 0 var(--button-padding-m); }
+.ribbon-button--xlarge.ribbon-button--icon-right { padding: 0 var(--button-padding-m) 0 var(--button-padding-l); }
+
+.ribbon-button--brand-solid {
+  color: var(--color-button-brand-solid-fg);
+  background: var(--color-button-brand-solid-bg);
+}
+.ribbon-button--brand-solid:active { background: var(--color-button-brand-solid-bg-pressed); }
+
+.ribbon-button--brand-weak {
+  color: var(--color-button-brand-weak-fg);
+  background: var(--color-button-brand-weak-bg);
+}
+.ribbon-button--brand-weak:active { background: var(--color-button-brand-weak-bg-pressed); }
+
+.ribbon-button--neutral-solid {
+  color: var(--color-button-neutral-solid-fg);
+  background: var(--color-button-neutral-solid-bg);
+}
+.ribbon-button--neutral-solid:active { background: var(--color-button-neutral-solid-bg-pressed); }
+
+.ribbon-button--neutral-weak {
+  color: var(--color-button-neutral-weak-fg);
+  background: var(--color-button-neutral-weak-bg);
+}
+.ribbon-button--neutral-weak:active { background: var(--color-button-neutral-weak-bg-pressed); }
+
+.ribbon-button--critical-solid {
+  color: var(--color-button-critical-solid-fg);
+  background: var(--color-button-critical-solid-bg);
+}
+.ribbon-button--critical-solid:active { background: var(--color-button-critical-solid-bg-pressed); }
+
+.ribbon-button--critical-weak {
+  color: var(--color-button-critical-weak-fg);
+  background: var(--color-button-critical-weak-bg);
+}
+.ribbon-button--critical-weak:active { background: var(--color-button-critical-weak-bg-pressed); }
+
+.ribbon-button--outline {
+  color: var(--color-button-outline-fg);
+  background: transparent;
+  border: var(--border-thin) solid var(--color-button-outline-border);
+}
+.ribbon-button--outline:active { background: var(--color-button-outline-bg-pressed); }
+
+.ribbon-button--ghost {
+  color: var(--color-button-ghost-fg);
+  background: transparent;
+}
+.ribbon-button--ghost:active { background: var(--color-button-ghost-bg-pressed); }
+
+.ribbon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.ribbon-button--brand-solid:disabled,
+.ribbon-button--brand-weak:disabled,
+.ribbon-button--neutral-solid:disabled,
+.ribbon-button--neutral-weak:disabled,
+.ribbon-button--critical-solid:disabled,
+.ribbon-button--critical-weak:disabled {
+  color: var(--color-button-disabled-fg);
+  background: var(--color-button-disabled-bg);
+}
+.ribbon-button--outline:disabled {
+  color: var(--color-button-outline-fg-disabled);
+  border-color: var(--color-button-outline-border-disabled);
+  background: transparent;
+}
+.ribbon-button--ghost:disabled {
+  color: var(--color-button-ghost-fg-disabled);
+  background: transparent;
+}
+
+.ribbon-button--icon-only { padding: 0; }
+.ribbon-button--icon-only.ribbon-button--xsmall { width: var(--button-height-xs); }
+.ribbon-button--icon-only.ribbon-button--small { width: var(--button-height-s); }
+.ribbon-button--icon-only.ribbon-button--medium { width: var(--button-height-m); }
+.ribbon-button--icon-only.ribbon-button--large { width: var(--button-height-l); }
+.ribbon-button--icon-only.ribbon-button--xlarge { width: var(--button-height-xl); }
+
+.ribbon-button--xsmall svg { width: var(--icon-size-xs); height: var(--icon-size-xs); }
+.ribbon-button--small svg { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--medium svg { width: var(--icon-size-s); height: var(--icon-size-s); }
+.ribbon-button--large svg { width: var(--icon-size-m); height: var(--icon-size-m); }
+.ribbon-button--xlarge svg { width: var(--icon-size-l); height: var(--icon-size-l); }
+
+.ribbon-button--loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.ribbon-button--flex-grow {
+  flex-grow: 1;
+}

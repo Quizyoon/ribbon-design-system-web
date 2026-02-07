@@ -1,0 +1,170 @@
+/* Typography Utility Classes - Auto-generated from typography.json */
+
+.title-2xl-regular {
+  font-size: var(--font-size-t10);
+  line-height: var(--line-height-title-t10);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-2xl-bold {
+  font-size: var(--font-size-t10);
+  line-height: var(--line-height-title-t10);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-xl-regular {
+  font-size: var(--font-size-t9);
+  line-height: var(--line-height-title-t9);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-xl-bold {
+  font-size: var(--font-size-t9);
+  line-height: var(--line-height-title-t9);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-lg-regular {
+  font-size: var(--font-size-t8);
+  line-height: var(--line-height-title-t8);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-lg-bold {
+  font-size: var(--font-size-t8);
+  line-height: var(--line-height-title-t8);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-md-regular {
+  font-size: var(--font-size-t7);
+  line-height: var(--line-height-title-t7);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-md-bold {
+  font-size: var(--font-size-t7);
+  line-height: var(--line-height-title-t7);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-sm-regular {
+  font-size: var(--font-size-t6);
+  line-height: var(--line-height-title-t6);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-sm-bold {
+  font-size: var(--font-size-t6);
+  line-height: var(--line-height-title-t6);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-xs-regular {
+  font-size: var(--font-size-t5);
+  line-height: var(--line-height-title-t5);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-xs-bold {
+  font-size: var(--font-size-t5);
+  line-height: var(--line-height-title-t5);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-2xs-regular {
+  font-size: var(--font-size-t4);
+  line-height: var(--line-height-title-t4);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-2xs-bold {
+  font-size: var(--font-size-t4);
+  line-height: var(--line-height-title-t4);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-3xs-regular {
+  font-size: var(--font-size-t3);
+  line-height: var(--line-height-title-t3);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-3xs-bold {
+  font-size: var(--font-size-t3);
+  line-height: var(--line-height-title-t3);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-4xs-regular {
+  font-size: var(--font-size-t2);
+  line-height: var(--line-height-title-t2);
+  font-weight: var(--font-weight-regular);
+}
+
+.title-4xs-bold {
+  font-size: var(--font-size-t2);
+  line-height: var(--line-height-title-t2);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-lg-regular {
+  font-size: var(--font-size-t5);
+  line-height: var(--line-height-body-t5);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-lg-bold {
+  font-size: var(--font-size-t5);
+  line-height: var(--line-height-body-t5);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-md-regular {
+  font-size: var(--font-size-t4);
+  line-height: var(--line-height-body-t4);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-md-bold {
+  font-size: var(--font-size-t4);
+  line-height: var(--line-height-body-t4);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-sm-regular {
+  font-size: var(--font-size-t3);
+  line-height: var(--line-height-body-t3);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-sm-bold {
+  font-size: var(--font-size-t3);
+  line-height: var(--line-height-body-t3);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-xs-regular {
+  font-size: var(--font-size-t2);
+  line-height: var(--line-height-body-t2);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-xs-bold {
+  font-size: var(--font-size-t2);
+  line-height: var(--line-height-body-t2);
+  font-weight: var(--font-weight-bold);
+}
+
+.body-2xs-regular {
+  font-size: var(--font-size-t1);
+  line-height: var(--line-height-body-t1);
+  font-weight: var(--font-weight-regular);
+}
+
+.body-2xs-bold {
+  font-size: var(--font-size-t1);
+  line-height: var(--line-height-body-t1);
+  font-weight: var(--font-weight-bold);
+}
+

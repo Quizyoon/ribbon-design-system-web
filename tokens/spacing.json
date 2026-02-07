@@ -1,0 +1,26 @@
+{
+  "spacing": {
+    "2xs": { "value": "{dimension.x0_5}", "type": "spacing", "description": "최소 간격 (2px)" },
+    "xs": { "value": "{dimension.x1}", "type": "spacing", "description": "아주 작은 간격 (4px)" },
+    "s": { "value": "{dimension.x2}", "type": "spacing", "description": "작은 간격 (8px)" },
+    "m": { "value": "{dimension.x3}", "type": "spacing", "description": "기본 간격 (12px)" },
+    "m-plus": { "value": "{dimension.x3_5}", "type": "spacing", "description": "약간 큰 간격 (14px)" },
+    "l": { "value": "{dimension.x4}", "type": "spacing", "description": "큰 간격 (16px)" },
+    "xl": { "value": "{dimension.x5}", "type": "spacing", "description": "아주 큰 간격 (20px)" }
+  },
+  "component": {
+    "button": {
+      "gap": {
+        "2": { "value": "{spacing.2xs}", "type": "spacing", "description": "아이콘-텍스트 간격 (2px)" },
+        "4": { "value": "{spacing.xs}", "type": "spacing", "description": "아이콘-텍스트 간격 (4px)" }
+      },
+      "padding": {
+        "xs": { "value": "{spacing.m}", "type": "spacing", "description": "XS 버튼 패딩 (12px) - height 32" },
+        "s": { "value": "{spacing.l}", "type": "spacing", "description": "S 버튼 패딩 (16px) - height 40" },
+        "m": { "value": "{spacing.l}", "type": "spacing", "description": "M 버튼 패딩 (16px) - height 44" },
+        "l": { "value": "{spacing.xl}", "type": "spacing", "description": "L 버튼 패딩 (20px) - height 48" },
+        "xl": { "value": "{spacing.xl}", "type": "spacing", "description": "XL 버튼 패딩 (20px) - height 56" }
+      }
+    }
+  }
+}

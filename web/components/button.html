@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button - Components - LINE GIFTSHOP Design System</title>
   <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../build/components/button.css">
 </head>
 <body>
   <header class="header">
@@ -173,20 +174,14 @@
                   </button>
                 </div>
                 <pre class="code-block"><code><span class="tag">&lt;template&gt;</span>
-  <span class="tag">&lt;<span class="component">CDropdown</span> <span class="attr">v-model</span>=<span class="string">"selectedValue"</span> <span class="attr">@change</span>=<span class="string">"handleChange"</span>&gt;</span>
-    <span class="tag">&lt;<span class="component">CDropdownItem</span> <span class="attr">label</span>=<span class="string">"항목 1"</span> <span class="attr">value</span>=<span class="string">"item1"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="component">CDropdownItem</span> <span class="attr">label</span>=<span class="string">"항목 2"</span> <span class="attr">value</span>=<span class="string">"item2"</span> /&gt;</span>
-    <span class="tag">&lt;<span class="component">CDropdownItem</span> <span class="attr">label</span>=<span class="string">"항목 3"</span> <span class="attr">value</span>=<span class="string">"item3"</span> /&gt;</span>
-  <span class="tag">&lt;/<span class="component">CDropdown</span>&gt;</span>
+  <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">@click</span>=<span class="string">"handleClick"</span>&gt;</span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
 <span class="tag">&lt;/template&gt;</span>
 
 <span class="tag">&lt;script setup&gt;</span>
-<span class="keyword">import</span> { ref } <span class="keyword">from</span> <span class="string">'vue'</span>
-<span class="keyword">import</span> { <span class="component">CDropdown</span>, <span class="component">CDropdownItem</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span>
+<span class="keyword">import</span> { <span class="component">CButton</span> } <span class="keyword">from</span> <span class="string">'@linecorp/cuetify'</span>
 
-<span class="keyword">const</span> selectedValue = <span class="function">ref</span>(<span class="keyword">null</span>)
-<span class="keyword">const</span> <span class="function">handleChange</span> = (value) =&gt; {
-  console.<span class="function">log</span>(<span class="string">'Selected:'</span>, value)
+<span class="keyword">const</span> <span class="function">handleClick</span> = () =&gt; {
+  console.<span class="function">log</span>(<span class="string">'clicked'</span>)
 }
 <span class="tag">&lt;/script&gt;</span></code></pre>
               </div>
@@ -200,7 +195,7 @@
               <h3 class="install-step-title" data-en="Basic Button usage." data-ko="가장 기본적인 Button 사용 방법입니다." data-zh="最基本的 Button 使用方法。" data-th="วิธีใช้งาน Button พื้นฐาน">가장 기본적인 Button 사용 방법입니다.</h3>
               <div class="example-block">
                 <div class="example-preview">
-                  <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
+                  <button class="ribbon-button ribbon-button--brand-solid ribbon-button--medium"><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
                 </div>
                 <div class="code-block-wrapper">
                   <div class="code-block-header">
@@ -229,9 +224,9 @@
               <div class="example-block">
                 <div class="example-preview">
                   <div class="button-group">
-                    <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
-                    <button class="demo-button demo-button--neutral-solid demo-button--m"><span data-en="Get Coupon" data-ko="쿠폰받기" data-zh="领取优惠券" data-th="รับคูปอง">쿠폰받기</span></button>
-                    <button class="demo-button demo-button--critical-solid demo-button--m"><span data-en="Delete" data-ko="삭제하기" data-zh="删除" data-th="ลบ">삭제하기</span></button>
+                    <button class="ribbon-button ribbon-button--brand-solid ribbon-button--medium"><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
+                    <button class="ribbon-button ribbon-button--neutral-solid ribbon-button--medium"><span data-en="Get Coupon" data-ko="쿠폰받기" data-zh="领取优惠券" data-th="รับคูปอง">쿠폰받기</span></button>
+                    <button class="ribbon-button ribbon-button--critical-solid ribbon-button--medium"><span data-en="Delete" data-ko="삭제하기" data-zh="删除" data-th="ลบ">삭제하기</span></button>
                   </div>
                 </div>
                 <div class="code-block-wrapper">
@@ -247,7 +242,7 @@
                       </svg>
                     </button>
                   </div>
-                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
+                  <pre class="code-block"><code><span class="tag">&lt;<span class="component">CButton</span>&gt;</span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
 <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"neutralSolid"</span>&gt;</span><span data-en="Get Coupon" data-ko="쿠폰받기" data-zh="领取优惠券" data-th="รับคูปอง">쿠폰받기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
 <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"criticalSolid"</span>&gt;</span><span data-en="Delete" data-ko="삭제하기" data-zh="删除" data-th="ลบ">삭제하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span></code></pre>
                 </div>
@@ -263,11 +258,11 @@
               <div class="example-block">
                 <div class="example-preview">
                   <div class="button-group">
-                    <button class="demo-button demo-button--ghost demo-button--m"><span data-en="Cancel" data-ko="취소" data-zh="取消" data-th="ยกเลิก">취소</span></button>
-                    <button class="demo-button demo-button--outline demo-button--m"><span data-en="More" data-ko="더보기" data-zh="更多" data-th="ดูเพิ่มเติม">더보기</span></button>
-                    <button class="demo-button demo-button--brand-solid demo-button--m demo-button--icon-left"><span class="demo-button-icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="m8.2344 3.2161 1.1313-1.1314 2.6344 2.6343 2.6343-2.6343 1.1313 1.1314L13.7819 5.2h4.4682c1.4635 0 2.65 1.1864 2.65 2.65v9.9999c0 1.4636-1.1865 2.65-2.65 2.65h-5.4524V5.2004h-1.6V20.5H5.7501c-1.4635 0-2.65-1.1864-2.65-2.65v-10c0-1.4635 1.1865-2.65 2.65-2.65h4.4682l-1.984-1.9838Z"/></g></svg></span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
-                    <button class="demo-button demo-button--neutral-weak demo-button--m demo-button--icon-right"><span data-en="Use" data-ko="사용하기" data-zh="使用" data-th="ใช้งาน">사용하기</span><span class="demo-button-icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="m18.1314 12-6.4302-6.7808 1.3061-1.2386L20.6121 12l-7.6048 8.0194-1.3061-1.2386L18.1314 12Z"/><path d="M19.135 11.1v1.8H4v-1.8h15.135Z"/></g></svg></span></button>
-                    <button class="demo-button demo-button--outline demo-button--m demo-button--icon-only"><span class="demo-button-icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="M4.1763 19.0055v-7.967h1.8V18.6h12.0461v-7.5615h1.8v7.967c0 .7702-.6243 1.3945-1.3945 1.3945H5.5708c-.7702 0-1.3945-.6243-1.3945-1.3945Zm7.8231-15.7452 4.2728 4.0478-1.238 1.3068-3.0348-2.8752-3.035 2.8752L7.7267 7.308l4.2728-4.0478Z"/><path d="m11.0957 14.4994.0071-10 1.8.0012-.0071 10-1.8-.0012Z"/></g></svg></span></button>
+                    <button class="ribbon-button ribbon-button--ghost ribbon-button--medium"><span data-en="Cancel" data-ko="취소" data-zh="取消" data-th="ยกเลิก">취소</span></button>
+                    <button class="ribbon-button ribbon-button--outline ribbon-button--medium"><span data-en="More" data-ko="더보기" data-zh="更多" data-th="ดูเพิ่มเติม">더보기</span></button>
+                    <button class="ribbon-button ribbon-button--brand-solid ribbon-button--medium ribbon-button--icon-left"><span class="ribbon-button__icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="m8.2344 3.2161 1.1313-1.1314 2.6344 2.6343 2.6343-2.6343 1.1313 1.1314L13.7819 5.2h4.4682c1.4635 0 2.65 1.1864 2.65 2.65v9.9999c0 1.4636-1.1865 2.65-2.65 2.65h-5.4524V5.2004h-1.6V20.5H5.7501c-1.4635 0-2.65-1.1864-2.65-2.65v-10c0-1.4635 1.1865-2.65 2.65-2.65h4.4682l-1.984-1.9838Z"/></g></svg></span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span></button>
+                    <button class="ribbon-button ribbon-button--neutral-weak ribbon-button--medium ribbon-button--icon-right"><span data-en="Use" data-ko="사용하기" data-zh="使用" data-th="ใช้งาน">사용하기</span><span class="ribbon-button__icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="m18.1314 12-6.4302-6.7808 1.3061-1.2386L20.6121 12l-7.6048 8.0194-1.3061-1.2386L18.1314 12Z"/><path d="M19.135 11.1v1.8H4v-1.8h15.135Z"/></g></svg></span></button>
+                    <button class="ribbon-button ribbon-button--outline ribbon-button--medium ribbon-button--icon-only"><span class="ribbon-button__icon"><svg viewBox="-2 -2 24 24" fill="currentColor"><g transform="translate(-2 -2)"><path d="M4.1763 19.0055v-7.967h1.8V18.6h12.0461v-7.5615h1.8v7.967c0 .7702-.6243 1.3945-1.3945 1.3945H5.5708c-.7702 0-1.3945-.6243-1.3945-1.3945Zm7.8231-15.7452 4.2728 4.0478-1.238 1.3068-3.0348-2.8752-3.035 2.8752L7.7267 7.308l4.2728-4.0478Z"/><path d="m11.0957 14.4994.0071-10 1.8.0012-.0071 10-1.8-.0012Z"/></g></svg></span></button>
                   </div>
                 </div>
                 <div class="code-block-wrapper">
@@ -290,7 +285,7 @@
 <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"outline"</span>&gt;</span><span data-en="More" data-ko="더보기" data-zh="更多" data-th="ดูเพิ่มเติม">더보기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
 
 <span class="comment" data-en="&amp;lt;!-- Icon (solid) + text button --&amp;gt;" data-ko="&amp;lt;!-- 아이콘(솔리드) + 텍스트 버튼 --&amp;gt;" data-zh="&amp;lt;!-- 图标(实心) + 文本按钮 --&amp;gt;" data-th="&amp;lt;!-- ไอคอน (solid) + ปุ่มข้อความ --&amp;gt;">&lt;!-- 아이콘(솔리드) + 텍스트 버튼 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">icon</span>=<span class="string">"gift-solid"</span>&gt;</span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
+<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">icon</span>=<span class="string">"gift-solid"</span>&gt;</span><span data-en="Send Gift" data-ko="선물하기" data-zh="送礼物" data-th="ส่งของขวัญ">선물하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
 
 <span class="comment" data-en="&amp;lt;!-- Text + icon button --&amp;gt;" data-ko="&amp;lt;!-- 텍스트 + 아이콘 버튼 --&amp;gt;" data-zh="&amp;lt;!-- 文本 + 图标按钮 --&amp;gt;" data-th="&amp;lt;!-- ข้อความ + ปุ่มไอคอน --&amp;gt;">&lt;!-- 텍스트 + 아이콘 버튼 --&gt;</span>
 <span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"neutralWeak"</span> <span class="attr">icon</span>=<span class="string">"arrow-right"</span> <span class="attr">iconPosition</span>=<span class="string">"right"</span>&gt;</span><span data-en="Use" data-ko="사용하기" data-zh="使用" data-th="ใช้งาน">사용하기</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
@@ -444,45 +439,12 @@
           <h2 data-en="Overview" data-ko="개요" data-zh="概述" data-th="ภาพรวม">개요</h2>
         </section>
 
-        <!-- Size -->
-        <section class="semantic-section">
-          <h3 data-en="Size" data-ko="크기" data-zh="尺寸" data-th="ขนาด">크기</h3>
-        </section>
-
-        <div class="example-block">
-          <div class="example-preview">
-            <p class="example-label" data-en="Text Button" data-ko="텍스트 버튼" data-zh="文本按钮" data-th="ปุ่มข้อความ">텍스트 버튼</p>
-            <div class="button-group">
-              <button class="demo-button demo-button--brand-solid demo-button--xs"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--s"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--l"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--xl"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-            </div>
-            <p class="example-label example-label--spaced" data-en="Icon Only" data-ko="아이콘 전용" data-zh="仅图标" data-th="ไอคอนเท่านั้น">아이콘 전용</p>
-            <div class="button-group">
-              <button class="demo-button demo-button--brand-solid demo-button--xs demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--s demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--m demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--l demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--xl demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
+        <template id="code-block-template">
           <div class="code-block-wrapper">
             <div class="code-block-header">
               <span class="code-filename">
                 <span class="code-file-icon vue">VUE</span>
-                Size
+                <span class="code-title"></span>
               </span>
               <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -491,186 +453,39 @@
                 </svg>
               </button>
             </div>
-            <pre class="code-block"><code><span class="comment" data-en="&amp;lt;!-- Text Button --&amp;gt;" data-ko="&amp;lt;!-- 텍스트 버튼 --&amp;gt;" data-zh="&amp;lt;!-- 文本按钮 --&amp;gt;" data-th="&amp;lt;!-- ปุ่มข้อความ --&amp;gt;">&lt;!-- Text Button --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"xsmall"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"small"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"medium"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"large"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"xlarge"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Icon Only --&amp;gt;" data-ko="&amp;lt;!-- 아이콘 전용 --&amp;gt;" data-zh="&amp;lt;!-- 仅图标 --&amp;gt;" data-th="&amp;lt;!-- ไอคอนเท่านั้น --&amp;gt;">&lt;!-- Icon Only --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"xsmall"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"small"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"medium"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"large"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">size</span>=<span class="string">"xlarge"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span></code></pre>
+            <pre class="code-block"><code></code></pre>
           </div>
-        </div>
+        </template>
+
+        <!-- Size -->
+        <section class="semantic-section">
+          <h3 data-en="Size" data-ko="크기" data-zh="尺寸" data-th="ขนาด">크기</h3>
+        </section>
+        <div class="example-block" id="overview-size"></div>
 
         <!-- Layout -->
         <section class="semantic-section">
           <h3>Layout</h3>
         </section>
-
-        <div class="example-block">
-          <div class="example-preview">
-            <div class="button-group">
-              <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--m demo-button--icon-left">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-                <span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--m demo-button--icon-right">
-                <span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <button class="demo-button demo-button--brand-solid demo-button--m demo-button--icon-only">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="code-block-wrapper">
-            <div class="code-block-header">
-              <span class="code-filename">
-                <span class="code-file-icon vue">VUE</span>
-                Layout
-              </span>
-              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
-            <pre class="code-block"><code><span class="comment" data-en="&amp;lt;!-- Text Only (default) --&amp;gt;" data-ko="&amp;lt;!-- Text Only (기본) --&amp;gt;" data-zh="&amp;lt;!-- 仅文本 (默认) --&amp;gt;" data-th="&amp;lt;!-- ข้อความเท่านั้น (ค่าเริ่มต้น) --&amp;gt;">&lt;!-- Text Only (기본) --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Icon First --&amp;gt;" data-ko="&amp;lt;!-- 아이콘 먼저 --&amp;gt;" data-zh="&amp;lt;!-- 图标在前 --&amp;gt;" data-th="&amp;lt;!-- ไอคอนก่อน --&amp;gt;">&lt;!-- 아이콘 먼저 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">icon</span>=<span class="string">"plus"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Icon Last --&amp;gt;" data-ko="&amp;lt;!-- 아이콘 나중 --&amp;gt;" data-zh="&amp;lt;!-- 图标在后 --&amp;gt;" data-th="&amp;lt;!-- ไอคอนหลัง --&amp;gt;">&lt;!-- 아이콘 나중 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">icon</span>=<span class="string">"arrow-right"</span> <span class="attr">iconPosition</span>=<span class="string">"right"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Icon Only --&amp;gt;" data-ko="&amp;lt;!-- 아이콘 전용 --&amp;gt;" data-zh="&amp;lt;!-- 仅图标 --&amp;gt;" data-th="&amp;lt;!-- ไอคอนเท่านั้น --&amp;gt;">&lt;!-- Icon Only --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">layout</span>=<span class="string">"iconOnly"</span> <span class="attr">icon</span>=<span class="string">"plus"</span> /&gt;</span></code></pre>
-          </div>
-        </div>
+        <div class="example-block" id="overview-layout"></div>
 
         <!-- Variant -->
         <section class="semantic-section">
           <h3 data-en="Variant" data-ko="스타일" data-zh="样式" data-th="รูปแบบ">스타일</h3>
         </section>
-
-        <div class="example-block">
-          <div class="example-preview">
-            <div class="button-group">
-              <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-weak demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--neutral-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--neutral-weak demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--critical-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--critical-weak demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--outline demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--ghost demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-            </div>
-          </div>
-          <div class="code-block-wrapper">
-            <div class="code-block-header">
-              <span class="code-filename">
-                <span class="code-file-icon vue">VUE</span>
-                Variant
-              </span>
-              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
-            <pre class="code-block"><code><span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandWeak"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"neutralSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"neutralWeak"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"criticalSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"criticalWeak"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"outline"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"ghost"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span></code></pre>
-          </div>
-        </div>
+        <div class="example-block" id="overview-variant"></div>
 
         <!-- State -->
         <section class="semantic-section">
           <h3>State</h3>
         </section>
-
-        <div class="example-block">
-          <div class="example-preview">
-            <div class="button-group">
-              <button class="demo-button demo-button--brand-solid demo-button--m"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--m" style="background: var(--color-button-brand-solid-bg-strong);"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--m" style="opacity: 0.7;">...</button>
-              <button class="demo-button demo-button--brand-solid demo-button--m" disabled><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-            </div>
-          </div>
-          <div class="code-block-wrapper">
-            <div class="code-block-header">
-              <span class="code-filename">
-                <span class="code-file-icon vue">VUE</span>
-                State
-              </span>
-              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
-            <pre class="code-block"><code><span class="comment" data-en="&amp;lt;!-- Enabled (default) --&amp;gt;" data-ko="&amp;lt;!-- Enabled (기본) --&amp;gt;" data-zh="&amp;lt;!-- 启用 (默认) --&amp;gt;" data-th="&amp;lt;!-- เปิดใช้งาน (ค่าเริ่มต้น) --&amp;gt;">&lt;!-- Enabled (기본) --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Hover/Pressed (CSS state) --&amp;gt;" data-ko="&amp;lt;!-- 호버/눌림 (CSS 상태) --&amp;gt;" data-zh="&amp;lt;!-- 悬停/按下 (CSS 状态) --&amp;gt;" data-th="&amp;lt;!-- โฮเวอร์/กด (สถานะ CSS) --&amp;gt;">&lt;!-- 호버/눌림 (CSS 상태) --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Loading --&amp;gt;" data-ko="&amp;lt;!-- 로딩 --&amp;gt;" data-zh="&amp;lt;!-- 加载中 --&amp;gt;" data-th="&amp;lt;!-- กำลังโหลด --&amp;gt;">&lt;!-- 로딩 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">loading</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Disabled --&amp;gt;" data-ko="&amp;lt;!-- 비활성화 --&amp;gt;" data-zh="&amp;lt;!-- 禁用 --&amp;gt;" data-th="&amp;lt;!-- ปิดใช้งาน --&amp;gt;">&lt;!-- 비활성화 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">disabled</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span></code></pre>
-          </div>
-        </div>
+        <div class="example-block" id="overview-state"></div>
 
         <!-- Width -->
         <section class="semantic-section">
           <h3 data-en="Width" data-ko="너비" data-zh="宽度" data-th="ความกว้าง">너비</h3>
         </section>
-
-        <div class="example-block">
-          <div class="example-preview">
-            <div class="button-group button-group--column" style="align-items: center;">
-              <button class="demo-button demo-button--brand-solid demo-button--m" style="width: fit-content;"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-              <button class="demo-button demo-button--brand-solid demo-button--m" style="width: 100%;"><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span></button>
-            </div>
-          </div>
-          <div class="code-block-wrapper">
-            <div class="code-block-header">
-              <span class="code-filename">
-                <span class="code-file-icon vue">VUE</span>
-                Width
-              </span>
-              <button class="code-block-copy" onclick="copyCodeBlock(this)" title="Copy">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
-            <pre class="code-block"><code><span class="comment" data-en="&amp;lt;!-- Hug (default) --&amp;gt;" data-ko="&amp;lt;!-- Hug (기본) --&amp;gt;" data-zh="&amp;lt;!-- 自适应 (默认) --&amp;gt;" data-th="&amp;lt;!-- Hug (ค่าเริ่มต้น) --&amp;gt;">&lt;!-- Hug (기본) --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>
-
-<span class="comment" data-en="&amp;lt;!-- Full Width --&amp;gt;" data-ko="&amp;lt;!-- 전체 너비 --&amp;gt;" data-zh="&amp;lt;!-- 全宽 --&amp;gt;" data-th="&amp;lt;!-- ความกว้างเต็ม --&amp;gt;">&lt;!-- 전체 너비 --&gt;</span>
-<span class="tag">&lt;<span class="component">CButton</span> <span class="attr">variant</span>=<span class="string">"brandSolid"</span> <span class="attr">:flexGrow</span>=<span class="string">"1"</span>&gt;</span><span data-en="Label" data-ko="라벨" data-zh="标签" data-th="ป้ายกำกับ">라벨</span><span class="tag">&lt;/<span class="component">CButton</span>&gt;</span></code></pre>
-          </div>
-        </div>
+        <div class="example-block" id="overview-width"></div>
 
         <!-- Related -->
         <div class="quick-links">
@@ -751,26 +566,181 @@
 
   <script src="../../script.js"></script>
   <script>
+    // ─── Ribbon Button Config (single source of truth) ───
+    const ICON = {
+      plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',
+      'arrow-right': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+    };
+
+    function toKebab(s) { return s.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase(); }
+
+    function btnClasses(c) {
+      const cls = ['ribbon-button', 'ribbon-button--' + toKebab(c.variant), 'ribbon-button--' + (c.size || 'medium')];
+      if (c.layout === 'iconOnly') cls.push('ribbon-button--icon-only');
+      if (c.iconPosition === 'left') cls.push('ribbon-button--icon-left');
+      if (c.iconPosition === 'right') cls.push('ribbon-button--icon-right');
+      if (c.loading) cls.push('ribbon-button--loading');
+      if (c.flexGrow) cls.push('ribbon-button--flex-grow');
+      return cls.join(' ');
+    }
+
+    function previewBtn(c) {
+      let inner = '';
+      if (c.iconPosition === 'left') inner = `<span class="ribbon-button__icon">${ICON[c.icon]}</span>${c.text}`;
+      else if (c.iconPosition === 'right') inner = `${c.text}<span class="ribbon-button__icon">${ICON[c.icon]}</span>`;
+      else if (c.layout === 'iconOnly') inner = ICON[c.icon];
+      else inner = c.text || '';
+      const dis = c.disabled ? ' disabled' : '';
+      const style = c._style ? ` style="${c._style}"` : '';
+      return `<button class="${btnClasses(c)}"${dis}${style}>${inner}</button>`;
+    }
+
+    function attr(name, value) {
+      return `<span class="attr">${name}</span>=<span class="string">"${value}"</span>`;
+    }
+    function toVue(c) {
+      const a = [];
+      if (c.variant && c.variant !== 'brandSolid') a.push(attr('variant', c.variant));
+      if (c.size && c.size !== 'medium') a.push(attr('size', c.size));
+      if (c.icon && c.layout !== 'iconOnly') a.push(attr('icon', c.icon));
+      if (c.iconPosition === 'right') a.push(attr('iconPosition', 'right'));
+      if (c.layout === 'iconOnly') { a.push(attr('layout', 'iconOnly')); a.push(attr('icon', c.icon)); }
+      if (c.loading) a.push(`<span class="attr">loading</span>`);
+      if (c.disabled) a.push(`<span class="attr">disabled</span>`);
+      if (c.flexGrow) a.push(attr(':flexGrow', '1'));
+      const attrs = a.length ? ' ' + a.join(' ') : '';
+      if (c.text) {
+        return `<span class="tag">&lt;<span class="component">CButton</span>${attrs}&gt;</span>${c.text}<span class="tag">&lt;/<span class="component">CButton</span>&gt;</span>`;
+      }
+      return `<span class="tag">&lt;<span class="component">CButton</span>${attrs} /&gt;</span>`;
+    }
+
+    // Section configs: groups[] → { comment?, label?, items[] }
+    const RIBBON = {
+      size: {
+        title: 'Size',
+        groups: [
+          { comment: 'Text Button', items: [
+            { text: 'Label', variant: 'brandSolid', size: 'xsmall' },
+            { text: 'Label', variant: 'brandSolid', size: 'small' },
+            { text: 'Label', variant: 'brandSolid', size: 'medium' },
+            { text: 'Label', variant: 'brandSolid', size: 'large' },
+            { text: 'Label', variant: 'brandSolid', size: 'xlarge' },
+          ]},
+          { comment: 'Icon Only', items: [
+            { variant: 'brandSolid', size: 'xsmall', layout: 'iconOnly', icon: 'plus' },
+            { variant: 'brandSolid', size: 'small', layout: 'iconOnly', icon: 'plus' },
+            { variant: 'brandSolid', size: 'medium', layout: 'iconOnly', icon: 'plus' },
+            { variant: 'brandSolid', size: 'large', layout: 'iconOnly', icon: 'plus' },
+            { variant: 'brandSolid', size: 'xlarge', layout: 'iconOnly', icon: 'plus' },
+          ]},
+        ],
+      },
+      layout: {
+        title: 'Layout',
+        singleRow: true,
+        groups: [
+          { comment: 'Text Only (default)', items: [{ text: 'Label', variant: 'brandSolid' }] },
+          { comment: 'Icon Left', items: [{ text: 'Label', variant: 'brandSolid', icon: 'plus', iconPosition: 'left' }] },
+          { comment: 'Icon Right', items: [{ text: 'Label', variant: 'brandSolid', icon: 'arrow-right', iconPosition: 'right' }] },
+          { comment: 'Icon Only', items: [{ variant: 'brandSolid', layout: 'iconOnly', icon: 'plus' }] },
+        ],
+      },
+      variant: {
+        title: 'Variant',
+        groups: [{ items: [
+          { text: 'Label', variant: 'brandSolid' },
+          { text: 'Label', variant: 'brandWeak' },
+          { text: 'Label', variant: 'neutralSolid' },
+          { text: 'Label', variant: 'neutralWeak' },
+          { text: 'Label', variant: 'criticalSolid' },
+          { text: 'Label', variant: 'criticalWeak' },
+          { text: 'Label', variant: 'outline' },
+          { text: 'Label', variant: 'ghost' },
+        ]}],
+      },
+      state: {
+        title: 'State',
+        singleRow: true,
+        groups: [
+          { comment: 'Enabled (default)', items: [{ text: 'Label', variant: 'brandSolid' }] },
+          { comment: 'Pressed (CSS :active)', items: [{ text: 'Label', variant: 'brandSolid', _style: 'background:var(--color-button-brand-solid-bg-pressed)' }] },
+          { comment: 'Loading', items: [{ text: 'Label', variant: 'brandSolid', loading: true }] },
+          { comment: 'Disabled', items: [{ text: 'Label', variant: 'brandSolid', disabled: true }] },
+        ],
+      },
+      width: {
+        title: 'Width',
+        columnLayout: true,
+        groups: [
+          { comment: 'Hug (default)', items: [{ text: 'Label', variant: 'brandSolid', _style: 'width:fit-content' }] },
+          { comment: 'Full Width', items: [{ text: 'Label', variant: 'brandSolid', flexGrow: true, _style: 'width:100%' }] },
+        ],
+      },
+    };
+
+    // ─── Render ───
+    function renderRibbon() {
+      const tpl = document.getElementById('code-block-template');
+
+      Object.entries(RIBBON).forEach(([id, cfg]) => {
+        const el = document.getElementById('overview-' + id);
+        if (!el) return;
+
+        // Build preview HTML
+        let previewHtml = '';
+        if (cfg.columnLayout) {
+          previewHtml += '<div class="button-group button-group--column" style="align-items:center">';
+          cfg.groups.forEach(g => g.items.forEach(item => { previewHtml += previewBtn(item); }));
+          previewHtml += '</div>';
+        } else if (cfg.singleRow) {
+          previewHtml += '<div class="button-group" style="justify-content:center">';
+          cfg.groups.forEach(g => g.items.forEach(item => { previewHtml += previewBtn(item); }));
+          previewHtml += '</div>';
+        } else {
+          cfg.groups.forEach((g, i) => {
+            previewHtml += '<div class="button-group" style="justify-content:center">';
+            g.items.forEach(item => { previewHtml += previewBtn(item); });
+            previewHtml += '</div>';
+          });
+        }
+
+        // Build code (syntax-highlighted HTML)
+        const vueLines = [];
+        cfg.groups.forEach((g, gi) => {
+          if (gi > 0) vueLines.push('');
+          if (g.comment) vueLines.push(`<span class="comment">&lt;!-- ${g.comment} --&gt;</span>`);
+          g.items.forEach(item => { vueLines.push(toVue(item)); });
+        });
+
+        // Assemble DOM
+        const preview = document.createElement('div');
+        preview.className = 'example-preview';
+        preview.innerHTML = previewHtml;
+
+        const codeBlock = tpl.content.cloneNode(true);
+        codeBlock.querySelector('.code-title').textContent = cfg.title;
+        codeBlock.querySelector('code').innerHTML = vueLines.join('\n');
+
+        el.appendChild(preview);
+        el.appendChild(codeBlock);
+      });
+    }
+
+    renderRibbon();
+
+    // ─── Copy code ───
     async function copyCodeBlock(button) {
-      const container = button.closest('.code-block-wrapper');
-      const codeEl = container.querySelector('code');
+      const container = button.closest('.code-tabs') || button.closest('.code-block-wrapper');
+      const codeEl = container.querySelector('.code-block:not([style*="display: none"]) code') || container.querySelector('code');
       const text = codeEl.textContent;
       try {
         await navigator.clipboard.writeText(text);
         button.classList.add('copied');
-        button.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        `;
+        button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
         setTimeout(() => {
           button.classList.remove('copied');
-          button.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-          `;
+          button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
         }, 2000);
       } catch (err) {
         console.error('Failed to copy:', err);
