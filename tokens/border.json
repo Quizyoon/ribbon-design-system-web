@@ -1,7 +1,0 @@
-{
-  "border": {
-    "thin": { "value": "1px", "type": "borderWidth", "description": "얇은 테두리" },
-    "medium": { "value": "2px", "type": "borderWidth", "description": "중간 테두리" },
-    "thick": { "value": "4px", "type": "borderWidth", "description": "두꺼운 테두리" }
-  }
-}

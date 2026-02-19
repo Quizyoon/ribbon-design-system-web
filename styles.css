@@ -2931,7 +2931,7 @@ code:not(.code-block code) {
   --color-button-ghost-bg-pressed: var(--semantic-bg-tertiary);
 
   /* Button Colors - Disabled → semantic references */
-  --color-button-disabled-fg: var(--semantic-fg-disabled);
+  --color-button-disabled-fg: var(--semantic-fg-on-disabled);
   --color-button-disabled-bg: var(--semantic-bg-disabled);
   --color-button-outline-fg-disabled: var(--semantic-fg-disabled);
   --color-button-outline-border-disabled: var(--semantic-border-tertiary);
